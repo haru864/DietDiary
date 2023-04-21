@@ -1,3 +1,5 @@
+package servlet;
+
 import java.io.IOException;
 
 import jakarta.servlet.RequestDispatcher;
@@ -7,20 +9,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/WelcomeServlet")
-public class WelcomeServlet extends HttpServlet {
+@WebServlet("/RegisterServlet")
+public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String welcomeJsp = "/WEB-INF/jsp/welcome.jsp";
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher(welcomeJsp);
+        String registerJsp = "/WEB-INF/jsp/register.jsp";
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher(registerJsp);
         requestDispatcher.forward(req, resp);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        super.doPost(req, resp);
     }
 }

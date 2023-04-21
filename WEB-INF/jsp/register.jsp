@@ -4,12 +4,12 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>トップ画面</title>
+        <title>ユーザー登録画面</title>
     </head>
 
     <body>
-        <a href="/DietDiary/LoginServlet">ログイン</a><br>
-        <a href="/DietDiary/RegisterServlet">ユーザー登録</a>
+        <p>登録</p>
+        <p>トップ画面へ</p>
     </body>
 
     </html>
