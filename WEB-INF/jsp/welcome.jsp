@@ -8,8 +8,8 @@
     </head>
 
     <body>
-        <a href="/DietDiary/LoginServlet">ログイン</a><br>
-        <a href="/DietDiary/RegisterServlet">ユーザー登録</a>
+        <a href="/DietDiary/LoginServlet?action=display">ログイン</a><br>
+        <a href="/DietDiary/RegisterServlet?action=display">ユーザー登録</a>
     </body>
 
     </html>

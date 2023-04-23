@@ -8,8 +8,12 @@
     </head>
 
     <body>
-        <p>ログイン</p>
-        <p>トップ画面へ</p>
+        <form action="/DietDiary/LoginServlet" method="post">
+            <div>ユーザー名：<input type="text" name="username"></div>
+            <div>パスワード：<input type="text" name="password"></div>
+            <input type="hidd" name="action" value="login">
+        </form>
+        <a href="/DietDiary/WelcomeServlet">トップ画面へ</a>
     </body>
 
     </html>

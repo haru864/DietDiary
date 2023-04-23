@@ -1,0 +1,26 @@
+# table: account
+create table account (
+    username           varchar(10)           primary key,
+    password           varchar(10)           not null,
+    email              varchar(50)           not null,
+    updated            date                  not null,
+    gender             enum('men','women')   not null,
+    birth              date                  not null,
+    height             double                not null,
+    weight             double                not null,
+    burnedCalories    double                not null
+);
+
+# user for test
+insert into account
+values (
+    'user',
+    'pass',
+    'hogehoge@dummy-email.com',
+    '2023-04-01',
+    'men',
+    '1990-10-25',
+    180.3,
+    72.5,
+    2200.0
+);

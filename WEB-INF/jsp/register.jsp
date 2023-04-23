@@ -8,8 +8,8 @@
     </head>
 
     <body>
-        <p>登録</p>
-        <p>トップ画面へ</p>
+        <a href="/DietDiary/RegisterServlet?action=register">ユーザー登録</a><br>
+        <a href="/DietDiary/WelcomeServlet">トップ画面へ</a>
     </body>
 
     </html>
