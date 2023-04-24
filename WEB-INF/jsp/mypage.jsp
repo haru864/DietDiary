@@ -1,14 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-    <!DOCTYPE html>
-    <html>
+    <% String username=(String)session.getAttribute("username"); %>
+        <!DOCTYPE html>
+        <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>マイページ</title>
-    </head>
+        <head>
+            <meta charset="UTF-8">
+            <title>マイページ</title>
+        </head>
 
-    <body>
-        <div>ようこそ、XXXXさん</div>
-    </body>
+        <body>
+            <div>ようこそ、<%= username %>さん</div>
+        </body>
 
-    </html>
+        </html>
