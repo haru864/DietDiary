@@ -5,9 +5,13 @@ public enum Gender {
     MEN("men"),
     WOMEN("women");
 
-    private final String gender;
+    private final String genderString;
 
-    private Gender(String gender) {
-        this.gender = new String(gender);
+    private Gender(String genderString) {
+        this.genderString = new String(genderString);
+    }
+
+    public String getGenderString() {
+        return genderString;
     }
 }

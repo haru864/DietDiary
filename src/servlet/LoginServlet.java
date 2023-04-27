@@ -2,8 +2,6 @@ package servlet;
 
 import java.io.IOException;
 
-import com.mysql.cj.log.Log;
-
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -17,18 +15,21 @@ import model.LoginLogic;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 
+    private final String loginJsp = "/WEB-INF/jsp/login.jsp";
+    private final String mypageJsp = "/WEB-INF/jsp/mypage.jsp";
+    private final String loginErrorJsp = "/WEB-INF/jsp/login_error.jsp";
+    private final String unknownErrorJsp = "/WEB-INF/jsp/unknown_error.jsp";
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String action = req.getParameter("action");
-        String loginJsp = "/WEB-INF/jsp/login.jsp";
-        String errorJsp = "/WEB-INF/jsp/error.jsp";
         RequestDispatcher requestDispatcher;
 
         if (action.equals("display")) {
             requestDispatcher = req.getRequestDispatcher(loginJsp);
         } else {
-            requestDispatcher = req.getRequestDispatcher(errorJsp);
+            requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
         }
 
         requestDispatcher.forward(req, resp);
@@ -38,8 +39,6 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String action = req.getParameter("action");
-        String mypageJsp = "/WEB-INF/jsp/mypage.jsp";
-        String errorJsp = "/WEB-INF/jsp/error.jsp";
         RequestDispatcher requestDispatcher;
 
         if (action.equals("login")) {
@@ -52,7 +51,7 @@ public class LoginServlet extends HttpServlet {
             Boolean isLoginSuccess = loginLogic.execute(login);
 
             if (!isLoginSuccess) {
-                requestDispatcher = req.getRequestDispatcher(errorJsp);
+                requestDispatcher = req.getRequestDispatcher(loginErrorJsp);
             } else {
                 HttpSession session = req.getSession(true);
                 session.setAttribute("username", username);
@@ -61,7 +60,7 @@ public class LoginServlet extends HttpServlet {
 
         } else {
 
-            requestDispatcher = req.getRequestDispatcher(errorJsp);
+            requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
         }
 
         requestDispatcher.forward(req, resp);

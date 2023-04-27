@@ -52,6 +52,33 @@ public class AccountDAO {
         }
     }
 
+    public Boolean registerAccount(Account account) {
+
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
+
+            String SQL = "INSERT INTO account VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement pStmt = conn.prepareStatement(SQL);
+            pStmt.setString(1, account.getUsername());
+            pStmt.setString(2, account.getPassword());
+            pStmt.setString(3, account.getEmail());
+            pStmt.setDate(4, account.getUpdated());
+            pStmt.setString(5, account.getGender().getGenderString());
+            pStmt.setDate(6, account.getBirth());
+            pStmt.setDouble(7, account.getHeight());
+            pStmt.setDouble(8, account.getWeight());
+            pStmt.setDouble(9, account.getBurnedCalories());
+
+            int numOfRowsUpdated = 0;
+            numOfRowsUpdated = pStmt.executeUpdate();
+
+            return numOfRowsUpdated == 1;
+
+        } catch (Exception e) {
+
+            return false;
+        }
+    }
+
     private Boolean updateLastLoginDate(Login login) throws Exception {
 
         Date currentDate = new Date();

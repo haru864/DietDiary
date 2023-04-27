@@ -8,8 +8,11 @@
     </head>
 
     <body>
-        <a href="/DietDiary/RegisterServlet?action=register">ユーザー登録</a><br>
+        <form action="/DietDiary/RegisterServlet" method="post">
+
+        </form>
         <a href="/DietDiary/WelcomeServlet">トップ画面へ</a>
+
         <script>
             function isUsernameValid() {
                 // 半角英数字10文字

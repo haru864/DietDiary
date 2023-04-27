@@ -34,4 +34,40 @@ public class Account {
         this.weight = weight;
         this.burnedCalories = burnedCalories;
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Date getUpdated() {
+        return updated;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public Date getBirth() {
+        return birth;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public double getBurnedCalories() {
+        return burnedCalories;
+    }
 }

@@ -17,7 +17,7 @@
             <div>
                 パスワード：<br>
                 <input type="password" name="password" id="password">
-                <button id="btn_passview">表示</button><br>
+                <button type="button" id="btn_passview">表示</button><br>
                 <font color="red" id="warningUnfilledPassword">パスワードを入力してください</font>
             </div>
             <input type="hidden" name="action" value="login">
@@ -73,6 +73,11 @@
                     return false;
                 }
                 return true;
+            }
+            function isAccountRegistered() {
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+
             }
         </script>
     </body>
