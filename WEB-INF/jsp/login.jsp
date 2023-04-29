@@ -10,12 +10,12 @@
     <body>
         <form action="/DietDiary/LoginServlet" method="post" onsubmit="return checkLoginForm()">
             <div>
-                ユーザー名：<br>
+                <label for="username">ユーザー名：</label><br>
                 <input type="text" name="username" id="username"><br>
                 <font color="red" id="warningUnfilledUsername">ユーザー名を入力してください</font>
             </div>
             <div>
-                パスワード：<br>
+                <label for="password">パスワード：</label><br>
                 <input type="password" name="password" id="password">
                 <button type="button" id="btn_passview">表示</button><br>
                 <font color="red" id="warningUnfilledPassword">パスワードを入力してください</font>

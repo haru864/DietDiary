@@ -9,7 +9,7 @@
 
     <body>
         <div>ユーザー登録時にエラーが発生しました。</div>
-        <div>ユーザー名が重複しています。</div>
+        <!-- <div>ユーザー名が重複しています。</div> -->
         <a href="/DietDiary/LoginServlet?action=display">ログイン画面へ戻る</a>
     </body>
 

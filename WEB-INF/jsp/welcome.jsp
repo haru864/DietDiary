@@ -8,6 +8,7 @@
     </head>
 
     <body>
+        <div>ようこそ</div>
         <a href="/DietDiary/LoginServlet?action=display">ログイン</a><br>
         <a href="/DietDiary/RegisterServlet?action=display">ユーザー登録</a>
     </body>

@@ -37,10 +37,12 @@ public class AccountDAO {
             Date birth = rs.getDate("birth");
             double height = rs.getDouble("height");
             double weight = rs.getDouble("weight");
-            double burnedCalories = rs.getDouble("burnedCalories");
+            int activityLevel = rs.getInt("activity_level");
+            double totalDailyEnergyExpenditure = rs.getDouble("total_daily_energy_expenditure");
+
             Account account = new Account(username, password, email,
                     updated, gender, birth,
-                    height, weight, burnedCalories);
+                    height, weight, activityLevel, totalDailyEnergyExpenditure);
 
             updateLastLoginDate(login);
 
@@ -56,17 +58,18 @@ public class AccountDAO {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
-            String SQL = "INSERT INTO account VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String SQL = "INSERT INTO account VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pStmt = conn.prepareStatement(SQL);
             pStmt.setString(1, account.getUsername());
             pStmt.setString(2, account.getPassword());
             pStmt.setString(3, account.getEmail());
-            pStmt.setDate(4, account.getUpdated());
+            pStmt.setDate(4, (java.sql.Date) account.getUpdated());
             pStmt.setString(5, account.getGender().getGenderString());
-            pStmt.setDate(6, account.getBirth());
+            pStmt.setDate(6, (java.sql.Date) account.getBirth());
             pStmt.setDouble(7, account.getHeight());
             pStmt.setDouble(8, account.getWeight());
-            pStmt.setDouble(9, account.getBurnedCalories());
+            pStmt.setInt(9, account.getActivityLevel());
+            pStmt.setDouble(10, account.getTotalDailyEnergyExpenditure());
 
             int numOfRowsUpdated = 0;
             numOfRowsUpdated = pStmt.executeUpdate();

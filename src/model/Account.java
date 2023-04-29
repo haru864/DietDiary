@@ -1,6 +1,6 @@
 package model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Account {
 
@@ -12,14 +12,16 @@ public class Account {
     private final Date birth;
     private final double height;
     private final double weight;
-    private final double burnedCalories;
+    private final int activityLevel;
+    private final double totalDailyEnergyExpenditure;
 
     public Account(String username, String password, String email,
-            java.util.Date updated2, Gender gender, java.util.Date birth2,
-            double height, double weight, double burnedCalories) throws NullPointerException {
+            java.util.Date updated, Gender gender, java.util.Date birth,
+            double height, double weight, int activityLevel, double totalDailyEnergyExpenditure)
+            throws NullPointerException {
 
         if (username == null || password == null || email == null
-                || updated2 == null || gender == null || birth2 == null) {
+                || updated == null || gender == null || birth == null) {
 
             throw new NullPointerException("some parameter of account is null");
         }
@@ -27,12 +29,13 @@ public class Account {
         this.username = new String(username);
         this.password = new String(password);
         this.email = new String(email);
-        this.updated = (Date) updated2.clone();
+        this.updated = updated;
         this.gender = gender;
-        this.birth = (Date) birth2.clone();
+        this.birth = birth;
         this.height = height;
         this.weight = weight;
-        this.burnedCalories = burnedCalories;
+        this.activityLevel = activityLevel;
+        this.totalDailyEnergyExpenditure = totalDailyEnergyExpenditure;
     }
 
     public String getUsername() {
@@ -67,7 +70,11 @@ public class Account {
         return weight;
     }
 
-    public double getBurnedCalories() {
-        return burnedCalories;
+    public int getActivityLevel() {
+        return activityLevel;
+    }
+
+    public double getTotalDailyEnergyExpenditure() {
+        return totalDailyEnergyExpenditure;
     }
 }
