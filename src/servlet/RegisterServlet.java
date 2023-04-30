@@ -1,8 +1,8 @@
 package servlet;
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.util.Calendar;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import jakarta.servlet.RequestDispatcher;
@@ -12,6 +12,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Account;
+import model.ActivityLevel;
 import model.CalculateCaloriesLogic;
 import model.CheckAccountLogic;
 import model.Gender;
@@ -64,15 +65,23 @@ public class RegisterServlet extends HttpServlet {
             String email = req.getParameter("action");
             Date updated = new Date();
             Gender gender = req.getParameter("action").equals("men") ? Gender.MEN : Gender.WOMEN;
-            int birth_year = Integer.parseInt(req.getParameter("birth_year"));
-            int birth_month = Integer.parseInt(req.getParameter("birth_month"));
-            int birth_day = Integer.parseInt(req.getParameter("birth_day"));
-            Calendar calendar = Calendar.getInstance();
-            calendar.set(birth_year, birth_month, birth_day);
-            Date birth = calendar.getTime();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Date birth = null;
+            try {
+                birth = sdf.parse((String) req.getAttribute("birth"));
+            } catch (ParseException e) {
+                requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+            }
             double height = Double.parseDouble(req.getParameter("height"));
             double weight = Double.parseDouble(req.getParameter("weight"));
-            int activityLevel = Integer.parseInt(req.getParameter("activityLevel"));
+            int activityLevelNumber = Integer.parseInt(req.getParameter("activity_level"));
+
+            ActivityLevel activityLevel = ActivityLevel.ALMOST_NO_EXERCISE;
+            for (ActivityLevel currentLevel : ActivityLevel.values()) {
+                if (activityLevelNumber == currentLevel.getRegistrationNumber()) {
+                    activityLevel = currentLevel;
+                }
+            }
 
             CalculateCaloriesLogic calcCalories = new CalculateCaloriesLogic();
             double totalDailyEnergyExpenditure = calcCalories.execute(birth, gender, height, weight, activityLevel);
@@ -83,13 +92,13 @@ public class RegisterServlet extends HttpServlet {
             // CheckAccountLogic checkAccountLogic = new CheckAccountLogic();
             // Boolean isAccountValid = checkAccountLogic.execute(account);
             // if (isAccountValid == false) {
-            //     requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+            // requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
             // }
 
             // RegisterLogic registerLogic = new RegisterLogic();
             // Boolean isRegisterSuccess = registerLogic.execute(account);
             // if (isRegisterSuccess == false) {
-            //     requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+            // requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
             // }
 
             requestDispatcher = req.getRequestDispatcher(mypageJsp);

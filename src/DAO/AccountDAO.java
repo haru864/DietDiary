@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import model.Account;
+import model.ActivityLevel;
 import model.Gender;
 import model.Login;
 
@@ -37,7 +38,8 @@ public class AccountDAO {
             Date birth = rs.getDate("birth");
             double height = rs.getDouble("height");
             double weight = rs.getDouble("weight");
-            int activityLevel = rs.getInt("activity_level");
+            int activityLevelNumber = rs.getInt("activity_level");
+            ActivityLevel activityLevel = ActivityLevel.valueOf(email);
             double totalDailyEnergyExpenditure = rs.getDouble("total_daily_energy_expenditure");
 
             Account account = new Account(username, password, email,
@@ -68,7 +70,7 @@ public class AccountDAO {
             pStmt.setDate(6, (java.sql.Date) account.getBirth());
             pStmt.setDouble(7, account.getHeight());
             pStmt.setDouble(8, account.getWeight());
-            pStmt.setInt(9, account.getActivityLevel());
+            pStmt.setInt(9, account.getActivityLevel().getRegistrationNumber());
             pStmt.setDouble(10, account.getTotalDailyEnergyExpenditure());
 
             int numOfRowsUpdated = 0;

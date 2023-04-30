@@ -12,12 +12,12 @@ public class Account {
     private final Date birth;
     private final double height;
     private final double weight;
-    private final int activityLevel;
+    private final ActivityLevel activityLevel;
     private final double totalDailyEnergyExpenditure;
 
     public Account(String username, String password, String email,
             java.util.Date updated, Gender gender, java.util.Date birth,
-            double height, double weight, int activityLevel, double totalDailyEnergyExpenditure)
+            double height, double weight, ActivityLevel activityLevel, double totalDailyEnergyExpenditure)
             throws NullPointerException {
 
         if (username == null || password == null || email == null
@@ -70,7 +70,7 @@ public class Account {
         return weight;
     }
 
-    public int getActivityLevel() {
+    public ActivityLevel getActivityLevel() {
         return activityLevel;
     }
 
