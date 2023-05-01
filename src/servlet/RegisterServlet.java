@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.catalina.tribes.group.interceptors.TwoPhaseCommitInterceptor.MapEntry;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -11,9 +15,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import model.Account;
 import model.ActivityLevel;
-import model.CalculateCaloriesLogic;
+import model.CalculateTDEELogic;
 import model.CheckAccountLogic;
 import model.Gender;
 import model.RegisterLogic;
@@ -69,31 +74,43 @@ public class RegisterServlet extends HttpServlet {
             Date birth = null;
             try {
                 birth = sdf.parse((String) req.getAttribute("birth"));
-            } catch (ParseException e) {
+            } catch (Exception e) {
                 requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+                requestDispatcher.forward(req, resp);
             }
             double height = Double.parseDouble(req.getParameter("height"));
             double weight = Double.parseDouble(req.getParameter("weight"));
             int activityLevelNumber = Integer.parseInt(req.getParameter("activity_level"));
+            ActivityLevel activityLevel = ActivityLevel.getActivityLevelFromInt(activityLevelNumber);
 
-            ActivityLevel activityLevel = ActivityLevel.ALMOST_NO_EXERCISE;
-            for (ActivityLevel currentLevel : ActivityLevel.values()) {
-                if (activityLevelNumber == currentLevel.getRegistrationNumber()) {
-                    activityLevel = currentLevel;
-                }
-            }
-
-            CalculateCaloriesLogic calcCalories = new CalculateCaloriesLogic();
-            double totalDailyEnergyExpenditure = calcCalories.execute(birth, gender, height, weight, activityLevel);
+            CalculateTDEELogic calcTDEE = new CalculateTDEELogic();
+            double TDEE = calcTDEE.execute(birth, gender, height, weight, activityLevel);
 
             Account account = new Account(username, password, email, updated,
                     gender, birth, height, weight,
-                    activityLevel, totalDailyEnergyExpenditure);
-            // CheckAccountLogic checkAccountLogic = new CheckAccountLogic();
-            // Boolean isAccountValid = checkAccountLogic.execute(account);
-            // if (isAccountValid == false) {
-            // requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+                    activityLevel, TDEE);
+
+            CheckAccountLogic checkAccountLogic = new CheckAccountLogic();
+            HttpSession session = req.getSession(true);
+            // List<Map<String, String>> errorMessageList =
+            // checkAccountLogic.execute(account);
+            // if (errorMessageList != null) {
+            // for (var errorMessageMap : errorMessageList) {
+            // for (var entry : errorMessageMap.entrySet()) {
+            // session.setAttribute(entry.getKey(), entry.getValue());
             // }
+            // }
+            // requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+            // requestDispatcher.forward(req, resp);
+            // }
+            var errorMessageList = checkAccountLogic.execute(account);
+            if (errorMessageList != null) {
+                // session.setAttribute("errorMessageList", errorMessageList);
+                session.setAttribute("error", "true");
+                log((String) session.getAttribute("error"));
+                requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+                requestDispatcher.forward(req, resp);
+            }
 
             // RegisterLogic registerLogic = new RegisterLogic();
             // Boolean isRegisterSuccess = registerLogic.execute(account);
@@ -102,12 +119,12 @@ public class RegisterServlet extends HttpServlet {
             // }
 
             requestDispatcher = req.getRequestDispatcher(mypageJsp);
+            requestDispatcher.forward(req, resp);
 
         } else {
 
             requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
+            requestDispatcher.forward(req, resp);
         }
-
-        requestDispatcher.forward(req, resp);
     }
 }

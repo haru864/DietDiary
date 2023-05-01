@@ -39,7 +39,7 @@ public class AccountDAO {
             double height = rs.getDouble("height");
             double weight = rs.getDouble("weight");
             int activityLevelNumber = rs.getInt("activity_level");
-            ActivityLevel activityLevel = ActivityLevel.valueOf(email);
+            ActivityLevel activityLevel = ActivityLevel.getActivityLevelFromInt(activityLevelNumber);
             double totalDailyEnergyExpenditure = rs.getDouble("total_daily_energy_expenditure");
 
             Account account = new Account(username, password, email,
