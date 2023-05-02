@@ -1,7 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <%
-String isError = (String)session.getAttribute("error");
-String s = "test";
+List<String> errorMessageList = (List<String>)session.getAttribute("errorMessageList");
 %>
         <!DOCTYPE html>
         <html>
@@ -13,8 +14,11 @@ String s = "test";
 
         <body>
             <div>ユーザー登録時にエラーが発生しました。</div>
-            <div><%= isError %></div>
-            <div><%= s %></div>
+            <% if (errorMessageList != null) { %>
+            <%   for (String errorMessage : errorMessageList) { %>
+                    <div><%= errorMessage %></div>
+            <%   } %>
+            <% } %>
             <a href="/DietDiary/RegisterServlet?action=display">登録画面へ戻る</a>
         </body>
 

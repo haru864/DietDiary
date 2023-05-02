@@ -38,12 +38,9 @@ public class CheckAccountLogic {
 
         // 性別："men"または"women"
         Gender gender = account.getGender();
-        if (gender == null || gender.getGenderString() == null
-                || gender.getGenderString().equals("men") == false
-                || gender.getGenderString().equals("women") == false) {
-            // Map<String, String> genderError = new HashMap<>();
-            // genderError.put("gender", "性別が不正です。男性または女性を選択してください。");
-            // errorMessageList.add(genderError);
+        if (gender == null
+                || (gender.getGenderString().equals("men") == false
+                        && gender.getGenderString().equals("women") == false)) {
             errorMessageList.add("性別が不正です。男性または女性を選択してください。");
         }
 
@@ -53,24 +50,18 @@ public class CheckAccountLogic {
         LocalDate todayLocalDate = LocalDate.ofInstant(todayDate.toInstant(), ZoneId.systemDefault());
         LocalDate birthLocalDate = LocalDate.ofInstant(birthDate.toInstant(), ZoneId.systemDefault());
         if (Period.between(birthLocalDate, todayLocalDate).getDays() < 0) {
-            // Map<String, String> birthError = new HashMap<>();
-            // birthError.put("birth", "生年月日が不正です。本日よりも前の日付を設定してください。");
-            // errorMessageList.add(birthError);
             errorMessageList.add("生年月日が不正です。本日よりも前の日付を設定してください。");
         }
 
-        // 身長・体重：負数でないこと
+        // 身長・体重・TDEE：負数でないこと
         if (account.getHeight() < 0) {
-            // Map<String, String> heightError = new HashMap<>();
-            // heightError.put("height", "身長が不正です。正数を設定してください。");
-            // errorMessageList.add(heightError);
             errorMessageList.add("身長が不正です。正数を設定してください。");
         }
         if (account.getWeight() < 0) {
-            // Map<String, String> weightError = new HashMap<>();
-            // weightError.put("weight", "体重が不正です。正数を設定してください。");
-            // errorMessageList.add(weightError);
             errorMessageList.add("体重が不正です。正数を設定してください。");
+        }
+        if (account.getWeight() < 0) {
+            errorMessageList.add("TDEEが不正です。性別、身長、体重の設定を見直してください。");
         }
 
         if (errorMessageList.size() > 0) {

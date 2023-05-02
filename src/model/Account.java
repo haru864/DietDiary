@@ -13,18 +13,34 @@ public class Account {
     private final double height;
     private final double weight;
     private final ActivityLevel activityLevel;
-    private final double totalDailyEnergyExpenditure;
+    private double totalDailyEnergyExpenditure;
 
     public Account(String username, String password, String email,
             java.util.Date updated, Gender gender, java.util.Date birth,
             double height, double weight, ActivityLevel activityLevel, double totalDailyEnergyExpenditure)
             throws NullPointerException {
 
-        if (username == null || password == null || email == null
-                || updated == null || gender == null || birth == null) {
-
-            throw new NullPointerException("some parameter of account is null");
-        }
+        // if (username == null) {
+        //     throw new NullPointerException("username of account is null");
+        // }
+        // if (password == null) {
+        //     throw new NullPointerException("password of account is null");
+        // }
+        // if (email == null) {
+        //     throw new NullPointerException("email of account is null");
+        // }
+        // if (updated == null) {
+        //     throw new NullPointerException("updated of account is null");
+        // }
+        // if (gender == null) {
+        //     throw new NullPointerException("gender of account is null");
+        // }
+        // if (birth == null) {
+        //     throw new NullPointerException("birth of account is null");
+        // }
+        // if (activityLevel == null) {
+        //     throw new NullPointerException("activityLevel of account is null");
+        // }
 
         this.username = new String(username);
         this.password = new String(password);
@@ -76,5 +92,9 @@ public class Account {
 
     public double getTotalDailyEnergyExpenditure() {
         return totalDailyEnergyExpenditure;
+    }
+
+    public void setTDEE(double totalDailyEnergyExpenditure) {
+        this.totalDailyEnergyExpenditure = totalDailyEnergyExpenditure;
     }
 }

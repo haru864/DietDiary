@@ -9,6 +9,10 @@ public class CalculateTDEELogic {
 
     public double execute(Date birth, Gender gender, double height, double weight, ActivityLevel activityLevel) {
 
+        if (birth == null || gender == null || activityLevel == null) {
+            return -1.0;
+        }
+
         final LocalDate today = LocalDate.now();
         final LocalDate birthLocalDate = LocalDate.ofInstant(birth.toInstant(), ZoneId.systemDefault());
         final int age = Period.between(birthLocalDate, today).getYears();
