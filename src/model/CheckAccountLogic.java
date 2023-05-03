@@ -5,34 +5,28 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import javax.print.attribute.HashAttributeSet;
 
 public class CheckAccountLogic {
 
+    /**
+     * Accountオブジェクトの登録内容をチェックする
+     * 
+     * @return 設定値が不正な箇所に関するメッセージのList、異常がなければnullを返す
+     */
     public List<String> execute(Account account) {
 
-        // List<Map<String, String>> errorMessageList = new ArrayList<>();
         List<String> errorMessageList = new ArrayList<>();
 
         // ユーザー名：10文字以下、半角英数のみ
         final String username = account.getUsername();
         if (username == null || username.length() > 10 || username.matches(("[a-z0-9]+")) == false) {
-            // Map<String, String> usernameError = new HashMap<>();
-            // usernameError.put("username", "ユーザー名が不正です。10文字以下、半角英数のみとしてください。");
-            // errorMessageList.add(usernameError);
             errorMessageList.add("ユーザー名が不正です。10文字以下、半角英数のみとしてください。");
         }
 
         // パスワード：10文字以下、半角英数記号(空白除く)
         final String password = account.getPassword();
         if (username == null || password.length() > 10 || password.matches(("[a-z0-9\\S]+")) == false) {
-            // Map<String, String> passwordError = new HashMap<>();
-            // passwordError.put("password", "パスワードが不正です。10文字以下、半角英数記号(空白除く)としてください。");
-            // errorMessageList.add(passwordError);
             errorMessageList.add("パスワードが不正です。10文字以下、半角英数記号(空白除く)としてください。");
         }
 
@@ -45,7 +39,7 @@ public class CheckAccountLogic {
         }
 
         // 生年月日：システム日付より前の日付
-        Date todayDate = account.getUpdated();
+        Date todayDate = account.getLastLoginDate();
         Date birthDate = account.getBirth();
         LocalDate todayLocalDate = LocalDate.ofInstant(todayDate.toInstant(), ZoneId.systemDefault());
         LocalDate birthLocalDate = LocalDate.ofInstant(birthDate.toInstant(), ZoneId.systemDefault());

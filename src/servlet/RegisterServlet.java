@@ -1,13 +1,9 @@
 package servlet;
 
 import java.io.IOException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.catalina.tribes.group.interceptors.TwoPhaseCommitInterceptor.MapEntry;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -52,6 +48,7 @@ public class RegisterServlet extends HttpServlet {
 
         String action = req.getParameter("action");
         RequestDispatcher requestDispatcher;
+        HttpSession session = req.getSession(true);
 
         if (action != null && action.equals("register")) {
 
@@ -61,13 +58,13 @@ public class RegisterServlet extends HttpServlet {
                 // 1.username ユーザー入力値を設定
                 // 2.password ユーザー入力値を設定
                 // 3.email ユーザー入力値を設定
-                // 4.updated システム日付を設定
+                // 4.lastUpdated システム日付を設定
                 // 5.gender ユーザー入力値を設定
                 // 6.birth ユーザー入力値を設定
                 // 7.height ユーザー入力値を設定
                 // 8.weight ユーザー入力値を設定
                 // 9.activityLevel ユーザー入力値を設定
-                // 10.totalDailyEnergyExpenditure CalculateCaloriesLogicで算出
+                // 10.TDEE CalculateCaloriesLogicで算出
                 String username = req.getParameter("username");
                 String password = req.getParameter("password");
                 String email = req.getParameter("email");
@@ -112,7 +109,6 @@ public class RegisterServlet extends HttpServlet {
                         gender, birth, height, weight,
                         activityLevel, TDEE);
                 CheckAccountLogic checkAccountLogic = new CheckAccountLogic();
-                HttpSession session = req.getSession(true);
                 var errorMessageList = checkAccountLogic.execute(account);
                 if (errorMessageList != null) {
                     session.setAttribute("errorMessageList", errorMessageList);
@@ -122,11 +118,17 @@ public class RegisterServlet extends HttpServlet {
                 }
 
                 // データベースに登録
-                // RegisterLogic registerLogic = new RegisterLogic();
-                // Boolean isRegisterSuccess = registerLogic.execute(account);
-                // if (isRegisterSuccess == false) {
-                // throw new Exception("account registration failed");
-                // }
+                RegisterLogic registerLogic = new RegisterLogic();
+                Boolean isRegisterSuccess = registerLogic.execute(account);
+                if (isRegisterSuccess == false) {
+                    var list = new ArrayList<>();
+                    list.add("登録済みのユーザー名です。");
+                    session.setAttribute("errorMessageList", list);
+                    requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+                    requestDispatcher.forward(req, resp);
+                    return;
+                }
+                session.setAttribute("username", account.getUsername());
 
                 // マイページ画面にフォワード
                 requestDispatcher = req.getRequestDispatcher(mypageJsp);

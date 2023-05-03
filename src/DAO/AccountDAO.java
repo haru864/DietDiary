@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import com.mysql.cj.log.Log;
+
 import model.Account;
 import model.ActivityLevel;
 import model.Gender;
@@ -33,18 +35,18 @@ public class AccountDAO {
             String username = rs.getString("username");
             String password = rs.getString("password");
             String email = rs.getString("email");
-            Date updated = rs.getDate("updated");
+            Date updated = rs.getDate("last_login_date");
             Gender gender = rs.getString("gender").equals("men") ? Gender.MEN : Gender.WOMEN;
             Date birth = rs.getDate("birth");
             double height = rs.getDouble("height");
             double weight = rs.getDouble("weight");
             int activityLevelNumber = rs.getInt("activity_level");
             ActivityLevel activityLevel = ActivityLevel.getActivityLevelFromInt(activityLevelNumber);
-            double totalDailyEnergyExpenditure = rs.getDouble("total_daily_energy_expenditure");
+            double TDEE = rs.getDouble("tdee");
 
             Account account = new Account(username, password, email,
                     updated, gender, birth,
-                    height, weight, activityLevel, totalDailyEnergyExpenditure);
+                    height, weight, activityLevel, TDEE);
 
             updateLastLoginDate(login);
 
@@ -60,18 +62,21 @@ public class AccountDAO {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
+            // String SQL = "INSERT INTO account VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             String SQL = "INSERT INTO account VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pStmt = conn.prepareStatement(SQL);
             pStmt.setString(1, account.getUsername());
             pStmt.setString(2, account.getPassword());
             pStmt.setString(3, account.getEmail());
-            pStmt.setDate(4, (java.sql.Date) account.getUpdated());
+            Date lastLoginDate = account.getLastLoginDate();
+            pStmt.setDate(4, new java.sql.Date(lastLoginDate.getTime()));
             pStmt.setString(5, account.getGender().getGenderString());
-            pStmt.setDate(6, (java.sql.Date) account.getBirth());
+            Date birthDate = account.getBirth();
+            pStmt.setDate(6, new java.sql.Date(birthDate.getTime()));
             pStmt.setDouble(7, account.getHeight());
             pStmt.setDouble(8, account.getWeight());
             pStmt.setInt(9, account.getActivityLevel().getRegistrationNumber());
-            pStmt.setDouble(10, account.getTotalDailyEnergyExpenditure());
+            pStmt.setDouble(10, account.getTDEE());
 
             int numOfRowsUpdated = 0;
             numOfRowsUpdated = pStmt.executeUpdate();
@@ -84,6 +89,27 @@ public class AccountDAO {
         }
     }
 
+    public Boolean deleteAccount(Account account) throws Exception {
+
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
+
+            String sql = "DELETE  FROM account WHERE username = ?";
+            PreparedStatement pStmt = conn.prepareStatement(sql);
+            pStmt.setString(1, account.getUsername());
+
+            int numOfUpdatedRows = pStmt.executeUpdate();
+            if (numOfUpdatedRows != 1) {
+                throw new Exception("no or more records have been deleted");
+            }
+
+        } catch (Exception e) {
+
+            throw new Exception("delete account failed");
+        }
+
+        return true;
+    }
+
     private Boolean updateLastLoginDate(Login login) throws Exception {
 
         Date currentDate = new Date();
@@ -92,22 +118,22 @@ public class AccountDAO {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
-            String sql = "UPDATE account SET updated = ? WHERE username = ? AND password = ?";
+            String sql = "UPDATE account SET last_login_date = ? WHERE username = ?";
             PreparedStatement pStmt = conn.prepareStatement(sql);
             pStmt.setString(1, currentDateString);
             pStmt.setString(2, login.getUsername());
-            pStmt.setString(3, login.getPassword());
 
             int numOfUpdatedRows = pStmt.executeUpdate();
-            if (numOfUpdatedRows < 1) {
-                throw new Exception("no account to update it's last login date");
+            if (numOfUpdatedRows != 1) {
+                throw new Exception("no or more records have been updated");
             }
 
         } catch (Exception e) {
 
-            throw new Exception(e);
+            throw new Exception("update last_login_date failed");
         }
 
         return true;
     }
+
 }
