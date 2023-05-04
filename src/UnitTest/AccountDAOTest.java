@@ -37,11 +37,9 @@ public class AccountDAOTest {
             e.printStackTrace();
         }
         Account registrableAccount = new Account("test", "pass", "test@sample.com",
-                loginDate, Gender.MEN, birth, 10, 10, ActivityLevel.HARD_EXERCIS, 1000);
+                loginDate, Gender.MEN, birth, 10, 10, ActivityLevel.HARD_EXERCIS);
         Account unregistrableAccount = new Account(null, null, null,
-                null, null, null, 0, 0, null, 0);
-        // System.out.println(registrableAccount.getLastLoginDate());
-        // System.out.println((java.sql.Date) registrableAccount.getLastLoginDate());
+                null, null, null, 0, 0, null);
 
         if (testRegisterAccount(registrableAccount) == true) {
             System.out.println("[PASS] register succeeded");

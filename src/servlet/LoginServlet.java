@@ -46,16 +46,17 @@ public class LoginServlet extends HttpServlet {
             String username = req.getParameter("username");
             String password = req.getParameter("password");
             Login login = new Login(username, password);
+            log("[login]username=" + username + ", password=" + password);
 
             LoginLogic loginLogic = new LoginLogic();
             Boolean isLoginSuccess = loginLogic.execute(login);
 
-            if (!isLoginSuccess) {
-                requestDispatcher = req.getRequestDispatcher(loginErrorJsp);
-            } else {
+            if (isLoginSuccess) {
                 HttpSession session = req.getSession(true);
                 session.setAttribute("username", username);
                 requestDispatcher = req.getRequestDispatcher(mypageJsp);
+            } else {
+                requestDispatcher = req.getRequestDispatcher(loginErrorJsp);
             }
 
         } else {

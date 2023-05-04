@@ -13,11 +13,10 @@ public class Account {
     private final double height;
     private final double weight;
     private final ActivityLevel activityLevel;
-    private double TDEE;
 
     public Account(String username, String password, String email,
             Date lastLoginDate, Gender gender, java.util.Date birth,
-            double height, double weight, ActivityLevel activityLevel, double TDEE) {
+            double height, double weight, ActivityLevel activityLevel) {
 
         this.username = username;
         this.password = password;
@@ -28,7 +27,6 @@ public class Account {
         this.height = height;
         this.weight = weight;
         this.activityLevel = activityLevel;
-        this.TDEE = TDEE;
     }
 
     public String getUsername() {
@@ -67,11 +65,4 @@ public class Account {
         return activityLevel;
     }
 
-    public double getTDEE() {
-        return TDEE;
-    }
-
-    public void setTDEE(double TDEE) {
-        this.TDEE = TDEE;
-    }
 }

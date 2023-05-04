@@ -99,15 +99,10 @@ public class RegisterServlet extends HttpServlet {
                 log("activityLevelNumber=" + activityLevelNumber);
                 log("activityLevel=" + activityLevel);
 
-                // 活動レベルからTDEEを算出
-                CalculateTDEELogic calcTDEE = new CalculateTDEELogic();
-                double TDEE = calcTDEE.execute(birth, gender, height, weight, activityLevel);
-                log("TDEE=" + TDEE);
-
                 // Accountオブジェクトを作成、フィールドの整合性をチェック
                 Account account = new Account(username, password, email, updated,
                         gender, birth, height, weight,
-                        activityLevel, TDEE);
+                        activityLevel);
                 CheckAccountLogic checkAccountLogic = new CheckAccountLogic();
                 var errorMessageList = checkAccountLogic.execute(account);
                 if (errorMessageList != null) {

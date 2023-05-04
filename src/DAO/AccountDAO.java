@@ -7,8 +7,6 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.mysql.cj.log.Log;
-
 import model.Account;
 import model.ActivityLevel;
 import model.Gender;
@@ -24,7 +22,7 @@ public class AccountDAO {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
-            String SQL = "SELECT * FROM account WHERE username = ? AND password = ?";
+            String SQL = "SELECT * FROM accounts WHERE username = ? AND password = ?";
             PreparedStatement pStmt = conn.prepareStatement(SQL);
             pStmt.setString(1, login.getUsername());
             pStmt.setString(2, login.getPassword());
@@ -42,11 +40,10 @@ public class AccountDAO {
             double weight = rs.getDouble("weight");
             int activityLevelNumber = rs.getInt("activity_level");
             ActivityLevel activityLevel = ActivityLevel.getActivityLevelFromInt(activityLevelNumber);
-            double TDEE = rs.getDouble("tdee");
 
             Account account = new Account(username, password, email,
                     updated, gender, birth,
-                    height, weight, activityLevel, TDEE);
+                    height, weight, activityLevel);
 
             updateLastLoginDate(login);
 
@@ -62,8 +59,7 @@ public class AccountDAO {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
-            // String SQL = "INSERT INTO account VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            String SQL = "INSERT INTO account VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String SQL = "INSERT INTO accounts VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pStmt = conn.prepareStatement(SQL);
             pStmt.setString(1, account.getUsername());
             pStmt.setString(2, account.getPassword());
@@ -76,7 +72,6 @@ public class AccountDAO {
             pStmt.setDouble(7, account.getHeight());
             pStmt.setDouble(8, account.getWeight());
             pStmt.setInt(9, account.getActivityLevel().getRegistrationNumber());
-            pStmt.setDouble(10, account.getTDEE());
 
             int numOfRowsUpdated = 0;
             numOfRowsUpdated = pStmt.executeUpdate();
@@ -93,7 +88,7 @@ public class AccountDAO {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
-            String sql = "DELETE  FROM account WHERE username = ?";
+            String sql = "DELETE  FROM accounts WHERE username = ?";
             PreparedStatement pStmt = conn.prepareStatement(sql);
             pStmt.setString(1, account.getUsername());
 
@@ -118,7 +113,7 @@ public class AccountDAO {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
-            String sql = "UPDATE account SET last_login_date = ? WHERE username = ?";
+            String sql = "UPDATE accounts SET last_login_date = ? WHERE username = ?";
             PreparedStatement pStmt = conn.prepareStatement(sql);
             pStmt.setString(1, currentDateString);
             pStmt.setString(2, login.getUsername());

@@ -1,14 +1,14 @@
-# table: account
-create table account (
+# table: accounts
+create table accounts (
     username           varchar(10)           primary key,
     password           varchar(10)           not null,
     email              varchar(50)           not null,
-    updated            date                  not null,
+    last_login_date    date                  not null,
     gender             enum('men','women')   not null,
     birth              date                  not null,
     height             double                not null,
     weight             double                not null,
-    burnedCalories    double                not null
+    activity_level     int                   not null
 );
 
 # user for test
@@ -24,4 +24,42 @@ values (
     72.5,
     1,
     2200.0
+);
+
+# table: nutrition_facts
+create table nutrition_facts (
+    food_name           varchar(256)       not null   primary key,
+    group               varchar(256)       not null,
+    energy              double unsigned    not null,
+    protein             double unsigned    not null,
+    fat                 double unsigned    not null,
+    fiber               double unsigned    not null,
+    carbohydrates       double unsigned    not null,
+    na                  double unsigned    not null,
+    k                   double unsigned    not null,
+    ca                  double unsigned    not null,
+    mg                  double unsigned    not null,
+    p                   double unsigned    not null,
+    fe                  double unsigned    not null,
+    zn                  double unsigned    not null,
+    cu                  double unsigned    not null,
+    mn                  double unsigned    not null,
+    id                  double unsigned    not null,
+    se                  double unsigned    not null,
+    cr                  double unsigned    not null,
+    mo                  double unsigned    not null,
+    vitamin_a           double unsigned    not null,
+    vitamin_d           double unsigned    not null,
+    vitamin_e           double unsigned    not null,
+    vitamin_k           double unsigned    not null,
+    vitamin_b1          double unsigned    not null,
+    vitamin_b2          double unsigned    not null,
+    niacin_equivalent   double unsigned    not null,
+    vitamin_b6          double unsigned    not null,
+    vitamin_b12         double unsigned    not null,
+    folic_acid          double unsigned    not null,
+    pantothenic_acid    double unsigned    not null,
+    biotin              double unsigned    not null,
+    vitamin_c           double unsigned    not null,
+    salt_equivalent     double unsigned    not null
 );
