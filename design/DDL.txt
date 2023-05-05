@@ -29,7 +29,7 @@ values (
 # table: nutrition_facts
 create table nutrition_facts (
     food_name           varchar(256)       not null   primary key,
-    group               varchar(256)       not null,
+    food_group_number   varchar(256)       not null,
     energy              double unsigned    not null,
     protein             double unsigned    not null,
     fat                 double unsigned    not null,
@@ -63,3 +63,5 @@ create table nutrition_facts (
     vitamin_c           double unsigned    not null,
     salt_equivalent     double unsigned    not null
 );
+
+# table: 
