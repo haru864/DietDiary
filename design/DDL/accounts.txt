@@ -63,5 +63,3 @@ create table nutrition_facts (
     vitamin_c           double unsigned    not null,
     salt_equivalent     double unsigned    not null
 );
-
-# table: 

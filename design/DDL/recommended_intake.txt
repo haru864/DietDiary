@@ -1,0 +1,13 @@
+create table recommended_intake (
+    nutrition_name              varchar(256),
+    gender                      enum('men','women'),
+    min_age                     int,
+    max_age                     int,
+    physical_activity_level     int,
+    pregnancy_period            int,
+    breastfeeding               int,
+    recommended_intake          double,
+    upper_limit                 double,
+    primary key (nutrition_name, gender, min_age, max_age, physical_activity_level, pregnancy_period, breastfeeding),
+    foreign key fk_nutrition_name (nutrition_name) references nutrition_units(nutrition_name)
+);

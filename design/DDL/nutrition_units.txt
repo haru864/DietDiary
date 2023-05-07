@@ -1,0 +1,4 @@
+create table nutrition_units (
+    nutrition_name  varchar(256)    not null primary key,
+    unit            varchar(10)     not null
+);

@@ -1,0 +1,56 @@
+LOAD DATA LOCAL INFILE '/usr/libexec/tomcat10/webapps/DietDiary/design/DML/food_group.csv'
+INTO TABLE food_group
+FIELDS
+    TERMINATED BY ','
+LINES
+    TERMINATED BY '\n'
+;
+
+LOAD DATA LOCAL INFILE '/usr/libexec/tomcat10/webapps/DietDiary/design/DML/nutrition_units.csv'
+INTO TABLE nutrition_units
+FIELDS
+    ENCLOSED BY '"'
+    TERMINATED BY ','
+LINES
+    TERMINATED BY '\n'
+;
+
+LOAD DATA LOCAL INFILE '/usr/libexec/tomcat10/webapps/DietDiary/design/DML/nutrition_facts.csv'
+INTO TABLE nutrition_facts
+FIELDS
+    TERMINATED BY ','
+LINES
+    TERMINATED BY '\n'
+SET
+    energy = nullif(energy, 'null'),
+    protein = nullif(protein, 'null'),
+    fat = nullif(fat, 'null'),
+    fiber = nullif(fiber, 'null'),
+    carbohydrates = nullif(carbohydrates, 'null'),
+    vitamin_a = nullif(vitamin_a, 'null'),
+    vitamin_b1 = nullif(vitamin_b1, 'null'),
+    vitamin_b2 = nullif(vitamin_b2, 'null'),
+    vitamin_b6 = nullif(vitamin_b6, 'null'),
+    vitamin_b12 = nullif(vitamin_b12, 'null'),
+    vitamin_c = nullif(vitamin_c, 'null'),
+    vitamin_d = nullif(vitamin_d, 'null'),
+    vitamin_e = nullif(vitamin_e, 'null'),
+    vitamin_k = nullif(vitamin_k, 'null'),
+    niacin_equivalent = nullif(niacin_equivalent, 'null'),
+    folic_acid = nullif(folic_acid, 'null'),
+    pantothenic_acid = nullif(pantothenic_acid, 'null'),
+    biotin = nullif(biotin, 'null'),
+    na = nullif(na, 'null'),
+    k = nullif(k, 'null'),
+    ca = nullif(ca, 'null'),
+    mg = nullif(mg, 'null'),
+    p = nullif(p, 'null'),
+    fe = nullif(fe, 'null'),
+    zn = nullif(zn, 'null'),
+    cu = nullif(cu, 'null'),
+    mn = nullif(mn, 'null'),
+    id = nullif(id, 'null'),
+    se = nullif(se, 'null'),
+    cr = nullif(cr, 'null'),
+    mo = nullif(mo, 'null')
+;

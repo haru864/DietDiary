@@ -1,0 +1,4 @@
+create table food_group (
+    food_group_number   int             NOT NULL PRIMARY KEY,
+    food_group_name	    varchar(256)    unique  not null
+);

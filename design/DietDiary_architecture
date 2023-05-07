@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-05T16:18:15.678Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="DMuUg3t10NKqOLNXfWHc" version="21.2.9" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-05-07T08:34:50.249Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="vW6gVg84_ja-rzYdyPnD" version="21.2.9" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -475,6 +475,12 @@
         </mxCell>
         <mxCell id="hn9-qHdOzcdeAvWz7wPk-12" value="action=register&lt;br&gt;page=dietRecord" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" parent="1" vertex="1">
           <mxGeometry x="2350" y="354" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="yLVgH8BT-74q1l7Diu2N-1" value="一定期間ログインしていないユーザーを定期処理でDBから削除したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="510" y="55" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="F5xzy9uc1psjQ421CndE-1" value="妊娠、授乳の有無による摂取推奨量の変更は後で機能追加する" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="2790" y="45" width="250" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -1041,10 +1047,10 @@
         <mxCell id="W21b2PF4HKjcA6cmdrB5-2" value="action=register&lt;br&gt;page=dietRecord" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" parent="1" vertex="1">
           <mxGeometry x="-320" y="579" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="amI3u3joHIaxh1MfxfvE-1" value="活動レベルによって推奨値が変わるのは一部のみ。&lt;br&gt;月経や妊娠の有無で推奨量が変わるものもあるので、&lt;br&gt;成分別にテーブルを作成したほうが良い。&lt;br&gt;(1)ユーザーの摂取量&lt;br&gt;　⇨テーブル1つに全成分の摂取量を記録する&lt;br&gt;　⇨user_intake&lt;br&gt;(2)食品ごとの栄養&lt;br&gt;　⇨テーブル1つで管理&lt;br&gt;　⇨nutrition_facts, nutrition_group&lt;br&gt;(3)推奨摂取量&lt;br&gt;　⇨栄養素ごとにテーブルを作成して管理する&lt;br&gt;　⇨recommended_intake_XX" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#f8cecc;strokeColor=#b85450;align=left;" vertex="1" parent="1">
+        <mxCell id="amI3u3joHIaxh1MfxfvE-1" value="活動レベルによって推奨値が変わるのは一部のみ。&lt;br&gt;月経や妊娠の有無で推奨量が変わるものもあるので、&lt;br&gt;成分別にテーブルを作成したほうが良い。&lt;br&gt;(1)ユーザーの摂取量&lt;br&gt;　⇨テーブル1つに全成分の摂取量を記録する&lt;br&gt;　⇨user_intake&lt;br&gt;(2)食品ごとの栄養&lt;br&gt;　⇨テーブル1つで管理&lt;br&gt;　⇨nutrition_facts, nutrition_group&lt;br&gt;(3)推奨摂取量&lt;br&gt;　⇨栄養素ごとにテーブルを作成して管理する&lt;br&gt;　⇨recommended_intake_XX" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#f8cecc;strokeColor=#b85450;align=left;" parent="1" vertex="1">
           <mxGeometry x="280" y="350" width="320" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="amI3u3joHIaxh1MfxfvE-2" value="&lt;div&gt;身体活動レベルは低い，ふつう，高いの3つのレベル&lt;/div&gt;&lt;div&gt;「ふつう」の内容 ： 座り仕事中心だが、一部は立って作業・接客、あるいは通勤・買物・家事、また軽いスポーツをするなど、いずれかを含む生活&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+        <mxCell id="amI3u3joHIaxh1MfxfvE-2" value="&lt;div&gt;身体活動レベルは低い，ふつう，高いの3つのレベル&lt;/div&gt;&lt;div&gt;「ふつう」の内容 ： 座り仕事中心だが、一部は立って作業・接客、あるいは通勤・買物・家事、また軽いスポーツをするなど、いずれかを含む生活&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" parent="1" vertex="1">
           <mxGeometry x="-270" y="150" width="310" height="130" as="geometry" />
         </mxCell>
       </root>
