@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-07T08:34:50.249Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="vW6gVg84_ja-rzYdyPnD" version="21.2.9" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-05-07T15:08:12.026Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="D83-KUVjDtG5-Mg-6Qmo" version="21.2.9" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -313,7 +313,7 @@
         <mxCell id="V1EqbFkyiiF36Y8cbw8S-11" value="dietRecord.jsp" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="2020" y="305" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="V1EqbFkyiiF36Y8cbw8S-12" value="calender.jsp" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+        <mxCell id="V1EqbFkyiiF36Y8cbw8S-12" value="diary.jsp" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="2437" y="125" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="V1EqbFkyiiF36Y8cbw8S-13" value="MypageServlet" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
@@ -479,8 +479,8 @@
         <mxCell id="yLVgH8BT-74q1l7Diu2N-1" value="一定期間ログインしていないユーザーを定期処理でDBから削除したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="510" y="55" width="220" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="F5xzy9uc1psjQ421CndE-1" value="妊娠、授乳の有無による摂取推奨量の変更は後で機能追加する" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="2790" y="45" width="250" height="80" as="geometry" />
+        <mxCell id="F5xzy9uc1psjQ421CndE-1" value="妊娠、授乳の有無による摂取推奨量の変更は後で機能追加する" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="2790" y="45" width="270" height="145" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

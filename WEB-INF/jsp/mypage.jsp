@@ -11,8 +11,9 @@
         <body>
             <div>ようこそ、<%= username %>さん</div>
             <div>
-                <form action="/DietDiary/MypageServlet" method="post" id="go_to_mypage">
+                <form action="/DietDiary/MypageServlet" method="post" id="go_to_calender">
                     <button>カレンダーへ</button>
+                    <input type="hidden" name="action" value="display">
                     <input type="hidden" name="page" value="calender">
                 </form>
             </div>
