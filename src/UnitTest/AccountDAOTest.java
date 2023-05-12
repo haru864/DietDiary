@@ -3,16 +3,20 @@ package UnitTest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.tomcat.util.buf.UDecoder;
+
 import DAO.AccountDAO;
 import model.Account;
 import model.ActivityLevel;
 import model.Gender;
 import model.Login;
+import model.UserIntake;
 
 public class AccountDAOTest {
 
     public static void main(String[] args) {
 
+        // ログイン処理をテスト
         Login loginExist = new Login("user", "pass");
         Login loginNotExist = new Login("userBoy", "pass");
 
@@ -28,6 +32,7 @@ public class AccountDAOTest {
             System.out.println("[FAILURE] unregistered login succeeded");
         }
 
+        // ユーザー登録処理をテスト
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date loginDate = new Date();
         Date birth = null;
@@ -55,6 +60,10 @@ public class AccountDAOTest {
         } else {
             System.out.println("[FAILURE] unauthorized register succeeded");
         }
+
+        // 栄養摂取量の集計・登録・削除処理をテスト
+        UserIntake userIntakeRight = new UserIntake("user", new Date(), 1, 1);
+
     }
 
     private static Boolean testFindByLogin(Login login) {
@@ -87,4 +96,17 @@ public class AccountDAOTest {
         }
         return isDeleted;
     }
+
+    private static Boolean testAggregateNutritionalIntake(String username, Date intakeDietDate) {
+
+    }
+
+    private static Boolean testRecordNutritionalIntake(UserIntake userIntake) {
+
+    }
+
+    private static Boolean testDeleteNutritionalIntake(UserIntake userIntake) {
+
+    }
+
 }
