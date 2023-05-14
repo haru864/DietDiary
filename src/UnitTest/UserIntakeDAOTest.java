@@ -26,31 +26,30 @@ public class UserIntakeDAOTest {
 
             System.out.println("[PASS] recording nutrition succeeded");
 
+            int numOfDiets = 0;
             try {
-                int numOfDiets = testGetNumOfDiets("test", new Date());
+                numOfDiets = testGetNumOfDietsRegistered("test", new Date());
                 System.out.println("number of records in user_intake: " + numOfDiets);
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-            if (testAggregateNutritionalIntake(userIntake01.username, userIntake01.intakeDietDate)
-                    && testAggregateNutritionalIntake(userIntake02.username, userIntake02.intakeDietDate)
-                    && testAggregateNutritionalIntake(userIntake03.username, userIntake03.intakeDietDate)) {
-                System.out.println("[PASS] aggregating nutrition intake succeeded");
-            } else {
-                System.out.println("[FAILURE] aggregating nutrition intake failed");
-            }
+            for (int i = 0; i < numOfDiets; i++) {
 
-            if (testDeleteNutritionalIntake(userIntake01)
-                    && testDeleteNutritionalIntake(userIntake02)
-                    && testDeleteNutritionalIntake(userIntake03)) {
-                System.out.println("[PASS] userIntake data deleted");
-            } else {
-                System.out.println("[FAILURE] userIntake data failed");
+                var nutritionalIntakeMap = testGetSpecifiedNumberDiet(userIntake01.username,
+                        userIntake01.intakeDietDate, i + 1);
+                // System.out.println(nutritionalIntakeMap);
+
+                if (testDeleteNutritionalIntake(userIntake01.username, userIntake01.intakeDietDate, i + 1)) {
+                    System.out.printf("[PASS] %dth userIntake data deleted\n", i + 1);
+                } else {
+                    System.out.printf("[FAILURE] %dth userIntake data NOT deleted\n", i + 1);
+                }
+
             }
 
             try {
-                int numOfDiets = testGetNumOfDiets("test", new Date());
+                numOfDiets = testGetNumOfDietsRegistered("test", new Date());
                 System.out.println("number of records in user_intake: " + numOfDiets);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -61,18 +60,6 @@ public class UserIntakeDAOTest {
             System.out.println("[FAILURE] recording nutrition failed");
         }
 
-    }
-
-    private static Boolean testAggregateNutritionalIntake(String username, Date intakeDietDate) {
-
-        UserIntakeDAO UserIntakeDAO = new UserIntakeDAO();
-        Map<String, Double> map;
-        try {
-            map = UserIntakeDAO.aggregateNutritionalIntake(username, intakeDietDate);
-        } catch (Exception e) {
-            return false;
-        }
-        return map != null;
     }
 
     private static Boolean testRecordNutritionalIntake(UserIntake userIntake) {
@@ -87,12 +74,12 @@ public class UserIntakeDAOTest {
         return isSuccess;
     }
 
-    private static Boolean testDeleteNutritionalIntake(UserIntake userIntake) {
+    private static Boolean testDeleteNutritionalIntake(String username, Date intakeDietDate, int dietNumber) {
 
         UserIntakeDAO UserIntakeDAO = new UserIntakeDAO();
         Boolean isSuccess;
         try {
-            isSuccess = UserIntakeDAO.deleteNutritionalIntake(userIntake);
+            isSuccess = UserIntakeDAO.deleteNutritionalIntake(username, intakeDietDate, dietNumber);
         } catch (Exception e) {
             return false;
         }
@@ -144,10 +131,18 @@ public class UserIntakeDAOTest {
         return Math.floor(randomDouble);
     }
 
-    private static int testGetNumOfDiets(String username, Date date) throws Exception {
+    private static int testGetNumOfDietsRegistered(String username, Date date) throws Exception {
 
         UserIntakeDAO UserIntakeDAO = new DAO.UserIntakeDAO();
-        int numOfDiets = UserIntakeDAO.getNumOfDiets(username, date);
+        int numOfDiets = UserIntakeDAO.getNumOfDietsRegistered(username, date);
         return numOfDiets;
     }
+
+    private static Map<String, Double> testGetSpecifiedNumberDiet(String username, Date intakeDietDate,
+            int dietNumber) {
+
+        UserIntakeDAO UserIntakeDAO = new DAO.UserIntakeDAO();
+        return UserIntakeDAO.getSpecifiedNumberDiet(username, intakeDietDate, dietNumber);
+    }
+
 }

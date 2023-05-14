@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-13T13:49:35.525Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="-FXGEvFO-wqCpuTqej0M" version="21.3.0" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-05-14T11:35:56.595Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="E8nba3pPPJjYReteSQHA" version="21.3.0" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -312,7 +312,7 @@
         <mxCell id="V1EqbFkyiiF36Y8cbw8S-12" value="diary.jsp" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="2648" y="125" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YEbDIqLyABHwTQ2ZvWIm-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="V1EqbFkyiiF36Y8cbw8S-13" target="YEbDIqLyABHwTQ2ZvWIm-1">
+        <mxCell id="YEbDIqLyABHwTQ2ZvWIm-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="V1EqbFkyiiF36Y8cbw8S-13" target="YEbDIqLyABHwTQ2ZvWIm-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="V1EqbFkyiiF36Y8cbw8S-13" value="MypageServlet" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
@@ -469,19 +469,19 @@
         <mxCell id="yLVgH8BT-74q1l7Diu2N-1" value="一定期間ログインしていないユーザーを定期処理でDBから削除したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="510" y="55" width="220" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="F5xzy9uc1psjQ421CndE-1" value="妊娠、授乳の有無を選択できるようにする&lt;br&gt;&lt;br&gt;写真をアプロードできるようにする" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+        <mxCell id="F5xzy9uc1psjQ421CndE-1" value="妊娠、授乳の有無を選択できるようにする&lt;br&gt;&lt;br&gt;写真をアプロードできるようにする&lt;br&gt;&lt;br&gt;栄養摂取量だけでなく、食事内容も表示できるようにする" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2830" y="-40" width="270" height="145" as="geometry" />
         </mxCell>
         <mxCell id="PtXKcQ7b7NiJiBekQcDX-1" value="食事が記録してある日のセルに色をつけて表示したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2110" y="-60" width="234" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="YEbDIqLyABHwTQ2ZvWIm-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YEbDIqLyABHwTQ2ZvWIm-1" target="V1EqbFkyiiF36Y8cbw8S-12">
+        <mxCell id="YEbDIqLyABHwTQ2ZvWIm-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="YEbDIqLyABHwTQ2ZvWIm-1" target="V1EqbFkyiiF36Y8cbw8S-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YEbDIqLyABHwTQ2ZvWIm-1" value="DiaryLogic" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="YEbDIqLyABHwTQ2ZvWIm-1" value="DiaryLogic" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="2451" y="125" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YEbDIqLyABHwTQ2ZvWIm-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="F7Vc8ZFNlc0AgKW0ZdvA-8" target="hn9-qHdOzcdeAvWz7wPk-11">
+        <mxCell id="YEbDIqLyABHwTQ2ZvWIm-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="F7Vc8ZFNlc0AgKW0ZdvA-8" target="hn9-qHdOzcdeAvWz7wPk-11" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="2894" y="240" />
@@ -494,6 +494,9 @@
         </mxCell>
         <mxCell id="hn9-qHdOzcdeAvWz7wPk-11" value="action=display&lt;br&gt;page=dietRecord" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" parent="1" vertex="1">
           <mxGeometry x="2680" y="240" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="adUW8EdYDnNfrDUWuIO9-1" value="DBに登録された食品から選択するだけでなく、摂取した栄養を直接入力できるモードも用意したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="2780" y="306.5" width="220" height="153.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

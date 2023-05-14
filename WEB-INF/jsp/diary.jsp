@@ -1,9 +1,10 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<!-- <%@ page contentType="text/html;charset=UTF-8" %>
 <% String username = (String)session.getAttribute("username"); %>
 <% String year = (String)session.getAttribute("year"); %>
 <% String month = (String)session.getAttribute("month"); %>
 <% String day = (String)session.getAttribute("day"); %>
-<% String day = (String)session.getAttribute("day"); %>
+<% Map<String, Double> nutritionalIntake = (Map<String, Double>)session.getAttribute("nutritional_intake"); %>
+<% List<UserIntake> userIntake = (List<UserIntake>)session.getAttribute("diet_list"); %> -->
 <!DOCTYPE html>
 <html>
 

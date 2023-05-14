@@ -2,7 +2,7 @@ package model;
 
 import java.util.Date;
 
-public class UserIntake {
+public class UserIntake implements Comparable<UserIntake> {
 
     public String username;
     public Date intakeDietDate;
@@ -45,6 +45,12 @@ public class UserIntake {
         this.intakeDietDate = intakeDietDate;
         this.dietNumber = dietNumber;
         this.physicalActivityLevel = physicalActivityLevel;
+    }
+
+    @Override
+    public int compareTo(UserIntake userIntake) {
+
+        return this.dietNumber - userIntake.dietNumber;
     }
 
 }

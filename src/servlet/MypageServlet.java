@@ -44,7 +44,7 @@ public class MypageServlet extends HttpServlet {
         } else if (action.equals("display") && page.equals("diary")) {
 
             DiaryLogic diaryLogic = new DiaryLogic();
-            Boolean isSuccess = diaryLogic.execute(req);
+            Boolean isSuccess = diaryLogic.setDietInfoToSession(req);
 
             if (!isSuccess) {
                 requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);

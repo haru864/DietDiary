@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import exception.LogException;
+import model.NutritionList;
 import model.UserIntake;
 
 public class UserIntakeDAO {
@@ -15,78 +17,6 @@ public class UserIntakeDAO {
     private final String DB_URL = "jdbc:mysql://localhost:3306/DietDiary";
     private final String DB_USER = "admin";
     private final String DB_PASS = "4dm1n";
-
-    public Map<String, Double> aggregateNutritionalIntake(String username, Date intakeDietDate) {
-
-        Map<String, Double> nutritionalIntakeMap = new HashMap<>();
-
-        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
-
-            String sql = "SELECT * FROM user_intake WHERE username = ? AND intake_diet_date = ?";
-            PreparedStatement pStmt = conn.prepareStatement(sql);
-            pStmt.setString(1, username);
-            pStmt.setDate(2, new java.sql.Date(intakeDietDate.getTime()));
-            ResultSet rs = pStmt.executeQuery();
-
-            while (rs.next()) {
-                nutritionalIntakeMap.put("energy",
-                        nutritionalIntakeMap.getOrDefault("energy", 0.0) + rs.getDouble("energy"));
-                nutritionalIntakeMap.put("protein",
-                        nutritionalIntakeMap.getOrDefault("protein", 0.0) + rs.getDouble("protein"));
-                nutritionalIntakeMap.put("fat", nutritionalIntakeMap.getOrDefault("fat", 0.0) + rs.getDouble("fat"));
-                nutritionalIntakeMap.put("fiber",
-                        nutritionalIntakeMap.getOrDefault("fiber", 0.0) + rs.getDouble("fiber"));
-                nutritionalIntakeMap.put("carbohydrates",
-                        nutritionalIntakeMap.getOrDefault("carbohydrates", 0.0) + rs.getDouble("carbohydrates"));
-                nutritionalIntakeMap.put("vitamin_a",
-                        nutritionalIntakeMap.getOrDefault("vitamin_a", 0.0) + rs.getDouble("vitamin_a"));
-                nutritionalIntakeMap.put("vitamin_b1",
-                        nutritionalIntakeMap.getOrDefault("vitamin_b1", 0.0) + rs.getDouble("vitamin_b1"));
-                nutritionalIntakeMap.put("vitamin_b2",
-                        nutritionalIntakeMap.getOrDefault("vitamin_b2", 0.0) + rs.getDouble("vitamin_b2"));
-                nutritionalIntakeMap.put("vitamin_b6",
-                        nutritionalIntakeMap.getOrDefault("vitamin_b6", 0.0) + rs.getDouble("vitamin_b6"));
-                nutritionalIntakeMap.put("vitamin_b12",
-                        nutritionalIntakeMap.getOrDefault("vitamin_b12", 0.0) + rs.getDouble("vitamin_b12"));
-                nutritionalIntakeMap.put("vitamin_c",
-                        nutritionalIntakeMap.getOrDefault("vitamin_c", 0.0) + rs.getDouble("vitamin_c"));
-                nutritionalIntakeMap.put("vitamin_d",
-                        nutritionalIntakeMap.getOrDefault("vitamin_d", 0.0) + rs.getDouble("vitamin_d"));
-                nutritionalIntakeMap.put("vitamin_e",
-                        nutritionalIntakeMap.getOrDefault("vitamin_e", 0.0) + rs.getDouble("vitamin_e"));
-                nutritionalIntakeMap.put("vitamin_k",
-                        nutritionalIntakeMap.getOrDefault("vitamin_k", 0.0) + rs.getDouble("vitamin_k"));
-                nutritionalIntakeMap.put("niacin_equivalent",
-                        nutritionalIntakeMap.getOrDefault("niacin_equivalent", 0.0)
-                                + rs.getDouble("niacin_equivalent"));
-                nutritionalIntakeMap.put("folic_acid",
-                        nutritionalIntakeMap.getOrDefault("folic_acid", 0.0) + rs.getDouble("folic_acid"));
-                nutritionalIntakeMap.put("pantothenic_acid",
-                        nutritionalIntakeMap.getOrDefault("pantothenic_acid", 0.0) + rs.getDouble("pantothenic_acid"));
-                nutritionalIntakeMap.put("biotin",
-                        nutritionalIntakeMap.getOrDefault("biotin", 0.0) + rs.getDouble("biotin"));
-                nutritionalIntakeMap.put("na", nutritionalIntakeMap.getOrDefault("na", 0.0) + rs.getDouble("na"));
-                nutritionalIntakeMap.put("k", nutritionalIntakeMap.getOrDefault("k", 0.0) + rs.getDouble("k"));
-                nutritionalIntakeMap.put("ca", nutritionalIntakeMap.getOrDefault("ca", 0.0) + rs.getDouble("ca"));
-                nutritionalIntakeMap.put("mg", nutritionalIntakeMap.getOrDefault("mg", 0.0) + rs.getDouble("mg"));
-                nutritionalIntakeMap.put("p", nutritionalIntakeMap.getOrDefault("p", 0.0) + rs.getDouble("p"));
-                nutritionalIntakeMap.put("fe", nutritionalIntakeMap.getOrDefault("fe", 0.0) + rs.getDouble("fe"));
-                nutritionalIntakeMap.put("zn", nutritionalIntakeMap.getOrDefault("zn", 0.0) + rs.getDouble("zn"));
-                nutritionalIntakeMap.put("cu", nutritionalIntakeMap.getOrDefault("cu", 0.0) + rs.getDouble("cu"));
-                nutritionalIntakeMap.put("mn", nutritionalIntakeMap.getOrDefault("mn", 0.0) + rs.getDouble("mn"));
-                nutritionalIntakeMap.put("id", nutritionalIntakeMap.getOrDefault("id", 0.0) + rs.getDouble("id"));
-                nutritionalIntakeMap.put("se", nutritionalIntakeMap.getOrDefault("se", 0.0) + rs.getDouble("se"));
-                nutritionalIntakeMap.put("cr", nutritionalIntakeMap.getOrDefault("cr", 0.0) + rs.getDouble("cr"));
-                nutritionalIntakeMap.put("mo", nutritionalIntakeMap.getOrDefault("mo", 0.0) + rs.getDouble("mo"));
-            }
-
-        } catch (Exception e) {
-
-            return null;
-        }
-
-        return nutritionalIntakeMap;
-    }
 
     public boolean recordNutritionalIntake(UserIntake userIntake) {
 
@@ -148,15 +78,15 @@ public class UserIntakeDAO {
         return true;
     }
 
-    public boolean deleteNutritionalIntake(UserIntake userIntake) {
+    public boolean deleteNutritionalIntake(String username, Date intakeDietDate, int dietNumber) {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
             String sql = "DELETE FROM user_intake WHERE username = ? AND intake_diet_date = ? AND diet_number = ?";
             PreparedStatement pStmt = conn.prepareStatement(sql);
-            pStmt.setString(1, userIntake.username);
-            pStmt.setDate(2, new java.sql.Date(userIntake.intakeDietDate.getTime()));
-            pStmt.setInt(3, userIntake.dietNumber);
+            pStmt.setString(1, username);
+            pStmt.setDate(2, new java.sql.Date(intakeDietDate.getTime()));
+            pStmt.setInt(3, dietNumber);
 
             int numOfUpdatedRows = pStmt.executeUpdate();
             if (numOfUpdatedRows != 1) {
@@ -171,7 +101,7 @@ public class UserIntakeDAO {
         return true;
     }
 
-    public int getNumOfDiets(String username, Date date) throws Exception {
+    public int getNumOfDietsRegistered(String username, Date date) throws Exception {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
@@ -190,6 +120,35 @@ public class UserIntakeDAO {
 
             throw new Exception(e);
         }
+    }
+
+    public Map<String, Double> getSpecifiedNumberDiet(String username, Date intakeDietDate, int dietNumber) {
+
+        Map<String, Double> nutritionalIntakeMap = new HashMap<>();
+
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
+
+            String sql = "SELECT * FROM user_intake WHERE username = ? AND intake_diet_date = ? AND diet_number = ? ";
+            PreparedStatement pStmt = conn.prepareStatement(sql);
+            pStmt.setString(1, username);
+            pStmt.setDate(2, new java.sql.Date(intakeDietDate.getTime()));
+            pStmt.setInt(3, dietNumber);
+
+            ResultSet rs = pStmt.executeQuery();
+            rs.next();
+
+            for (int i = 0; i < NutritionList.NUTRITION_LIST.size(); i++) {
+                String nutritionName = NutritionList.NUTRITION_LIST.get(i);
+                nutritionalIntakeMap.put(nutritionName, rs.getDouble(nutritionName));
+            }
+
+        } catch (Exception e) {
+
+            LogException.writeErrorMsgToFile(e);
+            return null;
+        }
+
+        return nutritionalIntakeMap;
     }
 
 }
