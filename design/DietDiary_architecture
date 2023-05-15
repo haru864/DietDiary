@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-14T11:35:56.595Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="E8nba3pPPJjYReteSQHA" version="21.3.0" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-05-15T14:29:28.494Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="AUAIN7tpRQzcC7lcPa4o" version="21.3.0" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -495,8 +495,11 @@
         <mxCell id="hn9-qHdOzcdeAvWz7wPk-11" value="action=display&lt;br&gt;page=dietRecord" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" parent="1" vertex="1">
           <mxGeometry x="2680" y="240" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="adUW8EdYDnNfrDUWuIO9-1" value="DBに登録された食品から選択するだけでなく、摂取した栄養を直接入力できるモードも用意したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="adUW8EdYDnNfrDUWuIO9-1" value="DBに登録された食品から選択するだけでなく、摂取した栄養を直接入力できるモードも用意したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2780" y="306.5" width="220" height="153.5" as="geometry" />
+        </mxCell>
+        <mxCell id="3xfaWBao8sKOb0TL2-zc-1" value="Log4J使ってservletを継承していないクラスでもログ出力ができるようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="-32.5" width="234" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

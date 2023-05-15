@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Random;
 
 import DAO.UserIntakeDAO;
+import debug.Debugger;
 import model.UserIntake;
 
 public class UserIntakeDAOTest {
@@ -39,6 +40,7 @@ public class UserIntakeDAOTest {
                 var nutritionalIntakeMap = testGetSpecifiedNumberDiet(userIntake01.username,
                         userIntake01.intakeDietDate, i + 1);
                 // System.out.println(nutritionalIntakeMap);
+                Debugger.writeObjectToFile(nutritionalIntakeMap, "UserIntakeTest.class");
 
                 if (testDeleteNutritionalIntake(userIntake01.username, userIntake01.intakeDietDate, i + 1)) {
                     System.out.printf("[PASS] %dth userIntake data deleted\n", i + 1);

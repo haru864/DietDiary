@@ -13,8 +13,7 @@
 
 <body>
     <div>
-        <!-- <% for (int i=0; i < N; i++) { %>
-        <% } %> -->
+        実装中
     </div>
     <div>
         <form action="/DietDiary/MypageServlet" method="post" id="go_to_mypage">

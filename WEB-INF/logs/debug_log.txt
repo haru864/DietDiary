@@ -1,0 +1,24 @@
+[DATE] Mon May 15 18:24:24 JST 2023
+[message] UserIntakeTest.class
+{pantothenic_acid=5.0, niacin_equivalent=9.0, se=2.0, vitamin_b2=9.0, protein=3.0, vitamin_b1=1.0, fat=8.0, mg=6.0, id=8.0, ca=1.0, energy=6.0, carbohydrates=5.0, mn=7.0, fiber=7.0, mo=2.0, vitamin_a=8.0, vitamin_c=1.0, vitamin_d=4.0, biotin=3.0, vitamin_e=2.0, vitamin_b6=7.0, folic_acid=5.0, k=5.0, vitamin_k=1.0, cr=6.0, p=4.0, cu=9.0, na=8.0, zn=7.0, vitamin_b12=9.0, fe=7.0}
+----------------------------------------------------
+[DATE] Mon May 15 18:24:24 JST 2023
+[message] UserIntakeTest.class
+{pantothenic_acid=3.0, niacin_equivalent=7.0, se=5.0, vitamin_b2=5.0, protein=3.0, vitamin_b1=1.0, fat=1.0, mg=6.0, id=6.0, ca=6.0, energy=6.0, carbohydrates=6.0, mn=8.0, fiber=3.0, mo=6.0, vitamin_a=3.0, vitamin_c=7.0, vitamin_d=5.0, biotin=2.0, vitamin_e=2.0, vitamin_b6=8.0, folic_acid=2.0, k=8.0, vitamin_k=4.0, cr=7.0, p=2.0, cu=6.0, na=4.0, zn=1.0, vitamin_b12=9.0, fe=4.0}
+----------------------------------------------------
+[DATE] Mon May 15 18:24:24 JST 2023
+[message] UserIntakeTest.class
+{pantothenic_acid=5.0, niacin_equivalent=3.0, se=7.0, vitamin_b2=5.0, protein=3.0, vitamin_b1=8.0, fat=1.0, mg=4.0, id=2.0, ca=6.0, energy=9.0, carbohydrates=8.0, mn=2.0, fiber=5.0, mo=7.0, vitamin_a=4.0, vitamin_c=3.0, vitamin_d=9.0, biotin=6.0, vitamin_e=2.0, vitamin_b6=1.0, folic_acid=7.0, k=1.0, vitamin_k=1.0, cr=7.0, p=6.0, cu=2.0, na=1.0, zn=8.0, vitamin_b12=7.0, fe=2.0}
+----------------------------------------------------
+[DATE] Mon May 15 18:24:38 JST 2023
+[message] UserIntakeTest.class
+{pantothenic_acid=8.0, niacin_equivalent=4.0, se=6.0, vitamin_b2=7.0, protein=8.0, vitamin_b1=1.0, fat=9.0, mg=3.0, id=8.0, ca=9.0, energy=2.0, carbohydrates=3.0, mn=8.0, fiber=5.0, mo=3.0, vitamin_a=9.0, vitamin_c=8.0, vitamin_d=3.0, biotin=7.0, vitamin_e=2.0, vitamin_b6=3.0, folic_acid=1.0, k=6.0, vitamin_k=2.0, cr=5.0, p=9.0, cu=3.0, na=6.0, zn=2.0, vitamin_b12=3.0, fe=3.0}
+----------------------------------------------------
+[DATE] Mon May 15 18:24:38 JST 2023
+[message] UserIntakeTest.class
+{pantothenic_acid=3.0, niacin_equivalent=6.0, se=2.0, vitamin_b2=2.0, protein=3.0, vitamin_b1=1.0, fat=8.0, mg=8.0, id=7.0, ca=1.0, energy=7.0, carbohydrates=1.0, mn=9.0, fiber=4.0, mo=7.0, vitamin_a=6.0, vitamin_c=2.0, vitamin_d=7.0, biotin=3.0, vitamin_e=5.0, vitamin_b6=9.0, folic_acid=8.0, k=6.0, vitamin_k=2.0, cr=8.0, p=7.0, cu=8.0, na=5.0, zn=3.0, vitamin_b12=4.0, fe=1.0}
+----------------------------------------------------
+[DATE] Mon May 15 18:24:38 JST 2023
+[message] UserIntakeTest.class
+{pantothenic_acid=4.0, niacin_equivalent=6.0, se=1.0, vitamin_b2=4.0, protein=9.0, vitamin_b1=4.0, fat=2.0, mg=4.0, id=8.0, ca=1.0, energy=5.0, carbohydrates=1.0, mn=8.0, fiber=7.0, mo=8.0, vitamin_a=4.0, vitamin_c=9.0, vitamin_d=8.0, biotin=7.0, vitamin_e=8.0, vitamin_b6=7.0, folic_acid=6.0, k=7.0, vitamin_k=1.0, cr=3.0, p=3.0, cu=9.0, na=1.0, zn=3.0, vitamin_b12=9.0, fe=6.0}
+----------------------------------------------------
