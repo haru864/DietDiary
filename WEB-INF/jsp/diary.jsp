@@ -2,6 +2,9 @@
 <%@ page import="java.util.Map" %>
 <%@ page import="java.util.List" %>
 <% String username = (String)session.getAttribute("username"); %>
+<% String genderKanji = (String)session.getAttribute("gender"); %>
+<% int age = (Integer)session.getAttribute("age"); %>
+<% int activityLevel = (Integer)session.getAttribute("activity_level"); %>
 <% String year = (String)session.getAttribute("year"); %>
 <% String month = (String)session.getAttribute("month"); %>
 <% String day = (String)session.getAttribute("day"); %>
@@ -23,14 +26,14 @@
     <div>
         <p>栄養摂取量(トータル)</p>
         <% if (totalNutritionalIntakeMap != null) { %>
-            <% for (String nutritionName : totalNutritionalIntakeMap.keySet()) { %>
-                <div>
-                    <%= nutritionName %>: <%= totalNutritionalIntakeMap.get(nutritionName) %>
-                </div>
-            <% } %>
+            <%= totalNutritionalIntakeMap %>
         <% } else { %>
             <p>--食事内容が登録されていません--</p>
         <% } %>
+    </div>
+    <div>
+        <p>推奨摂取量</p>
+        <p>性別：<%= genderKanji %>, 年齢：<%= age %>歳, 活動レベル：<%= activityLevel %></p>
     </div>
     <div>
         <p>栄養摂取量(食事別)</p>

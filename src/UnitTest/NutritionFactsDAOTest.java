@@ -19,7 +19,6 @@ public class NutritionFactsDAOTest {
         }
 
         showFailedCases(failedCasesList);
-
     }
 
     private static void showFailedCases(List<String> failedCasesList) {

@@ -1,5 +1,8 @@
 package model;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class Account {
@@ -63,6 +66,14 @@ public class Account {
 
     public ActivityLevel getActivityLevel() {
         return activityLevel;
+    }
+
+    public int calcAge() {
+
+        final LocalDate todayLocalDate = LocalDate.now();
+        final LocalDate birthLocalDate = LocalDate.ofInstant(this.birth.toInstant(), ZoneId.systemDefault());
+        final int age = Period.between(birthLocalDate, todayLocalDate).getYears();
+        return age;
     }
 
 }
