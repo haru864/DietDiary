@@ -34,6 +34,16 @@
     </div>
     <div>
         <p>栄養摂取量(食事別)</p>
+        <% if (totalNutritionalIntakeMap != null) { %>
+            <% for (int i = 0; i < dietList.size(); i++) { %>
+                <% Map<String, Double> nutritionalIntakeMap = dietList.get(i); %>
+                <div>
+                    <%= i + 1 %>食目: <%= nutritionalIntakeMap %>
+                </div>
+            <% } %>
+        <% } else { %>
+            <p>--食事内容が登録されていません--</p>
+        <% } %>
     </div>
     <div>
         <form action="/DietDiary/MypageServlet" method="post" id="go_to_dietRecord">

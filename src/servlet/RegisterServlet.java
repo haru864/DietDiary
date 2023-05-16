@@ -14,7 +14,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import model.Account;
 import model.ActivityLevel;
-import model.CalculateTDEELogic;
 import model.CheckAccountLogic;
 import model.Gender;
 import model.RegisterLogic;

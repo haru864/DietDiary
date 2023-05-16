@@ -56,6 +56,10 @@ public class DiaryLogic {
         try {
 
             int numOfDiets = userIntakeDAO.getNumOfDietsRegistered(username, date);
+            if (numOfDiets == 0) {
+                return null;
+            }
+
             for (int dietNumber = 1; dietNumber <= numOfDiets; dietNumber++) {
                 var nutritionalIntakeMap = userIntakeDAO.getSpecifiedNumberDiet(username, date, dietNumber);
                 for (int i = 0; i < NutritionList.NUTRITION_LIST.size(); i++) {
@@ -82,6 +86,10 @@ public class DiaryLogic {
         try {
 
             int numOfDiets = userIntakeDAO.getNumOfDietsRegistered(username, date);
+            if (numOfDiets == 0) {
+                return null;
+            }
+
             for (int dietNumber = 1; dietNumber <= numOfDiets; dietNumber++) {
                 var nutritionalIntakeMap = userIntakeDAO.getSpecifiedNumberDiet(username, date, dietNumber);
                 dietList.add(nutritionalIntakeMap);

@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-15T14:29:28.494Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="AUAIN7tpRQzcC7lcPa4o" version="21.3.0" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-05-15T16:23:18.118Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="g6UOA4A4aSVsN5TFTz5G" version="21.3.2" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -342,7 +342,7 @@
         <mxCell id="V1EqbFkyiiF36Y8cbw8S-19" value="MypageServlet" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="2409" y="305" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="V1EqbFkyiiF36Y8cbw8S-20" value="RecordLogic" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+        <mxCell id="V1EqbFkyiiF36Y8cbw8S-20" value="DietRecordLogic" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="2591" y="305" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="V1EqbFkyiiF36Y8cbw8S-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="F7Vc8ZFNlc0AgKW0ZdvA-4" target="V1EqbFkyiiF36Y8cbw8S-19" edge="1">
@@ -388,9 +388,6 @@
         <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-8" value="action=display" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="206" y="370" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="oAsUEzmU9854Oo67QXW2-1" value="CalculateTDEELogic" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="2571" y="404" width="160" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="oAsUEzmU9854Oo67QXW2-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oAsUEzmU9854Oo67QXW2-11" target="F7Vc8ZFNlc0AgKW0ZdvA-33" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -429,12 +426,6 @@
         </mxCell>
         <mxCell id="Q-mw3KqoH2_z4VpCv3KH-1" value="設定変更機能と退会機能を追加したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2220" y="530" width="250" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="1Hn2nPha-pQOoZsAQW6d-2" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="oAsUEzmU9854Oo67QXW2-1" target="V1EqbFkyiiF36Y8cbw8S-20" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="2040" y="400" as="sourcePoint" />
-            <mxPoint x="2090" y="350" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="hn9-qHdOzcdeAvWz7wPk-2" value="action=display&lt;br&gt;page=calender" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" parent="1" vertex="1">
           <mxGeometry x="1739" y="155" width="100" height="50" as="geometry" />
@@ -498,8 +489,11 @@
         <mxCell id="adUW8EdYDnNfrDUWuIO9-1" value="DBに登録された食品から選択するだけでなく、摂取した栄養を直接入力できるモードも用意したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2780" y="306.5" width="220" height="153.5" as="geometry" />
         </mxCell>
-        <mxCell id="3xfaWBao8sKOb0TL2-zc-1" value="Log4J使ってservletを継承していないクラスでもログ出力ができるようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="3xfaWBao8sKOb0TL2-zc-1" value="Log4J使ってservletを継承していないクラスでもログ出力ができるようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="1460" y="-32.5" width="234" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_ENeYMZY1AbDpytAbhA-1" value="JSTL使ってJSPコードをフォーマットできるようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="2446" y="-180" width="234" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
