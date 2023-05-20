@@ -34,7 +34,7 @@ public class AccountDAO {
             String password = rs.getString("password");
             String email = rs.getString("email");
             Date updated = rs.getDate("last_login_date");
-            Gender gender = rs.getString("gender").equals("men") ? Gender.MEN : Gender.WOMEN;
+            Gender gender = rs.getString("gender").equals("men") ? Gender.men : Gender.women;
             Date birth = new java.util.Date(rs.getDate("birth").getTime());
             double height = rs.getDouble("height");
             double weight = rs.getDouble("weight");

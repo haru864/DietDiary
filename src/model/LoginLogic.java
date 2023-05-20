@@ -24,13 +24,13 @@ public class LoginLogic {
             return false;
         }
 
-        String genderKanji = (account.getGender() == Gender.valueOf("MEN") ? "男性" : "女性");
+        String genderString = account.getGender().getGenderString();
         int age = account.calcAge();
         int activityLevelNumber = account.getActivityLevel().getRegistrationNumber();
 
         HttpSession session = req.getSession(true);
         session.setAttribute("username", account.getUsername());
-        session.setAttribute("gender", genderKanji);
+        session.setAttribute("gender", genderString);
         session.setAttribute("age", age);
         session.setAttribute("activity_level", activityLevelNumber);
 

@@ -4,8 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.Map;
 
 import model.Gender;
+import model.NutritionList;
 import model.RecommendedIntake;
 
 public class RecommendedIntakeDAO {
@@ -48,15 +51,17 @@ public class RecommendedIntakeDAO {
 
             String nutrition_name = rs.getString("nutrition_name");
             String genderString = (rs.getString("gender"));
-            Gender genderRegistered = (genderString.equals("men") ? Gender.MEN : Gender.WOMEN);
+            Gender genderRegistered = Gender.valueOf(genderString);
             int min_age = rs.getInt("min_age");
             int max_age = rs.getInt("max_age");
             int physical_activity_level = rs.getInt("physical_activity_level");
             int pregnancy_period = rs.getInt("pregnancy_period");
             int breastfeeding = rs.getInt("breastfeeding");
+            Double recommended_intake = rs.getDouble("recommended_intake");
+            Double upper_limit = rs.getDouble("upper_limit");
 
             recommendedIntake = new RecommendedIntake(nutrition_name, genderRegistered, min_age, max_age,
-                    physical_activity_level, pregnancy_period, breastfeeding);
+                    physical_activity_level, pregnancy_period, breastfeeding, recommended_intake, upper_limit);
 
         } catch (Exception e) {
 
@@ -66,6 +71,19 @@ public class RecommendedIntakeDAO {
         }
 
         return recommendedIntake;
+    }
+
+    public Map<String, Double> mergeRecommendedIntake(Gender gender, int age, int physicalActivityLevel) {
+
+        Map<String, Double> recommendedIntakeMap = new HashMap<>();
+
+        for (String nutritionName : NutritionList.NUTRITION_LIST) {
+            RecommendedIntake recommendedIntake = getRecommendedIntake(nutritionName, gender, age,
+                    physicalActivityLevel);
+            recommendedIntakeMap.put(nutritionName, recommendedIntake.recommended_intake);
+        }
+
+        return recommendedIntakeMap;
     }
 
 }

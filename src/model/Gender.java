@@ -2,8 +2,8 @@ package model;
 
 public enum Gender {
 
-    MEN("men"),
-    WOMEN("women");
+    men("men"),
+    women("women");
 
     private final String genderString;
 

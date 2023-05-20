@@ -39,7 +39,7 @@ public class AccountDAOTest {
             e.printStackTrace();
         }
         Account registrableAccount = new Account("test", "pass", "test@sample.com",
-                loginDate, Gender.MEN, birth, 10, 10, ActivityLevel.HARD_EXERCIS);
+                loginDate, Gender.men, birth, 10, 10, ActivityLevel.HARD_EXERCIS);
         Account unregistrableAccount = new Account(null, null, null,
                 null, null, null, 0, 0, null);
 

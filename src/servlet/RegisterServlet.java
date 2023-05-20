@@ -72,9 +72,9 @@ public class RegisterServlet extends HttpServlet {
                 Gender gender = null;
                 if (genderString != null) {
                     if (genderString.equals("men")) {
-                        gender = Gender.MEN;
+                        gender = Gender.men;
                     } else if (genderString.equals("women")) {
-                        gender = Gender.WOMEN;
+                        gender = Gender.women;
                     }
                 }
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

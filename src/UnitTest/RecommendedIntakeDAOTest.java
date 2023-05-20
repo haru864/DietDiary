@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import DAO.RecommendedIntakeDAO;
+import debug.Debugger;
 import model.Gender;
 import model.NutritionList;
 
@@ -12,7 +13,7 @@ public class RecommendedIntakeDAOTest {
     public static void main(String[] args) {
 
         List<String> failedCasesList = new ArrayList<>();
-        Gender[] arrGender = new Gender[] { Gender.MEN, Gender.WOMEN };
+        Gender[] arrGender = new Gender[] { Gender.men, Gender.women };
 
         // if (testGetRecommendedIntake("energy", Gender.MEN, 10, 1) == false) {
         // failedCasesList.add("case 1");
@@ -33,10 +34,22 @@ public class RecommendedIntakeDAOTest {
             }
         }
 
-        showFailedCases(failedCasesList);
+        for (int age = 1; age <= 100; age+=5) {
+            for (int gender_i = 0; gender_i < arrGender.length; gender_i++) {
+                for (int physicalActivityLevel = 1; physicalActivityLevel <= 3; physicalActivityLevel++) {
+                    if (testMergeRecommendedIntake(arrGender[gender_i], age, physicalActivityLevel)) {
+                        failedCasesList.add(String.format(
+                                "gender=%s, age=%d, physicalActivityLevel=%d",
+                                arrGender[gender_i], age, physicalActivityLevel));
+                    }
+                }
+            }
+        }
+
+        showTestResult(failedCasesList);
     }
 
-    private static void showFailedCases(List<String> failedCasesList) {
+    private static void showTestResult(List<String> failedCasesList) {
 
         if (failedCasesList.size() == 0) {
             System.out.println();
@@ -59,8 +72,15 @@ public class RecommendedIntakeDAOTest {
         RecommendedIntakeDAO recommendedIntakeDAO = new RecommendedIntakeDAO();
         var recommendedIntake = recommendedIntakeDAO.getRecommendedIntake(nutritionName, gender, age,
                 physicalActivityLevel);
-        System.out.println(recommendedIntake);
+        Debugger.writeObjectToFile(recommendedIntake, "testGetRecommendedIntake");
         return recommendedIntake != null;
     }
 
+    private static Boolean testMergeRecommendedIntake(Gender gender, int age, int physicalActivityLevel) {
+
+        RecommendedIntakeDAO recommendedIntakeDAO = new RecommendedIntakeDAO();
+        var recommendedIntakeMap = recommendedIntakeDAO.mergeRecommendedIntake(gender, age, physicalActivityLevel);
+        Debugger.writeObjectToFile(recommendedIntakeMap, "testMergeRecommendedIntake");
+        return recommendedIntakeMap != null;
+    }
 }

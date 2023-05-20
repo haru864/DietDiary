@@ -8,8 +8,9 @@
 <% String year = (String)session.getAttribute("year"); %>
 <% String month = (String)session.getAttribute("month"); %>
 <% String day = (String)session.getAttribute("day"); %>
-<% Map<String, Double> totalNutritionalIntakeMap = (Map<String, Double>)session.getAttribute("total_nutritional_intake"); %>
+<% Map<String, Double> totalNutritionalIntakeMap = (Map<String, Double>)session.getAttribute("total_nutritional_intake_map"); %>
 <% List<Map<String, Double>> dietList = (List<Map<String, Double>>)session.getAttribute("diet_list"); %>
+<% Map<String, Double> recommendedIntakeMap = (Map<String, Double>)session.getAttribute("recommended_intake_map"); %>
 
 <!DOCTYPE html>
 <html>
@@ -34,6 +35,7 @@
     <div>
         <p>推奨摂取量</p>
         <p>性別：<%= genderKanji %>, 年齢：<%= age %>歳, 活動レベル：<%= activityLevel %></p>
+        <%= recommendedIntakeMap %>
     </div>
     <div>
         <p>栄養摂取量(食事別)</p>

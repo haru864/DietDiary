@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import DAO.RecommendedIntakeDAO;
 import DAO.UserIntakeDAO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -19,6 +20,9 @@ public class DiaryLogic {
 
         HttpSession session = request.getSession(true);
         String username = (String) session.getAttribute("username");
+        String genderString = (String) session.getAttribute("gender");
+        int age = (Integer) session.getAttribute("age");
+        int activityLevelNumber = (Integer) session.getAttribute("activity_level");
         String year = request.getParameter("year");
         String month = request.getParameter("month");
         String day = request.getParameter("day");
@@ -33,12 +37,15 @@ public class DiaryLogic {
 
         Map<String, Double> totalNutritionalIntakeMap = calcTotalNutritionIntake(username, date);
         List<Map<String, Double>> dietList = getDietList(username, date);
+        Map<String, Double> recommendedIntakeMap = getRecommendedIntakeMap(age, Gender.valueOf(genderString),
+                activityLevelNumber);
 
         session.setAttribute("year", year);
         session.setAttribute("month", month);
         session.setAttribute("day", day);
-        session.setAttribute("total_nutritional_intake", totalNutritionalIntakeMap);
+        session.setAttribute("total_nutritional_intake_map", totalNutritionalIntakeMap);
         session.setAttribute("diet_list", dietList);
+        session.setAttribute("recommended_intake_map", recommendedIntakeMap);
 
         return true;
     }
@@ -101,6 +108,14 @@ public class DiaryLogic {
         }
 
         return dietList;
+    }
+
+    public Map<String, Double> getRecommendedIntakeMap(int age, Gender gender, int physicalActivityLevel) {
+
+        RecommendedIntakeDAO recommendedIntakeDAO = new RecommendedIntakeDAO();
+        Map<String, Double> recommendedIntakeMap = recommendedIntakeDAO.mergeRecommendedIntake(gender, age,
+                physicalActivityLevel);
+        return recommendedIntakeMap;
     }
 
 }
