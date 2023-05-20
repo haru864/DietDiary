@@ -14,6 +14,11 @@
 <body>
     <div>
         実装中
+        <form action="/DietDiary/MypageServlet" method="post" id="register_diet">
+            <button>登録</button>
+            <input type="hidden" name="action" value="register">
+            <input type="hidden" name="page" value="dietRecord">
+        </form>
     </div>
     <div>
         <form action="/DietDiary/MypageServlet" method="post" id="go_to_mypage">
