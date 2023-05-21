@@ -55,15 +55,18 @@ public class MypageServlet extends HttpServlet {
 
             requestDispatcher = req.getRequestDispatcher(diaryJsp);
 
-        } else if (action.equals("display") && page.equals("dietRecord")) {
-
-            requestDispatcher = req.getRequestDispatcher(dietRecord);
-
-        } else if (action.equals("register") && page.equals("dietRecord")) {
+        } else if ((action.equals("display") || action.equals("register")) && page.equals("dietRecord")) {
 
             DietRecordLogic dietRecordLogic = new DietRecordLogic();
-            dietRecordLogic.execute();
-            requestDispatcher = req.getRequestDispatcher(calenderJsp);
+            requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
+
+            if (action.equals("display") && dietRecordLogic.setSelectElement(req)) {
+                // log(req.getAttribute("food_group_map").toString());
+                // log(req.getAttribute("food_name_map").toString());
+                requestDispatcher = req.getRequestDispatcher(dietRecord);
+            } else if (action.equals("register") && dietRecordLogic.registerDiet(req)) {
+                requestDispatcher = req.getRequestDispatcher(calenderJsp);
+            }
 
         } else {
 

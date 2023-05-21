@@ -41,4 +41,33 @@ public class NutritionFactsDAO {
         return dietsAvailableForDropdown;
     }
 
+    public List<String> listFoodNameByFoodGroupNumber(int foodGroupNumber) {
+
+        List<String> foodNameList = new ArrayList<>();
+
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
+
+            String sql = "SELECT food_name FROM nutrition_facts WHERE food_group_number = ? ORDER BY food_name";
+            PreparedStatement pStmt = conn.prepareStatement(sql);
+            pStmt.setInt(1, foodGroupNumber);
+            ResultSet rs = pStmt.executeQuery();
+
+            while (rs.next()) {
+                foodNameList.add(rs.getString(1));
+            }
+
+            if (foodNameList.size() == 0) {
+                return null;
+            }
+
+        } catch (Exception e) {
+
+            // LogException.writeErrorMsgToFile(e);
+            e.printStackTrace();
+            return null;
+        }
+
+        return foodNameList;
+    }
+
 }

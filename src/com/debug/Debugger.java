@@ -24,7 +24,7 @@ public class Debugger {
             DEBUG_LOG_FILE = DEBUG_LOG_FILE_ON_SERVICE;
         }
 
-        try (FileWriter fileWriter = new FileWriter(DEBUG_LOG_FILE, true);
+        try (FileWriter fileWriter = new FileWriter(DEBUG_LOG_FILE, false);
                 PrintWriter printWriter = new PrintWriter(fileWriter)) {
 
             printWriter.println("[DATE] " + new Date());

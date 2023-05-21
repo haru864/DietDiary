@@ -22,7 +22,7 @@ public class LogException {
             ERROR_LOG_FILE = ERROR_LOG_FILE_ON_SERVICE;
         }
 
-        try (FileWriter fileWriter = new FileWriter(ERROR_LOG_FILE, true);
+        try (FileWriter fileWriter = new FileWriter(ERROR_LOG_FILE, false);
                 PrintWriter printWriter = new PrintWriter(fileWriter)) {
 
             printWriter.println("[DATE] " + new Date());

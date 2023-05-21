@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.model.FoodGroup;
@@ -36,6 +37,8 @@ public class FoodGroupDAO {
                 return null;
             }
 
+            Collections.sort(foodGroupList);
+
         } catch (Exception e) {
 
             // LogException.writeErrorMsgToFile(e);
@@ -45,4 +48,5 @@ public class FoodGroupDAO {
 
         return foodGroupList;
     }
+
 }
