@@ -1,5 +1,6 @@
 package com.model;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,10 +14,15 @@ public class DietRecordLogic {
 
     public Boolean setSelectElement(HttpServletRequest request) {
 
-        Map<String, Integer> foodGroupMap = listFoodGroup();
+        List<FoodGroup> foodGroupList = listFoodGroup();
         Map<Integer, List<String>> foodNameMap = listFoodName();
 
-        request.setAttribute("food_group_map", foodGroupMap);
+        // overwrite for debug
+        // foodNameMap = new HashMap<>();
+        // foodNameMap.put(1, Arrays.asList("じゃがいも", "米", "パン"));
+        // foodNameMap.put(2, Arrays.asList("牛肉", "鶏肉", "さかな"));
+
+        request.setAttribute("food_group_list", foodGroupList);
         request.setAttribute("food_name_map", foodNameMap);
 
         return true;
@@ -29,24 +35,19 @@ public class DietRecordLogic {
         return true;
     }
 
-    private Map<String, Integer> listFoodGroup() {
+    public List<FoodGroup> listFoodGroup() {
 
         FoodGroupDAO foodGroupDAO = new FoodGroupDAO();
         List<FoodGroup> foodGroupList = foodGroupDAO.listFoodGroups();
 
-        Map<String, Integer> foodGroupMap = new HashMap<>();
-        for (var foodGroup : foodGroupList) {
-            foodGroupMap.put(foodGroup.foodGroupName, foodGroup.foodGroupNumber);
-        }
-
-        if (foodGroupMap == null || foodGroupMap.size() == 0) {
+        if (foodGroupList == null || foodGroupList.size() == 0) {
             return null;
         }
 
-        return foodGroupMap;
+        return foodGroupList;
     }
 
-    private Map<Integer, List<String>> listFoodName() {
+    public Map<Integer, List<String>> listFoodName() {
 
         NutritionFactsDAO nutritionFactsDAO = new NutritionFactsDAO();
         Map<Integer, List<String>> foodNameMap = new HashMap<>();

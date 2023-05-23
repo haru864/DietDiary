@@ -1,12 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.util.Map" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.model.FoodGroup" %>
 <%@ page import="com.fasterxml.jackson.databind.ObjectMapper" %>
-<% Map<String, Integer> foodGroupMap = (Map<String, Integer>)request.getAttribute("food_group_map"); %>
+<% List<FoodGroup> foodGroupList = (List<FoodGroup>)request.getAttribute("food_group_list"); %>
 <% Map<Integer, List<String>> foodNameMap = (Map<Integer, List<String>>)request.getAttribute("food_name_map"); %>
 <%
 ObjectMapper mapper = new ObjectMapper();
-String jsonMap = mapper.writeValueAsString(foodNameMap);
+String foodNameMapJson = mapper.writeValueAsString(foodNameMap);
 %>
 
 <!DOCTYPE html>
@@ -15,20 +16,20 @@ String jsonMap = mapper.writeValueAsString(foodNameMap);
 <head>
     <meta charset="UTF-8">
     <title>食事登録画面</title>
+    <script type="text/javascript">
+        window.foodNameMapJson = '<%= foodNameMapJson %>';
+    </script>
 </head>
 
 <body>
-    <div>
-        <%= jsonMap %>
-    </div>
     <div>
         <form action="/DietDiary/MypageServlet" method="post" id="register_diet">
             <label for="food_group">分類を選択してください:</label>
             <br>
             <select name="food_group" id="food_group" onchange="showFoodName()">
-                <option value="">--選択してください--</option>
-                <% for (Map.Entry<String, Integer> entry : foodGroupMap.entrySet()) { %>
-                    <option value="<%= entry.getValue() %>"><%= entry.getKey() %></option>
+                <option value="" selected>--選択してください--</option>
+                <% for (var foodGroup : foodGroupList) { %>
+                    <option value="<%= foodGroup.foodGroupNumber %>"><%= foodGroup.foodGroupName %></option>
                 <% } %>
             </select>
             <br><br>
@@ -37,8 +38,7 @@ String jsonMap = mapper.writeValueAsString(foodNameMap);
                 <label for="food_name">食事を選択してください:</label>
                 <br>
                 <select name="food_name" id="food_name">
-                    <option value="">--選択してください--</option>
-
+                    <option value="" selected>--選択してください--</option>
                 </select>
             </div>
             <br><br>
@@ -56,7 +56,7 @@ String jsonMap = mapper.writeValueAsString(foodNameMap);
         </form>
     </div>
 
-    <script src="/DietDiary/JavaScript/dietRecordLogic.js">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/JavaScript/dietRecordLogic.js">
     </script>
 </body>
 

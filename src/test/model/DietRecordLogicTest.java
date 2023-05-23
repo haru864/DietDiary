@@ -1,22 +1,23 @@
-package test.DAO;
+package test.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-import com.DAO.FoodGroupDAO;
+import com.model.DietRecordLogic;
 import com.model.FoodGroup;
 
-public class FoodGroupDAOTest {
+public class DietRecordLogicTest {
 
     public static void main(String[] args) {
 
         List<String> failedCasesList = new ArrayList<>();
 
-        if (testListFoodGroups() == true) {
-            System.out.println("testListFoodGroups ... passed");
+        if (testListFoodGroup() == true) {
+            System.out.println("testListFoodGroup ... passed");
         } else {
-            System.out.println("testListFoodGroups ... FAILED");
-            failedCasesList.add("testListFoodGroups: food_groups has no record?");
+            System.out.println("testListFoodGroup ... FAILED");
+            failedCasesList.add("testListFoodGroup: case_01-01 failed");
         }
 
         showFailedCases(failedCasesList);
@@ -39,17 +40,17 @@ public class FoodGroupDAOTest {
         }
     }
 
-    private static Boolean testListFoodGroups() {
+    private static boolean testListFoodGroup() {
 
-        FoodGroupDAO foodGroupDAO = new FoodGroupDAO();
-        List<FoodGroup> list = foodGroupDAO.listFoodGroups();
-        if (list == null) {
-            return false;
-        }
-        list.forEach((foodGroup) -> {
+        DietRecordLogic dietRecordLogic = new DietRecordLogic();
+        List<FoodGroup> foodGroupList = dietRecordLogic.listFoodGroup();
+
+        foodGroupList.forEach((foodGroup) -> {
             System.out.print(foodGroup.foodGroupNumber + " ");
         });
         System.out.println();
-        return list.size() != 0;
+
+        return foodGroupList != null;
     }
+
 }
