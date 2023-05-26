@@ -1,6 +1,5 @@
 package com.model;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,11 +15,6 @@ public class DietRecordLogic {
 
         List<FoodGroup> foodGroupList = listFoodGroup();
         Map<Integer, List<String>> foodNameMap = listFoodName();
-
-        // overwrite for debug
-        // foodNameMap = new HashMap<>();
-        // foodNameMap.put(1, Arrays.asList("じゃがいも", "米", "パン"));
-        // foodNameMap.put(2, Arrays.asList("牛肉", "鶏肉", "さかな"));
 
         request.setAttribute("food_group_list", foodGroupList);
         request.setAttribute("food_name_map", foodNameMap);

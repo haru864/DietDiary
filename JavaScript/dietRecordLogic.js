@@ -1,49 +1,98 @@
+window.onload = function () {
 
+    const showFoodName = function () {
 
-function showFoodName() {
+        let foodNameMapJsonFromWindow = window.foodNameMapJson;
+        var foodNameMap = JSON.parse(foodNameMapJsonFromWindow);
+        var foodGroupNumber = document.getElementById("food_group").value;
+        // console.log(foodGroupNumber + ', ' + (foodGroupNumber != ""));
 
-    let foodNameMapJsonFromWindow = window.foodNameMapJson;
-    // console.log(foodNameMapJsonFromWindow);
+        if (foodGroupNumber != "") {
 
-    var foodNameMap = JSON.parse(foodNameMapJsonFromWindow);
-    // console.log(foodNameMap);
+            let foodNameSelect = document.getElementById("food_name");
+            removeAllChildNodes(foodNameSelect);
 
-    // var jsObject = JSON.parse('{"1":["じゃがいも","米","パン"],"2":["牛肉","鶏肉","さかな"]}'); // success
-    // var jsObject = JSON.parse("{\"1\":[\"じゃがいも\",\"米\",\"パン\"],\"2\":[\"牛肉\",\"鶏肉\",\"さかな\"]}"); // success
+            let option = document.createElement("option");
+            option.value = '';
+            option.text = '--選択してください--';
+            foodNameSelect.appendChild(option);
 
-    var foodGroupNumber = document.getElementById("food_group").value;
-    console.log('foodGroupNumber: ' + foodGroupNumber);
+            for (let key in foodNameMap) {
 
-    if (foodGroupNumber != "") {
+                if (key != foodGroupNumber) {
+                    continue;
+                }
 
-        let foodNameSelect = document.getElementById("food_name");
-        removeAllChildNodes(foodNameSelect);
+                let foodNameList = foodNameMap[key];
 
-        for (let key in foodNameMap) {
-
-            if (key != foodGroupNumber) {
-                continue;
+                for (let i = 0; i < foodNameList.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = foodNameList[i];
+                    option.text = foodNameList[i];
+                    foodNameSelect.appendChild(option);
+                }
+                break;
             }
-            // console.log('key:' + key + ' value:' + foodNameMap[key]);
 
-            let foodNameList = foodNameMap[key];
+            document.getElementById("food_name_div").style.display = "block";
 
-            for (let i = 0; i < foodNameList.length; i++) {
-                // console.log('i:' + i + ' element:' + foodNameList[i]);
-                let option = document.createElement("option");
-                option.value = foodNameList[i];
-                option.text = foodNameList[i];
-                foodNameSelect.appendChild(option);
-            }
-            break;
+        } else {
+
+            document.getElementById("food_name_div").style.display = "none";
+            document.getElementById("grams_input_field_div").style.display = "none";
+        }
+    }
+
+    const showGramsInputField = function () {
+
+        let foodNameSelect = document.getElementById("food_name").value;
+        // console.log(foodNameSelect + ', ' + (foodNameSelect != ""));
+
+        if (foodNameSelect != "") {
+            document.getElementById("grams_input_field_div").style.display = "block";
+        } else {
+            document.getElementById("grams_input_field_div").style.display = "none";
+        }
+    }
+
+    const checkGramsInput = function () {
+
+        let gramsInput = document.getElementById("grams_input").value;
+        console.log(gramsInput);
+
+        if (isNaN(gramsInput) == true) {
+            alert('数値を入力してください');
+            return;
         }
 
-        document.getElementById("food_name_div").style.display = "block";
-
-    } else {
-
-        document.getElementById("food_name_div").style.display = "none";
+        if (isPositiveDecimal(gramsInput) == false) {
+            alert('10進数の正整数を入力してください');
+            return;
+        }
     }
+
+    const checkInputFields = function (e) {
+
+        let foodGroupNumber = document.getElementById('food_group').value;
+        let foodName = document.getElementById('food_name').value;
+        let foodWeightGrams = document.getElementById('grams_input').value;
+
+        if (foodGroupNumber == "" || foodName == "" || foodWeightGrams == "") {
+            alert('すべての入力値を設定してください');
+            e.preventDefault();
+        }
+    }
+
+    document.getElementById('food_group').addEventListener('change', showFoodName);
+    document.getElementById('food_name').addEventListener('change', showGramsInputField);
+    document.getElementById('grams_input').addEventListener('change', checkGramsInput);
+    document.getElementById('submit_inputs').addEventListener('click', checkInputFields);
+
+};
+
+function isPositiveDecimal(value) {
+
+    return /^\d+$/.test(String(value));
 }
 
 function removeAllChildNodes(parent) {

@@ -14,7 +14,7 @@ String foodNameMapJson = mapper.writeValueAsString(foodNameMap);
 <html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" http-equiv="Prag" content="no-cache">
     <title>食事登録画面</title>
     <script type="text/javascript">
         window.foodNameMapJson = '<%= foodNameMapJson %>';
@@ -26,7 +26,7 @@ String foodNameMapJson = mapper.writeValueAsString(foodNameMap);
         <form action="/DietDiary/MypageServlet" method="post" id="register_diet">
             <label for="food_group">分類を選択してください:</label>
             <br>
-            <select name="food_group" id="food_group" onchange="showFoodName()">
+            <select name="food_group" id="food_group">
                 <option value="" selected>--選択してください--</option>
                 <% for (var foodGroup : foodGroupList) { %>
                     <option value="<%= foodGroup.foodGroupNumber %>"><%= foodGroup.foodGroupName %></option>
@@ -38,14 +38,21 @@ String foodNameMapJson = mapper.writeValueAsString(foodNameMap);
                 <label for="food_name">食事を選択してください:</label>
                 <br>
                 <select name="food_name" id="food_name">
-                    <option value="" selected>--選択してください--</option>
                 </select>
+            </div>
+            <br><br>
+
+            <div id="grams_input_field_div" style="display:none;">
+                <label for="grams_input_field">グラム数を入力してください:</label>
+                <br>
+                <input type="text" id="grams_input">
+                g(グラム)
             </div>
             <br><br>
 
             <input type="hidden" name="action" value="register">
             <input type="hidden" name="page" value="dietRecord">
-            <button>登録</button>
+            <button id="submit_inputs">登録</button>
         </form>
     </div>
     <div>
