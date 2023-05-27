@@ -6,6 +6,7 @@ import java.util.Random;
 
 import com.DAO.UserIntakeDAO;
 import com.debug.Debugger;
+import com.model.Nutrition;
 import com.model.UserIntake;
 
 public class UserIntakeDAOTest {
@@ -92,37 +93,11 @@ public class UserIntakeDAOTest {
             int physicalActivityLevel) {
 
         UserIntake userIntake = new UserIntake(username, intakeDietDate, dietNumber, physicalActivityLevel);
-        userIntake.energy = generateRandomDouble(1, 10);
-        userIntake.protein = generateRandomDouble(1, 10);
-        userIntake.fat = generateRandomDouble(1, 10);
-        userIntake.fiber = generateRandomDouble(1, 10);
-        userIntake.carbohydrates = generateRandomDouble(1, 10);
-        userIntake.vitamin_a = generateRandomDouble(1, 10);
-        userIntake.vitamin_b1 = generateRandomDouble(1, 10);
-        userIntake.vitamin_b2 = generateRandomDouble(1, 10);
-        userIntake.vitamin_b6 = generateRandomDouble(1, 10);
-        userIntake.vitamin_b12 = generateRandomDouble(1, 10);
-        userIntake.vitamin_c = generateRandomDouble(1, 10);
-        userIntake.vitamin_d = generateRandomDouble(1, 10);
-        userIntake.vitamin_e = generateRandomDouble(1, 10);
-        userIntake.vitamin_k = generateRandomDouble(1, 10);
-        userIntake.niacin_equivalent = generateRandomDouble(1, 10);
-        userIntake.folic_acid = generateRandomDouble(1, 10);
-        userIntake.pantothenic_acid = generateRandomDouble(1, 10);
-        userIntake.biotin = generateRandomDouble(1, 10);
-        userIntake.na = generateRandomDouble(1, 10);
-        userIntake.k = generateRandomDouble(1, 10);
-        userIntake.ca = generateRandomDouble(1, 10);
-        userIntake.mg = generateRandomDouble(1, 10);
-        userIntake.p = generateRandomDouble(1, 10);
-        userIntake.fe = generateRandomDouble(1, 10);
-        userIntake.zn = generateRandomDouble(1, 10);
-        userIntake.cu = generateRandomDouble(1, 10);
-        userIntake.mn = generateRandomDouble(1, 10);
-        userIntake.id = generateRandomDouble(1, 10);
-        userIntake.se = generateRandomDouble(1, 10);
-        userIntake.cr = generateRandomDouble(1, 10);
-        userIntake.mo = generateRandomDouble(1, 10);
+
+        for (String nutritionName : Nutrition.NUTRITION_LIST) {
+            userIntake.nutrition.setNutritionAmount(nutritionName, generateRandomDouble(1, 10));
+        }
+
         return userIntake;
     }
 

@@ -1,11 +1,14 @@
 package com.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class NutritionList {
+public class Nutrition {
 
     public static final List<String> NUTRITION_LIST = new ArrayList<>();
+    private final Map<String, Double> nutritionAmount = new HashMap<>();
 
     static {
         NUTRITION_LIST.add("energy");
@@ -39,6 +42,23 @@ public class NutritionList {
         NUTRITION_LIST.add("se");
         NUTRITION_LIST.add("cr");
         NUTRITION_LIST.add("mo");
+    }
+
+    public Nutrition() {
+
+        for (String nutritionName : NUTRITION_LIST) {
+            nutritionAmount.put(nutritionName, 0.0);
+        }
+    }
+
+    public void setNutritionAmount(String nutritionName, double amount) {
+
+        nutritionAmount.put(nutritionName, amount);
+    }
+
+    public Double getNutritionAmount(String nutritionName) {
+
+        return nutritionAmount.get(nutritionName);
     }
 
 }

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.exception.LogException;
-import com.model.NutritionList;
+import com.model.Nutrition;
 import com.model.UserIntake;
 
 public class UserIntakeDAO {
@@ -33,37 +33,11 @@ public class UserIntakeDAO {
             pStmt.setDate(2, new java.sql.Date(userIntake.intakeDietDate.getTime()));
             pStmt.setInt(3, userIntake.dietNumber);
             pStmt.setInt(4, userIntake.physicalActivityLevel);
-            pStmt.setDouble(5, userIntake.energy);
-            pStmt.setDouble(6, userIntake.protein);
-            pStmt.setDouble(7, userIntake.fat);
-            pStmt.setDouble(8, userIntake.fiber);
-            pStmt.setDouble(9, userIntake.carbohydrates);
-            pStmt.setDouble(10, userIntake.vitamin_a);
-            pStmt.setDouble(11, userIntake.vitamin_b1);
-            pStmt.setDouble(12, userIntake.vitamin_b2);
-            pStmt.setDouble(13, userIntake.vitamin_b6);
-            pStmt.setDouble(14, userIntake.vitamin_b12);
-            pStmt.setDouble(15, userIntake.vitamin_c);
-            pStmt.setDouble(16, userIntake.vitamin_d);
-            pStmt.setDouble(17, userIntake.vitamin_e);
-            pStmt.setDouble(18, userIntake.vitamin_k);
-            pStmt.setDouble(19, userIntake.niacin_equivalent);
-            pStmt.setDouble(20, userIntake.folic_acid);
-            pStmt.setDouble(21, userIntake.pantothenic_acid);
-            pStmt.setDouble(22, userIntake.biotin);
-            pStmt.setDouble(23, userIntake.na);
-            pStmt.setDouble(24, userIntake.k);
-            pStmt.setDouble(25, userIntake.ca);
-            pStmt.setDouble(26, userIntake.mg);
-            pStmt.setDouble(27, userIntake.p);
-            pStmt.setDouble(28, userIntake.fe);
-            pStmt.setDouble(29, userIntake.zn);
-            pStmt.setDouble(30, userIntake.cu);
-            pStmt.setDouble(31, userIntake.mn);
-            pStmt.setDouble(32, userIntake.id);
-            pStmt.setDouble(33, userIntake.se);
-            pStmt.setDouble(34, userIntake.cr);
-            pStmt.setDouble(35, userIntake.mo);
+
+            for (int i = 0; i < Nutrition.NUTRITION_LIST.size(); i++) {
+                String nutritionName = Nutrition.NUTRITION_LIST.get(i);
+                pStmt.setDouble(5 + i, userIntake.nutrition.getNutritionAmount(nutritionName));
+            }
 
             int numOfRowsInserted = pStmt.executeUpdate();
             if (numOfRowsInserted != 1) {
@@ -137,8 +111,8 @@ public class UserIntakeDAO {
             ResultSet rs = pStmt.executeQuery();
             rs.next();
 
-            for (int i = 0; i < NutritionList.NUTRITION_LIST.size(); i++) {
-                String nutritionName = NutritionList.NUTRITION_LIST.get(i);
+            for (int i = 0; i < Nutrition.NUTRITION_LIST.size(); i++) {
+                String nutritionName = Nutrition.NUTRITION_LIST.get(i);
                 nutritionalIntakeMap.put(nutritionName, rs.getDouble(nutritionName));
             }
 

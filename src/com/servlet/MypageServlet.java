@@ -21,6 +21,12 @@ public class MypageServlet extends HttpServlet {
     private final String unknownErrorJsp = "/WEB-INF/jsp/unknown_error.jsp";
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        super.doGet(req, resp);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String page = req.getParameter("page");
@@ -61,10 +67,17 @@ public class MypageServlet extends HttpServlet {
             requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
 
             if (action.equals("display") && dietRecordLogic.setSelectElement(req)) {
+
                 // log(req.getAttribute("food_group_map").toString());
                 // log(req.getAttribute("food_name_map").toString());
                 requestDispatcher = req.getRequestDispatcher(dietRecord);
+
             } else if (action.equals("register") && dietRecordLogic.registerDiet(req)) {
+
+                String foodGroup = req.getParameter("food_group");
+                String foodName = req.getParameter("food_name");
+                String foodWeightGram = req.getParameter("food_weight_gram");
+                log("foodGroup: " + foodGroup + ", foodName: " + foodName + ", foodWeightGram: " + foodWeightGram);
                 requestDispatcher = req.getRequestDispatcher(calenderJsp);
             }
 

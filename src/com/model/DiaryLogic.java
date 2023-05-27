@@ -60,8 +60,8 @@ public class DiaryLogic {
         UserIntakeDAO userIntakeDAO = new UserIntakeDAO();
         Map<String, Double> totalNutritionalIntakeMap = new HashMap<>();
 
-        for (int i = 0; i < NutritionList.NUTRITION_LIST.size(); i++) {
-            String nutritionName = NutritionList.NUTRITION_LIST.get(i);
+        for (int i = 0; i < Nutrition.NUTRITION_LIST.size(); i++) {
+            String nutritionName = Nutrition.NUTRITION_LIST.get(i);
             totalNutritionalIntakeMap.put(nutritionName, 0.0);
         }
 
@@ -74,8 +74,8 @@ public class DiaryLogic {
 
             for (int dietNumber = 1; dietNumber <= numOfDiets; dietNumber++) {
                 var nutritionalIntakeMap = userIntakeDAO.getSpecifiedNumberDiet(username, date, dietNumber);
-                for (int i = 0; i < NutritionList.NUTRITION_LIST.size(); i++) {
-                    String nutritionName = NutritionList.NUTRITION_LIST.get(i);
+                for (int i = 0; i < Nutrition.NUTRITION_LIST.size(); i++) {
+                    String nutritionName = Nutrition.NUTRITION_LIST.get(i);
                     totalNutritionalIntakeMap.put(nutritionName,
                             totalNutritionalIntakeMap.getOrDefault(nutritionName, 0.0)
                                     + nutritionalIntakeMap.get(nutritionName));

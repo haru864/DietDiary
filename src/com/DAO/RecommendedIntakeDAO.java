@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.model.Gender;
-import com.model.NutritionList;
+import com.model.Nutrition;
 import com.model.RecommendedIntake;
 
 public class RecommendedIntakeDAO {
@@ -77,7 +77,7 @@ public class RecommendedIntakeDAO {
 
         Map<String, Double> recommendedIntakeMap = new HashMap<>();
 
-        for (String nutritionName : NutritionList.NUTRITION_LIST) {
+        for (String nutritionName : Nutrition.NUTRITION_LIST) {
             RecommendedIntake recommendedIntake = getRecommendedIntake(nutritionName, gender, age,
                     physicalActivityLevel);
             recommendedIntakeMap.put(nutritionName, recommendedIntake.recommended_intake);

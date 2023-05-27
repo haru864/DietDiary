@@ -45,7 +45,7 @@ String foodNameMapJson = mapper.writeValueAsString(foodNameMap);
             <div id="grams_input_field_div" style="display:none;">
                 <label for="grams_input_field">グラム数を入力してください:</label>
                 <br>
-                <input type="text" id="grams_input">
+                <input type="text" name="food_weight_gram" id="grams_input">
                 g(グラム)
             </div>
             <br><br>

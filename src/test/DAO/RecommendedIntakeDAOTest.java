@@ -6,7 +6,7 @@ import java.util.List;
 import com.DAO.RecommendedIntakeDAO;
 import com.debug.Debugger;
 import com.model.Gender;
-import com.model.NutritionList;
+import com.model.Nutrition;
 
 public class RecommendedIntakeDAOTest {
 
@@ -19,10 +19,10 @@ public class RecommendedIntakeDAOTest {
         // failedCasesList.add("case 1");
         // }
 
-        for (int NUTRITION_LIST_i = 0; NUTRITION_LIST_i < NutritionList.NUTRITION_LIST.size(); NUTRITION_LIST_i++) {
+        for (int NUTRITION_LIST_i = 0; NUTRITION_LIST_i < Nutrition.NUTRITION_LIST.size(); NUTRITION_LIST_i++) {
             for (int gender_i = 0; gender_i < arrGender.length; gender_i++) {
                 for (int physicalActivityLevel = 1; physicalActivityLevel <= 3; physicalActivityLevel++) {
-                    var nutritionName = NutritionList.NUTRITION_LIST.get(NUTRITION_LIST_i);
+                    var nutritionName = Nutrition.NUTRITION_LIST.get(NUTRITION_LIST_i);
                     if (testGetRecommendedIntake(nutritionName, arrGender[gender_i], 20,
                             physicalActivityLevel) == false) {
                         failedCasesList

@@ -1,13 +1,16 @@
 package com.model;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.DAO.FoodGroupDAO;
 import com.DAO.NutritionFactsDAO;
+import com.DAO.UserIntakeDAO;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 public class DietRecordLogic {
 
@@ -24,9 +27,26 @@ public class DietRecordLogic {
 
     public Boolean registerDiet(HttpServletRequest request) {
 
-        // pending
+        try {
 
-        return true;
+            HttpSession session = request.getSession(true);
+            String userName = (String) session.getAttribute("username");
+            String foodGroup = request.getParameter("food_group");
+            String foodName = request.getParameter("food_name");
+            String foodWeightGram = request.getParameter("food_weight_gram");
+
+            Date today = new Date();
+            UserIntakeDAO userIntakeDAO = new UserIntakeDAO();
+            int lastDietNumber = userIntakeDAO.getNumOfDietsRegistered(userName, today);
+
+            UserIntake userIntake = new UserIntake(userName, today, lastDietNumber + 1, 0);
+
+            return true;
+
+        } catch (Exception e) {
+
+            return false;
+        }
     }
 
     public List<FoodGroup> listFoodGroup() {
