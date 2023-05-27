@@ -7,8 +7,7 @@ create table accounts (
     gender             enum('men','women')   not null,
     birth              date                  not null,
     height             double                not null,
-    weight             double                not null,
-    activity_level     int                   not null
+    weight             double                not null
 );
 
 # user for test

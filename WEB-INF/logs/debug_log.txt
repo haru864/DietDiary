@@ -1,4 +1,4 @@
-[DATE] Sat May 27 21:17:22 JST 2023
-[message] testMergeRecommendedIntake
-{pantothenic_acid=5.0, niacin_equivalent=10.0, se=25.0, vitamin_b2=1.0, protein=50.0, vitamin_b1=0.9, fat=0.0, mg=260.0, id=130.0, ca=600.0, energy=0.0, carbohydrates=0.0, mn=3.5, fiber=17.0, mo=25.0, vitamin_a=650.0, vitamin_c=100.0, vitamin_d=8.5, biotin=50.0, vitamin_e=6.5, vitamin_b6=1.1, folic_acid=240.0, k=2600.0, vitamin_k=150.0, cr=10.0, p=800.0, cu=0.7, na=5000.0, zn=8.0, vitamin_b12=2.4, fe=6.0}
+[DATE] Sun May 28 01:22:24 JST 2023
+[message] UserIntakeTest.class
+null
 ----------------------------------------------------

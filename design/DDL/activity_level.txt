@@ -1,0 +1,6 @@
+create table activity_level (
+    username                    varchar(10),
+    intake_diet_date            date,
+    physical_activity_level     enum('1','2','3')       not null,
+    primary key (username, intake_diet_date)
+);

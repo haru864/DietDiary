@@ -7,15 +7,19 @@ public class UserIntake implements Comparable<UserIntake> {
     public String username;
     public Date intakeDietDate;
     public int dietNumber;
-    public int physicalActivityLevel;
-    public Nutrition nutrition;
+    public int foodGroup;
+    public String foodName;
+    public double grams;
 
-    public UserIntake(String username, Date intakeDietDate, int dietNumber, int physicalActivityLevel) {
+    public UserIntake(String username, Date intakeDietDate, int dietNumber,
+            int foodGroup, String foodName, double grams) {
+
         this.username = username;
         this.intakeDietDate = intakeDietDate;
         this.dietNumber = dietNumber;
-        this.physicalActivityLevel = physicalActivityLevel;
-        this.nutrition = new Nutrition();
+        this.foodGroup = foodGroup;
+        this.foodName = foodName;
+        this.grams = grams;
     }
 
     @Override

@@ -1,85 +1,12 @@
-[DATE] Tue May 16 12:22:03 JST 2023
-java.sql.SQLException: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.last(ResultSetImpl.java:1787)
-	at DAO.NutritionFactsDAO.listRegisteredDiets(NutritionFactsDAO.java:28)
-	at UnitTest.NutritionFactsDAOTest.testListRegisteredDiets(NutritionFactsDAOTest.java:47)
-	at UnitTest.NutritionFactsDAOTest.main(NutritionFactsDAOTest.java:16)
-----------------------------------------------------
-[DATE] Tue May 16 12:22:28 JST 2023
-java.sql.SQLException: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.last(ResultSetImpl.java:1787)
-	at DAO.NutritionFactsDAO.listRegisteredDiets(NutritionFactsDAO.java:28)
-	at UnitTest.NutritionFactsDAOTest.testListRegisteredDiets(NutritionFactsDAOTest.java:45)
-	at UnitTest.NutritionFactsDAOTest.main(NutritionFactsDAOTest.java:14)
-----------------------------------------------------
-[DATE] Tue May 16 12:23:20 JST 2023
-java.sql.SQLException: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.last(ResultSetImpl.java:1787)
-	at DAO.NutritionFactsDAO.listRegisteredDiets(NutritionFactsDAO.java:28)
-	at UnitTest.NutritionFactsDAOTest.testListRegisteredDiets(NutritionFactsDAOTest.java:45)
-	at UnitTest.NutritionFactsDAOTest.main(NutritionFactsDAOTest.java:14)
-----------------------------------------------------
-[DATE] Tue May 16 12:23:42 JST 2023
-java.sql.SQLException: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.last(ResultSetImpl.java:1787)
-	at DAO.NutritionFactsDAO.listRegisteredDiets(NutritionFactsDAO.java:28)
-	at UnitTest.NutritionFactsDAOTest.testListRegisteredDiets(NutritionFactsDAOTest.java:45)
-	at UnitTest.NutritionFactsDAOTest.main(NutritionFactsDAOTest.java:14)
-----------------------------------------------------
-[DATE] Tue May 16 12:45:56 JST 2023
-java.sql.SQLException: Statement.executeQuery() cannot issue statements that do not produce result sets.
+[DATE] Sun May 28 01:22:24 JST 2023
+java.sql.SQLException: Column 'energy' not found.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:928)
-	at DAO.NutritionFactsDAO.listRegisteredDiets(NutritionFactsDAO.java:27)
-	at UnitTest.NutritionFactsDAOTest.testListRegisteredDiets(NutritionFactsDAOTest.java:45)
-	at UnitTest.NutritionFactsDAOTest.main(NutritionFactsDAOTest.java:14)
-----------------------------------------------------
-[DATE] Tue May 16 12:46:26 JST 2023
-java.sql.SQLException: Statement.executeQuery() cannot issue statements that do not produce result sets.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:928)
-	at DAO.NutritionFactsDAO.listRegisteredDiets(NutritionFactsDAO.java:28)
-	at UnitTest.NutritionFactsDAOTest.testListRegisteredDiets(NutritionFactsDAOTest.java:45)
-	at UnitTest.NutritionFactsDAOTest.main(NutritionFactsDAOTest.java:14)
-----------------------------------------------------
-[DATE] Tue May 16 12:46:51 JST 2023
-java.sql.SQLException: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.last(ResultSetImpl.java:1787)
-	at DAO.NutritionFactsDAO.listRegisteredDiets(NutritionFactsDAO.java:29)
-	at UnitTest.NutritionFactsDAOTest.testListRegisteredDiets(NutritionFactsDAOTest.java:45)
-	at UnitTest.NutritionFactsDAOTest.main(NutritionFactsDAOTest.java:14)
-----------------------------------------------------
-[DATE] Tue May 16 12:47:37 JST 2023
-java.sql.SQLException: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.last(ResultSetImpl.java:1787)
-	at DAO.NutritionFactsDAO.listRegisteredDiets(NutritionFactsDAO.java:29)
-	at UnitTest.NutritionFactsDAOTest.testListRegisteredDiets(NutritionFactsDAOTest.java:45)
-	at UnitTest.NutritionFactsDAOTest.main(NutritionFactsDAOTest.java:14)
-----------------------------------------------------
-[DATE] Tue May 16 12:47:56 JST 2023
-java.sql.SQLException: Operation not allowed for a result set of type ResultSet.TYPE_FORWARD_ONLY.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.last(ResultSetImpl.java:1787)
-	at DAO.NutritionFactsDAO.listRegisteredDiets(NutritionFactsDAO.java:30)
-	at UnitTest.NutritionFactsDAOTest.testListRegisteredDiets(NutritionFactsDAOTest.java:45)
-	at UnitTest.NutritionFactsDAOTest.main(NutritionFactsDAOTest.java:14)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getDouble(ResultSetImpl.java:814)
+	at com.DAO.UserIntakeDAO.getSpecifiedNumberDiet(UserIntakeDAO.java:112)
+	at test.DAO.UserIntakeDAOTest.testGetSpecifiedNumberDiet(UserIntakeDAOTest.java:112)
+	at test.DAO.UserIntakeDAOTest.main(UserIntakeDAOTest.java:48)
 ----------------------------------------------------

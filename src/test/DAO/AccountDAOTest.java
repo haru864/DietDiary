@@ -5,7 +5,6 @@ import java.util.Date;
 
 import com.DAO.AccountDAO;
 import com.model.Account;
-import com.model.ActivityLevel;
 import com.model.Gender;
 import com.model.Login;
 
@@ -39,9 +38,9 @@ public class AccountDAOTest {
             e.printStackTrace();
         }
         Account registrableAccount = new Account("test", "pass", "test@sample.com",
-                loginDate, Gender.men, birth, 10, 10, ActivityLevel.HARD_EXERCIS);
+                loginDate, Gender.men, birth, 10, 10);
         Account unregistrableAccount = new Account(null, null, null,
-                null, null, null, 0, 0, null);
+                null, null, null, 0, 0);
 
         if (testRegisterAccount(registrableAccount) == true) {
             System.out.println("[PASS] register succeeded");

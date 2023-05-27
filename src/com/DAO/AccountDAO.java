@@ -8,7 +8,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.model.Account;
-import com.model.ActivityLevel;
 import com.model.Gender;
 import com.model.Login;
 
@@ -38,12 +37,9 @@ public class AccountDAO {
             Date birth = new java.util.Date(rs.getDate("birth").getTime());
             double height = rs.getDouble("height");
             double weight = rs.getDouble("weight");
-            int activityLevelNumber = rs.getInt("activity_level");
-            ActivityLevel activityLevel = ActivityLevel.getActivityLevelFromInt(activityLevelNumber);
 
             Account account = new Account(username, password, email,
-                    updated, gender, birth,
-                    height, weight, activityLevel);
+                    updated, gender, birth, height, weight);
 
             updateLastLoginDate(login);
 
@@ -59,7 +55,7 @@ public class AccountDAO {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
-            String SQL = "INSERT INTO accounts VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String SQL = "INSERT INTO accounts VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pStmt = conn.prepareStatement(SQL);
             pStmt.setString(1, account.getUsername());
             pStmt.setString(2, account.getPassword());
@@ -71,7 +67,6 @@ public class AccountDAO {
             pStmt.setDate(6, new java.sql.Date(birthDate.getTime()));
             pStmt.setDouble(7, account.getHeight());
             pStmt.setDouble(8, account.getWeight());
-            pStmt.setInt(9, account.getActivityLevel().getRegistrationNumber());
 
             int numOfRowsUpdated = 0;
             numOfRowsUpdated = pStmt.executeUpdate();

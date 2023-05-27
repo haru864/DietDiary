@@ -31,15 +31,17 @@ public class DietRecordLogic {
 
             HttpSession session = request.getSession(true);
             String userName = (String) session.getAttribute("username");
-            String foodGroup = request.getParameter("food_group");
+            int foodGroup = Integer.parseInt(request.getParameter("food_group"));
             String foodName = request.getParameter("food_name");
-            String foodWeightGram = request.getParameter("food_weight_gram");
+            double foodWeightGram = Double.parseDouble(request.getParameter("food_weight_gram"));
 
             Date today = new Date();
             UserIntakeDAO userIntakeDAO = new UserIntakeDAO();
             int lastDietNumber = userIntakeDAO.getNumOfDietsRegistered(userName, today);
+            UserIntake userIntake = new UserIntake(userName, today, lastDietNumber + 1,
+                    foodGroup, foodName, foodWeightGram);
 
-            UserIntake userIntake = new UserIntake(userName, today, lastDietNumber + 1, 0);
+            userIntakeDAO.recordNutritionalIntake(userIntake);
 
             return true;
 

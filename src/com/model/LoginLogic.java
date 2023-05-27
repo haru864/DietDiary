@@ -26,13 +26,11 @@ public class LoginLogic {
 
         String genderString = account.getGender().getGenderString();
         int age = account.calcAge();
-        int activityLevelNumber = account.getActivityLevel().getRegistrationNumber();
 
         HttpSession session = req.getSession(true);
         session.setAttribute("username", account.getUsername());
         session.setAttribute("gender", genderString);
         session.setAttribute("age", age);
-        session.setAttribute("activity_level", activityLevelNumber);
 
         return true;
     }

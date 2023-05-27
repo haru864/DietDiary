@@ -1,12 +1,12 @@
 package test.DAO;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 import com.DAO.UserIntakeDAO;
 import com.debug.Debugger;
-import com.model.Nutrition;
 import com.model.UserIntake;
 
 public class UserIntakeDAOTest {
@@ -14,13 +14,20 @@ public class UserIntakeDAOTest {
     public static void main(String[] args) {
 
         // 栄養摂取量の集計・登録・削除処理をテスト
-        UserIntake userIntake01 = generateUserIntake("test", new Date(), 1, 1);
-        UserIntake userIntake02 = generateUserIntake("test", new Date(), 2, 1);
-        UserIntake userIntake03 = generateUserIntake("test", new Date(), 3, 1);
-        // UserIntake userIntake04 = generateUserIntake("user", new Date(), 1, 1);
-        // UserIntake userIntake05 = generateUserIntake("user", new Date(), 2, 1);
-        // testRecordNutritionalIntake(userIntake04);
-        // testRecordNutritionalIntake(userIntake05);
+        UserIntake userIntake01 = new UserIntake("test", new Date(), 1,
+                1, "アマランサス　玄穀", 100.0);
+        UserIntake userIntake02 = new UserIntake("test", new Date(), 2,
+                3, "（その他）　メープルシロップ", 150.0);
+        UserIntake userIntake03 = new UserIntake("test", new Date(), 3,
+                4, "あずき　あん　こし生あん", 200.0);
+
+        List<UserIntake> userIntakeList = new ArrayList<>() {
+            {
+                add(userIntake01);
+                add(userIntake02);
+                add(userIntake03);
+            }
+        };
 
         if (testRecordNutritionalIntake(userIntake01)
                 && testRecordNutritionalIntake(userIntake02)
@@ -42,13 +49,15 @@ public class UserIntakeDAOTest {
                         userIntake01.intakeDietDate, i + 1);
                 // System.out.println(nutritionalIntakeMap);
                 Debugger.writeObjectToFile(nutritionalIntakeMap, "UserIntakeTest.class");
+            }
 
-                if (testDeleteNutritionalIntake(userIntake01.username, userIntake01.intakeDietDate, i + 1)) {
-                    System.out.printf("[PASS] %dth userIntake data deleted\n", i + 1);
+            for (int i = 0; i < userIntakeList.size(); i++) {
+
+                if (testDeleteNutritionalIntake(userIntakeList.get(i))) {
+                    System.out.printf("[PASS] userIntake%02d data deleted\n", i + 1);
                 } else {
-                    System.out.printf("[FAILURE] %dth userIntake data NOT deleted\n", i + 1);
+                    System.out.printf("[FAILURE] userIntake%02d data NOT deleted\n", i + 1);
                 }
-
             }
 
             try {
@@ -77,35 +86,16 @@ public class UserIntakeDAOTest {
         return isSuccess;
     }
 
-    private static Boolean testDeleteNutritionalIntake(String username, Date intakeDietDate, int dietNumber) {
+    private static Boolean testDeleteNutritionalIntake(UserIntake userIntake) {
 
         UserIntakeDAO UserIntakeDAO = new UserIntakeDAO();
         Boolean isSuccess;
         try {
-            isSuccess = UserIntakeDAO.deleteNutritionalIntake(username, intakeDietDate, dietNumber);
+            isSuccess = UserIntakeDAO.deleteNutritionalIntake(userIntake);
         } catch (Exception e) {
             return false;
         }
         return isSuccess;
-    }
-
-    private static UserIntake generateUserIntake(String username, Date intakeDietDate, int dietNumber,
-            int physicalActivityLevel) {
-
-        UserIntake userIntake = new UserIntake(username, intakeDietDate, dietNumber, physicalActivityLevel);
-
-        for (String nutritionName : Nutrition.NUTRITION_LIST) {
-            userIntake.nutrition.setNutritionAmount(nutritionName, generateRandomDouble(1, 10));
-        }
-
-        return userIntake;
-    }
-
-    private static double generateRandomDouble(int min, int max) {
-
-        Random random = new Random();
-        double randomDouble = random.nextDouble() * (max - min) + min;
-        return Math.floor(randomDouble);
     }
 
     private static int testGetNumOfDietsRegistered(String username, Date date) throws Exception {

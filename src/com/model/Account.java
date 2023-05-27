@@ -15,11 +15,10 @@ public class Account {
     private final Date birth;
     private final double height;
     private final double weight;
-    private final ActivityLevel activityLevel;
 
     public Account(String username, String password, String email,
             Date lastLoginDate, Gender gender, java.util.Date birth,
-            double height, double weight, ActivityLevel activityLevel) {
+            double height, double weight) {
 
         this.username = username;
         this.password = password;
@@ -29,7 +28,6 @@ public class Account {
         this.birth = birth;
         this.height = height;
         this.weight = weight;
-        this.activityLevel = activityLevel;
     }
 
     public String getUsername() {
@@ -62,10 +60,6 @@ public class Account {
 
     public double getWeight() {
         return weight;
-    }
-
-    public ActivityLevel getActivityLevel() {
-        return activityLevel;
     }
 
     public int calcAge() {

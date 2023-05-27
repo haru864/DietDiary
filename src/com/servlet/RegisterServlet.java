@@ -13,7 +13,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import com.model.Account;
-import com.model.ActivityLevel;
 import com.model.CheckAccountLogic;
 import com.model.Gender;
 import com.model.RegisterLogic;
@@ -62,8 +61,6 @@ public class RegisterServlet extends HttpServlet {
                 // 6.birth ユーザー入力値を設定
                 // 7.height ユーザー入力値を設定
                 // 8.weight ユーザー入力値を設定
-                // 9.activityLevel ユーザー入力値を設定
-                // 10.TDEE CalculateCaloriesLogicで算出
                 String username = req.getParameter("username");
                 String password = req.getParameter("password");
                 String email = req.getParameter("email");
@@ -85,8 +82,6 @@ public class RegisterServlet extends HttpServlet {
                 }
                 double height = Double.parseDouble(req.getParameter("height"));
                 double weight = Double.parseDouble(req.getParameter("weight"));
-                int activityLevelNumber = Integer.parseInt(req.getParameter("activity_level"));
-                ActivityLevel activityLevel = ActivityLevel.getActivityLevelFromInt(activityLevelNumber);
                 log("username=" + username);
                 log("password=" + password);
                 log("email=" + email);
@@ -95,13 +90,9 @@ public class RegisterServlet extends HttpServlet {
                 log("birth=" + birth);
                 log("height=" + height);
                 log("weight=" + weight);
-                log("activityLevelNumber=" + activityLevelNumber);
-                log("activityLevel=" + activityLevel);
 
                 // Accountオブジェクトを作成、フィールドの整合性をチェック
-                Account account = new Account(username, password, email, updated,
-                        gender, birth, height, weight,
-                        activityLevel);
+                Account account = new Account(username, password, email, updated, gender, birth, height, weight);
                 CheckAccountLogic checkAccountLogic = new CheckAccountLogic();
                 var errorMessageList = checkAccountLogic.execute(account);
                 if (errorMessageList != null) {
