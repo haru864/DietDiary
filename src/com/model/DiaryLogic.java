@@ -27,7 +27,6 @@ public class DiaryLogic {
         String username = (String) session.getAttribute("username");
         String genderString = (String) session.getAttribute("gender");
         int age = (Integer) session.getAttribute("age");
-        int activityLevelNumber = (Integer) session.getAttribute("activity_level");
         String year = request.getParameter("year");
         String month = request.getParameter("month");
         String day = request.getParameter("day");
@@ -40,30 +39,23 @@ public class DiaryLogic {
         LocalDate localDate = LocalDate.parse(year + "-" + month + "-" + day, formatter);
         Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
-        Map<String, Double> totalNutritionalIntakeMap = calcTotalNutritionIntake(username, date);
-        List<Map<String, Double>> dietList = getDietList(username, date);
-        Map<String, Double> recommendedIntakeMap = getRecommendedIntakeMap(age, Gender.valueOf(genderString),
-                activityLevelNumber);
+        var userIntakeNutritionList = listDietAndNutritionOnSpecifiedDate(username, date);
+        // 活動レベルは仮設定
+        Map<String, Double> recommendedIntakeMap = getRecommendedIntakeMap(age, Gender.valueOf(genderString), 1);
 
         session.setAttribute("year", year);
         session.setAttribute("month", month);
         session.setAttribute("day", day);
-        session.setAttribute("total_nutritional_intake_map", totalNutritionalIntakeMap);
-        session.setAttribute("diet_list", dietList);
+        session.setAttribute("user_intake_nutrition_list", userIntakeNutritionList);
         session.setAttribute("recommended_intake_map", recommendedIntakeMap);
 
         return true;
     }
 
-    public Map<String, Double> calcTotalNutritionIntake(String username, Date date) {
+    public List<UserIntakeNutrition> listDietAndNutritionOnSpecifiedDate(String username, Date date) {
 
         UserIntakeDAO userIntakeDAO = new UserIntakeDAO();
-        Map<String, Double> totalNutritionalIntakeMap = new HashMap<>();
-
-        for (int i = 0; i < Nutrition.NUTRITION_LIST.size(); i++) {
-            String nutritionName = Nutrition.NUTRITION_LIST.get(i);
-            totalNutritionalIntakeMap.put(nutritionName, 0.0);
-        }
+        List<UserIntakeNutrition> userIntakeNutritionList = new ArrayList<>();
 
         try {
 
@@ -73,46 +65,18 @@ public class DiaryLogic {
             }
 
             for (int dietNumber = 1; dietNumber <= numOfDiets; dietNumber++) {
-                var nutritionalIntakeMap = userIntakeDAO.getSpecifiedNumberDiet(username, date, dietNumber);
-                for (int i = 0; i < Nutrition.NUTRITION_LIST.size(); i++) {
-                    String nutritionName = Nutrition.NUTRITION_LIST.get(i);
-                    totalNutritionalIntakeMap.put(nutritionName,
-                            totalNutritionalIntakeMap.getOrDefault(nutritionName, 0.0)
-                                    + nutritionalIntakeMap.get(nutritionName));
-                }
+                var userIntake = userIntakeDAO.getSpecifiedUserIntake(username, date, dietNumber);
+                UserIntakeNutrition userIntakeNutrition = new UserIntakeNutrition(userIntake);
+                // System.out.println("userIntakeNutrition: " + userIntakeNutrition);
+                userIntakeNutritionList.add(userIntakeNutrition);
             }
 
         } catch (Exception e) {
 
-            // e.printStackTrace();
+            e.printStackTrace();
         }
 
-        return totalNutritionalIntakeMap;
-    }
-
-    public List<Map<String, Double>> getDietList(String username, Date date) {
-
-        List<Map<String, Double>> dietList = new ArrayList<>();
-        UserIntakeDAO userIntakeDAO = new UserIntakeDAO();
-
-        try {
-
-            int numOfDiets = userIntakeDAO.getNumOfDietsRegistered(username, date);
-            if (numOfDiets == 0) {
-                return null;
-            }
-
-            for (int dietNumber = 1; dietNumber <= numOfDiets; dietNumber++) {
-                var nutritionalIntakeMap = userIntakeDAO.getSpecifiedNumberDiet(username, date, dietNumber);
-                dietList.add(nutritionalIntakeMap);
-            }
-
-        } catch (Exception e) {
-
-            // e.printStackTrace();
-        }
-
-        return dietList;
+        return userIntakeNutritionList;
     }
 
     public Map<String, Double> getRecommendedIntakeMap(int age, Gender gender, int physicalActivityLevel) {

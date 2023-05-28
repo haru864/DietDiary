@@ -1,4 +1,4 @@
-[DATE] Sun May 28 01:22:24 JST 2023
+[DATE] Mon May 29 01:10:33 JST 2023
 [message] UserIntakeTest.class
-null
+UserIntake [username=test, intakeDietDate=2023-05-29, dietNumber=3, foodGroup=4, foodName=あずき　あん　こし生あん, grams=200.0]
 ----------------------------------------------------

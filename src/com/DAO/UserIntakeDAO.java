@@ -92,9 +92,9 @@ public class UserIntakeDAO {
         }
     }
 
-    public Map<String, Double> getSpecifiedNumberDiet(String username, Date intakeDietDate, int dietNumber) {
+    public UserIntake getSpecifiedUserIntake(String username, Date intakeDietDate, int dietNumber) {
 
-        Map<String, Double> nutritionalIntakeMap = new HashMap<>();
+        UserIntake userIntake;
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
@@ -107,18 +107,23 @@ public class UserIntakeDAO {
             ResultSet rs = pStmt.executeQuery();
             rs.next();
 
-            for (int i = 0; i < Nutrition.NUTRITION_LIST.size(); i++) {
-                String nutritionName = Nutrition.NUTRITION_LIST.get(i);
-                nutritionalIntakeMap.put(nutritionName, rs.getDouble(nutritionName));
-            }
+            String _username = rs.getString("username");
+            Date _intakeDietDate = rs.getDate("intake_diet_date");
+            int _dietNumber = rs.getInt("diet_number");
+            int _foodGroupNumber = rs.getInt("food_group_number");
+            String _foodName = rs.getString("food_name");
+            double _grams = rs.getDouble("grams");
+
+            userIntake = new UserIntake(_username, _intakeDietDate, _dietNumber, _foodGroupNumber, _foodName, _grams);
 
         } catch (Exception e) {
 
-            LogException.writeErrorMsgToFile(e);
+            // LogException.writeErrorMsgToFile(e);
+            e.printStackTrace();
             return null;
         }
 
-        return nutritionalIntakeMap;
+        return userIntake;
     }
 
 }

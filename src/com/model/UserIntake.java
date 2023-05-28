@@ -28,4 +28,10 @@ public class UserIntake implements Comparable<UserIntake> {
         return this.dietNumber - userIntake.dietNumber;
     }
 
+    @Override
+    public String toString() {
+        return "UserIntake [username=" + username + ", intakeDietDate=" + intakeDietDate + ", dietNumber=" + dietNumber
+                + ", foodGroup=" + foodGroup + ", foodName=" + foodName + ", grams=" + grams + "]";
+    }
+
 }

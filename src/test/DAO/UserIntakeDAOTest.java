@@ -3,7 +3,6 @@ package test.DAO;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import com.DAO.UserIntakeDAO;
 import com.debug.Debugger;
@@ -45,7 +44,7 @@ public class UserIntakeDAOTest {
 
             for (int i = 0; i < numOfDiets; i++) {
 
-                var nutritionalIntakeMap = testGetSpecifiedNumberDiet(userIntake01.username,
+                var nutritionalIntakeMap = testGetSpecifiedUserIntake(userIntake01.username,
                         userIntake01.intakeDietDate, i + 1);
                 // System.out.println(nutritionalIntakeMap);
                 Debugger.writeObjectToFile(nutritionalIntakeMap, "UserIntakeTest.class");
@@ -105,11 +104,11 @@ public class UserIntakeDAOTest {
         return numOfDiets;
     }
 
-    private static Map<String, Double> testGetSpecifiedNumberDiet(String username, Date intakeDietDate,
+    private static UserIntake testGetSpecifiedUserIntake(String username, Date intakeDietDate,
             int dietNumber) {
 
         UserIntakeDAO UserIntakeDAO = new UserIntakeDAO();
-        return UserIntakeDAO.getSpecifiedNumberDiet(username, intakeDietDate, dietNumber);
+        return UserIntakeDAO.getSpecifiedUserIntake(username, intakeDietDate, dietNumber);
     }
 
 }

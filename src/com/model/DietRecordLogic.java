@@ -1,5 +1,8 @@
 package com.model;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -31,14 +34,21 @@ public class DietRecordLogic {
 
             HttpSession session = request.getSession(true);
             String userName = (String) session.getAttribute("username");
+            String year = (String) session.getAttribute("year");
+            String month = (String) session.getAttribute("month");
+            String day = (String) session.getAttribute("day");
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
+            LocalDate localDate = LocalDate.parse(year + "-" + month + "-" + day, formatter);
+            Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
             int foodGroup = Integer.parseInt(request.getParameter("food_group"));
             String foodName = request.getParameter("food_name");
             double foodWeightGram = Double.parseDouble(request.getParameter("food_weight_gram"));
 
-            Date today = new Date();
             UserIntakeDAO userIntakeDAO = new UserIntakeDAO();
-            int lastDietNumber = userIntakeDAO.getNumOfDietsRegistered(userName, today);
-            UserIntake userIntake = new UserIntake(userName, today, lastDietNumber + 1,
+            int lastDietNumber = userIntakeDAO.getNumOfDietsRegistered(userName, date);
+            UserIntake userIntake = new UserIntake(userName, date, lastDietNumber + 1,
                     foodGroup, foodName, foodWeightGram);
 
             userIntakeDAO.recordNutritionalIntake(userIntake);

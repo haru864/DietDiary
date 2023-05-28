@@ -1,6 +1,7 @@
 package com.servlet;
 
 import java.io.IOException;
+import java.util.Map;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -8,6 +9,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import com.model.DiaryLogic;
 import com.model.DietRecordLogic;
 
@@ -52,6 +55,8 @@ public class MypageServlet extends HttpServlet {
 
             DiaryLogic diaryLogic = new DiaryLogic();
             Boolean isSuccess = diaryLogic.execute(req);
+            // HttpSession session = req.getSession(true);
+            // log("user_intake_nutrition_list: " + session.getAttribute("user_intake_nutrition_list"));
 
             if (!isSuccess) {
                 requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);

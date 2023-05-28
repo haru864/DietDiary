@@ -1,4 +1,4 @@
-[DATE] Sun May 28 01:22:24 JST 2023
+[DATE] Sun May 28 23:26:30 JST 2023
 java.sql.SQLException: Column 'energy' not found.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
@@ -7,6 +7,7 @@ java.sql.SQLException: Column 'energy' not found.
 	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
 	at com.mysql.cj.jdbc.result.ResultSetImpl.getDouble(ResultSetImpl.java:814)
 	at com.DAO.UserIntakeDAO.getSpecifiedNumberDiet(UserIntakeDAO.java:112)
-	at test.DAO.UserIntakeDAOTest.testGetSpecifiedNumberDiet(UserIntakeDAOTest.java:112)
-	at test.DAO.UserIntakeDAOTest.main(UserIntakeDAOTest.java:48)
+	at com.model.DiaryLogic.getDietList(DiaryLogic.java:106)
+	at test.model.DiaryLogicTest.testGetDietList(DiaryLogicTest.java:43)
+	at test.model.DiaryLogicTest.main(DiaryLogicTest.java:28)
 ----------------------------------------------------

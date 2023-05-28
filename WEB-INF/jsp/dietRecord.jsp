@@ -56,10 +56,10 @@ String foodNameMapJson = mapper.writeValueAsString(foodNameMap);
         </form>
     </div>
     <div>
-        <form action="/DietDiary/MypageServlet" method="post" id="go_to_mypage">
-            <button>マイページへ</button>
+        <form action="/DietDiary/MypageServlet" method="post" id="go_to_diary">
+            <button>ダイアリー画面へ戻る</button>
             <input type="hidden" name="action" value="display">
-            <input type="hidden" name="page" value="mypage">
+            <input type="hidden" name="page" value="diary">
         </form>
     </div>
 

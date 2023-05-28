@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.model.Nutrition;
+
 public class NutritionFactsDAO {
 
     private final String DB_URL = "jdbc:mysql://localhost:3306/DietDiary";
@@ -68,6 +70,34 @@ public class NutritionFactsDAO {
         }
 
         return foodNameList;
+    }
+
+    public Nutrition getNutritionOfSpecifiedFood(String foodName, double foodGrams) {
+
+        Nutrition nutrition = new Nutrition();
+
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
+
+            String sql = "SELECT * FROM nutrition_facts WHERE food_name = ?";
+            PreparedStatement pStmt = conn.prepareStatement(sql);
+            pStmt.setString(1, foodName);
+            ResultSet rs = pStmt.executeQuery();
+
+            rs.next();
+            for (String nutritionName : Nutrition.NUTRITION_LIST) {
+                double nutritionAmount = rs.getDouble(nutritionName);
+                double foodGramsRegistered = rs.getDouble("grams");
+                nutrition.setNutritionAmount(nutritionName, nutritionAmount * foodGrams / foodGramsRegistered);
+            }
+
+        } catch (Exception e) {
+
+            // LogException.writeErrorMsgToFile(e);
+            e.printStackTrace();
+            return null;
+        }
+
+        return nutrition;
     }
 
 }

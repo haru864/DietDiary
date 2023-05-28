@@ -61,4 +61,9 @@ public class Nutrition {
         return nutritionAmount.get(nutritionName);
     }
 
+    @Override
+    public String toString() {
+        return "Nutrition [nutritionAmount=" + nutritionAmount + "]";
+    }
+
 }
