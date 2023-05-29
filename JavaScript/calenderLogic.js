@@ -60,7 +60,7 @@ function generateCalender() {
 
         // ダイアリー画面へPOSTするためのフォームを生成
         const cellForm = document.createElement("form");
-        cellForm.method = "post";
+        cellForm.method = "get";
         cellForm.action = "/DietDiary/MypageServlet";
 
         // リクエストパラメータを設定

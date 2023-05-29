@@ -51,6 +51,37 @@ public class AccountDAO {
         }
     }
 
+    public Account getAccountByUserName(String username) {
+
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
+
+            String SQL = "SELECT * FROM accounts WHERE username = ?";
+            PreparedStatement pStmt = conn.prepareStatement(SQL);
+            pStmt.setString(1, username);
+
+            ResultSet rs = pStmt.executeQuery();
+            rs.next();
+
+            String _username = rs.getString("username");
+            String _password = rs.getString("password");
+            String _email = rs.getString("email");
+            Date _updated = rs.getDate("last_login_date");
+            Gender _gender = rs.getString("gender").equals("men") ? Gender.men : Gender.women;
+            Date _birth = new java.util.Date(rs.getDate("birth").getTime());
+            double _height = rs.getDouble("height");
+            double _weight = rs.getDouble("weight");
+
+            Account account = new Account(_username, _password, _email,
+                    _updated, _gender, _birth, _height, _weight);
+
+            return account;
+
+        } catch (Exception e) {
+
+            return null;
+        }
+    }
+
     public Boolean registerAccount(Account account) {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {

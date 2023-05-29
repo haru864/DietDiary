@@ -55,21 +55,21 @@
         <% } %>
     </div>
     <div>
-        <form action="/DietDiary/MypageServlet" method="post" id="go_to_dietRecord">
+        <form action="/DietDiary/MypageServlet" method="get" id="go_to_dietRecord">
             <button>食事を登録する</button>
             <input type="hidden" name="action" value="display">
             <input type="hidden" name="page" value="dietRecord">
         </form>
     </div>
     <div>
-        <form action="/DietDiary/MypageServlet" method="post" id="go_to_calender">
+        <form action="/DietDiary/MypageServlet" method="get" id="go_to_calender">
             <button>カレンダーへ</button>
             <input type="hidden" name="action" value="display">
             <input type="hidden" name="page" value="calender">
         </form>
     </div>
     <div>
-        <form action="/DietDiary/MypageServlet" method="post" id="go_to_mypage">
+        <form action="/DietDiary/MypageServlet" method="get" id="go_to_mypage">
             <button>マイページへ</button>
             <input type="hidden" name="action" value="display">
             <input type="hidden" name="page" value="mypage">

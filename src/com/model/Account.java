@@ -1,9 +1,15 @@
 package com.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Account {
 
@@ -15,6 +21,21 @@ public class Account {
     private final Date birth;
     private final double height;
     private final double weight;
+    public static List<String> USER_MODIFIABLE_INFORMATION;
+
+    static {
+        USER_MODIFIABLE_INFORMATION = new ArrayList<>() {
+            {
+                add("ユーザー名");
+                add("パスワード");
+                add("メールアドレス");
+                add("性別");
+                add("誕生日");
+                add("身長");
+                add("体重");
+            }
+        };
+    }
 
     public Account(String username, String password, String email,
             Date lastLoginDate, Gender gender, java.util.Date birth,
@@ -68,6 +89,25 @@ public class Account {
         final LocalDate birthLocalDate = LocalDate.ofInstant(this.birth.toInstant(), ZoneId.systemDefault());
         final int age = Period.between(birthLocalDate, todayLocalDate).getYears();
         return age;
+    }
+
+    public Map<String, String> getUserInfoMap() {
+
+        Map<String, String> userInfoMap = new HashMap<>();
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        LocalDateTime birthLocalDateTime = LocalDateTime.ofInstant(birth.toInstant(), ZoneId.systemDefault());
+        String birthString = dtf.format(birthLocalDateTime);
+
+        userInfoMap.put("ユーザー名", username);
+        userInfoMap.put("パスワード", password);
+        userInfoMap.put("メールアドレス", email);
+        userInfoMap.put("性別", gender.getGenderString());
+        userInfoMap.put("誕生日", birthString);
+        userInfoMap.put("身長", height + "cm");
+        userInfoMap.put("体重", weight + "kg");
+
+        return userInfoMap;
     }
 
 }
