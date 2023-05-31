@@ -82,7 +82,7 @@ public class AccountDAO {
         }
     }
 
-    public Boolean registerAccount(Account account) {
+    public boolean registerAccount(Account account) {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
@@ -110,7 +110,30 @@ public class AccountDAO {
         }
     }
 
-    public Boolean deleteAccount(Account account) throws Exception {
+    public boolean changeUpdatableUserInformation(String username, String email, double height, double weight) {
+
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
+
+            String SQL = "UPDATE accounts set email = ?, height = ?, weight = ? WHERE username = ?";
+
+            PreparedStatement pStmt = conn.prepareStatement(SQL);
+            pStmt.setString(1, email);
+            pStmt.setDouble(2, height);
+            pStmt.setDouble(3, weight);
+            pStmt.setString(4, username);
+
+            int numOfRowsUpdated = 0;
+            numOfRowsUpdated = pStmt.executeUpdate();
+
+            return numOfRowsUpdated == 1;
+
+        } catch (Exception e) {
+
+            return false;
+        }
+    }
+
+    public boolean deleteAccount(Account account) throws Exception {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
@@ -131,7 +154,7 @@ public class AccountDAO {
         return true;
     }
 
-    private Boolean updateLastLoginDate(Login login) throws Exception {
+    private boolean updateLastLoginDate(Login login) throws Exception {
 
         Date currentDate = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

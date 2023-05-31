@@ -44,9 +44,6 @@ public class AccountDAOTest {
 
         if (testRegisterAccount(registrableAccount) == true) {
             System.out.println("[PASS] register succeeded");
-            if (testDeleteAccount(registrableAccount)) {
-                System.out.println("test account deleted");
-            }
         } else {
             System.out.println("[FAILURE] register failed");
         }
@@ -57,9 +54,23 @@ public class AccountDAOTest {
             System.out.println("[FAILURE] unauthorized register succeeded");
         }
 
+        // ユーザー情報の変更をテスト
+        if (testChangeUpdatableUserInformation(
+                registrableAccount.getUsername(), "hogehoge", 190.45, 74.8) == true) {
+            System.out.println("[PASS] change succeeded");
+        } else {
+            System.out.println("[PASS] change failed");
+        }
+
+        // ユーザー情報の削除をテスト
+        if (testDeleteAccount(registrableAccount)) {
+            System.out.println("[PASS] test account deleted");
+        } else {
+            System.out.println("[FAILURE] delete failed");
+        }
     }
 
-    private static Boolean testFindByLogin(Login login) {
+    private static boolean testFindByLogin(Login login) {
 
         AccountDAO accountDAO = new AccountDAO();
         Account account = accountDAO.findByLogin(login);
@@ -71,23 +82,30 @@ public class AccountDAOTest {
         return true;
     }
 
-    private static Boolean testRegisterAccount(Account account) {
+    private static boolean testRegisterAccount(Account account) {
 
         AccountDAO accountDAO = new AccountDAO();
-        Boolean isRegistered = accountDAO.registerAccount(account);
+        boolean isRegistered = accountDAO.registerAccount(account);
         return isRegistered;
     }
 
-    private static Boolean testDeleteAccount(Account account) {
+    private static boolean testDeleteAccount(Account account) {
 
         AccountDAO accountDAO = new AccountDAO();
-        Boolean isDeleted;
+        boolean isDeleted;
         try {
             isDeleted = accountDAO.deleteAccount(account);
         } catch (Exception e) {
             isDeleted = false;
         }
         return isDeleted;
+    }
+
+    private static boolean testChangeUpdatableUserInformation(
+            String username, String email, double height, double weight) {
+
+        AccountDAO accountDAO = new AccountDAO();
+        return accountDAO.changeUpdatableUserInformation(username, email, height, weight);
     }
 
 }

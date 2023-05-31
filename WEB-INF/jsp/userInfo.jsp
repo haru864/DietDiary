@@ -6,7 +6,8 @@
 <% Map<String, String> userInfoMap = (Map<String, String>)session.getAttribute("user_info_map"); %>
 <%
 ObjectMapper mapper = new ObjectMapper();
-String userModifiableInformationListJson = mapper.writeValueAsString(Account.USER_MODIFIABLE_INFORMATION);
+String visibleUserInformationListJson = mapper.writeValueAsString(Account.VISIBLE_USER_INFORMATION);
+String modifiableUserInformationMapJson = mapper.writeValueAsString(Account.MODIFIABLE_USER_INFORMATION);
 String userInfoMapJson = mapper.writeValueAsString(userInfoMap);
 %>
 
@@ -16,8 +17,10 @@ String userInfoMapJson = mapper.writeValueAsString(userInfoMap);
 <head>
     <meta charset="UTF-8" http-equiv="Prag" content="no-cache">
     <title>ユーザー情報</title>
+    <link rel="stylesheet" href="/DietDiary/CSS/userInfo.css">
     <script type="text/javascript">
-        window.userModifiableInformationListJson = '<%= userModifiableInformationListJson %>';
+        window.visibleUserInformationListJson = '<%= visibleUserInformationListJson %>';
+        window.modifiableUserInformationMapJson = '<%= modifiableUserInformationMapJson %>';
         window.userInfoMapJson = '<%= userInfoMapJson %>';
     </script>
 </head>
@@ -30,9 +33,9 @@ String userInfoMapJson = mapper.writeValueAsString(userInfoMap);
     </div>
     <div>
         <form action="/DietDiary/MypageServlet" method="post" id="go_to_calender">
-            <button>修正する ※実装中</button>
-            <input type="hidden" name="action" value="display">
-            <input type="hidden" name="page" value="calender">
+            <button id="submit">修正する ※実装中</button>
+            <input type="hidden" name="action" value="register">
+            <input type="hidden" name="page" value="userInfo">
         </form>
         <form action="/DietDiary/MypageServlet" method="get" id="go_to_calender">
             <button>カレンダーへ</button>

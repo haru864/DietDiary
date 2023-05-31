@@ -110,6 +110,16 @@ public class MypageServlet extends HttpServlet {
 
             requestDispatcher = req.getRequestDispatcher(calenderJsp);
 
+        } else if (page.equals("userInfo")) {
+
+            if (new UserInfoLogic().registerModifiedUserInfo(req)) {
+                requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
+                requestDispatcher.forward(req, resp);
+                return;
+            }
+
+            requestDispatcher = req.getRequestDispatcher(mypageJsp);
+
         } else {
 
             requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);

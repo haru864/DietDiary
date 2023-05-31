@@ -21,10 +21,11 @@ public class Account {
     private final Date birth;
     private final double height;
     private final double weight;
-    public static List<String> USER_MODIFIABLE_INFORMATION;
+    public static List<String> VISIBLE_USER_INFORMATION;
+    public static Map<String, Boolean> MODIFIABLE_USER_INFORMATION;
 
     static {
-        USER_MODIFIABLE_INFORMATION = new ArrayList<>() {
+        VISIBLE_USER_INFORMATION = new ArrayList<>() {
             {
                 add("ユーザー名");
                 add("パスワード");
@@ -33,6 +34,17 @@ public class Account {
                 add("誕生日");
                 add("身長");
                 add("体重");
+            }
+        };
+        MODIFIABLE_USER_INFORMATION = new HashMap<>() {
+            {
+                put("ユーザー名", false);
+                put("パスワード", false);
+                put("メールアドレス", true);
+                put("性別", false);
+                put("誕生日", false);
+                put("身長", true);
+                put("体重", true);
             }
         };
     }
@@ -100,7 +112,7 @@ public class Account {
         String birthString = dtf.format(birthLocalDateTime);
 
         userInfoMap.put("ユーザー名", username);
-        userInfoMap.put("パスワード", password);
+        userInfoMap.put("パスワード", password.replaceAll(".", "\\*"));
         userInfoMap.put("メールアドレス", email);
         userInfoMap.put("性別", gender.getGenderString());
         userInfoMap.put("誕生日", birthString);

@@ -52,14 +52,14 @@ public class AccountTest {
 
     private static boolean testGetUserInfoMap(Account account) {
 
-        System.out.println(Account.USER_MODIFIABLE_INFORMATION);
+        System.out.println(Account.VISIBLE_USER_INFORMATION);
 
         var userInfoMap = account.getUserInfoMap();
         if (userInfoMap == null) {
             return false;
         }
 
-        for (String key : Account.USER_MODIFIABLE_INFORMATION) {
+        for (String key : Account.VISIBLE_USER_INFORMATION) {
             System.out.println(key + ": " + userInfoMap.get(key));
         }
 
