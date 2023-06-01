@@ -112,7 +112,7 @@ public class MypageServlet extends HttpServlet {
 
         } else if (page.equals("userInfo")) {
 
-            if (new UserInfoLogic().registerModifiedUserInfo(req)) {
+            if (new UserInfoLogic().registerModifiedUserInfo(req) == false) {
                 requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
                 requestDispatcher.forward(req, resp);
                 return;

@@ -24,9 +24,9 @@ public class UserInfoLogic {
 
         HttpSession session = request.getSession(true);
         String username = (String) session.getAttribute("username");
-        String email = (String) session.getAttribute("email");
-        double height = (Double) session.getAttribute("height");
-        double weight = (Double) session.getAttribute("weight");
+        String email = request.getParameter("email");
+        double height = Double.parseDouble(request.getParameter("height"));
+        double weight = Double.parseDouble(request.getParameter("weight"));
 
         AccountDAO accountDAO = new AccountDAO();
         var result = accountDAO.changeUpdatableUserInformation(username, email, height, weight);

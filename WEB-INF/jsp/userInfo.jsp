@@ -32,7 +32,7 @@ String userInfoMapJson = mapper.writeValueAsString(userInfoMap);
         </div>
     </div>
     <div>
-        <form action="/DietDiary/MypageServlet" method="post" id="go_to_calender">
+        <form action="/DietDiary/MypageServlet" method="post" id="submit_userInfo">
             <button id="submit">修正する ※実装中</button>
             <input type="hidden" name="action" value="register">
             <input type="hidden" name="page" value="userInfo">

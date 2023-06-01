@@ -116,8 +116,8 @@ public class Account {
         userInfoMap.put("メールアドレス", email);
         userInfoMap.put("性別", gender.getGenderString());
         userInfoMap.put("誕生日", birthString);
-        userInfoMap.put("身長", height + "cm");
-        userInfoMap.put("体重", weight + "kg");
+        userInfoMap.put("身長", String.valueOf(height));
+        userInfoMap.put("体重", String.valueOf(weight));
 
         return userInfoMap;
     }
