@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-31T13:51:44.193Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="ptcmeyaYHWok-Or8E61F" version="21.3.6" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-06-02T13:01:54.707Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="k8Pz7oN6FtLNwRK0BhBt" version="21.3.6" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,8 +7,8 @@
         <mxCell id="F7Vc8ZFNlc0AgKW0ZdvA-2" value="&lt;b&gt;ログイン画面&lt;/b&gt;&lt;br&gt;ログイン&lt;br&gt;トップ画面へ" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="637" y="200" width="130" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="F7Vc8ZFNlc0AgKW0ZdvA-3" value="&lt;b&gt;マイページ画面&lt;/b&gt;&lt;br&gt;カレンダー&lt;br&gt;アカウント情報" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="1541" y="200" width="130" height="90" as="geometry" />
+        <mxCell id="F7Vc8ZFNlc0AgKW0ZdvA-3" value="&lt;b&gt;マイページ画面&lt;/b&gt;&lt;br&gt;・カレンダー&lt;br&gt;・登録情報修正&lt;br&gt;・ログアウト" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1530" y="200" width="141" height="90" as="geometry" />
         </mxCell>
         <mxCell id="F7Vc8ZFNlc0AgKW0ZdvA-4" value="&lt;b&gt;食事登録画面&lt;/b&gt;&lt;br&gt;・登録&lt;br&gt;・マイページへ戻る" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="2193" y="290" width="130" height="90" as="geometry" />
@@ -85,7 +85,7 @@
             <mxPoint x="1560" y="310" as="targetPoint" />
             <Array as="points">
               <mxPoint x="2093" y="50" />
-              <mxPoint x="1606" y="50" />
+              <mxPoint x="1601" y="50" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -104,9 +104,9 @@
             <mxPoint x="163" y="290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="F7Vc8ZFNlc0AgKW0ZdvA-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="V1EqbFkyiiF36Y8cbw8S-18" target="TZGxG1lLMiEYIYuuG3XD-22" edge="1">
+        <mxCell id="F7Vc8ZFNlc0AgKW0ZdvA-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="F7Vc8ZFNlc0AgKW0ZdvA-3" target="TZGxG1lLMiEYIYuuG3XD-22" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1310" y="510" as="sourcePoint" />
+            <mxPoint x="2161" y="762" as="sourcePoint" />
             <mxPoint x="1430" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -332,9 +332,6 @@
             <mxPoint x="1883" y="165" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="V1EqbFkyiiF36Y8cbw8S-18" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-90;" parent="1" vertex="1">
-          <mxGeometry x="2136" y="126" width="50" height="1222" as="geometry" />
-        </mxCell>
         <mxCell id="V1EqbFkyiiF36Y8cbw8S-19" value="MypageServlet" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="2409" y="305" width="120" height="60" as="geometry" />
         </mxCell>
@@ -364,12 +361,12 @@
             <mxPoint x="2078" y="345" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oAsUEzmU9854Oo67QXW2-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="fMCOVagfSarkIOheRsBp-1" target="F7Vc8ZFNlc0AgKW0ZdvA-3" edge="1">
+        <mxCell id="oAsUEzmU9854Oo67QXW2-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="fMCOVagfSarkIOheRsBp-1" target="F7Vc8ZFNlc0AgKW0ZdvA-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1610" y="390" as="targetPoint" />
             <Array as="points">
               <mxPoint x="2470" y="630" />
-              <mxPoint x="1606" y="630" />
+              <mxPoint x="1636" y="630" />
             </Array>
             <mxPoint x="2340" y="630" as="sourcePoint" />
           </mxGeometry>
@@ -434,8 +431,8 @@
             <mxPoint x="1070" y="489" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Q-mw3KqoH2_z4VpCv3KH-1" value="設定変更機能と退会機能を追加したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="2648" y="524" width="250" height="80" as="geometry" />
+        <mxCell id="Q-mw3KqoH2_z4VpCv3KH-1" value="退会機能を追加したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="2591" y="479" width="250" height="80" as="geometry" />
         </mxCell>
         <mxCell id="hn9-qHdOzcdeAvWz7wPk-2" value="action=display&lt;br&gt;page=calender" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" parent="1" vertex="1">
           <mxGeometry x="1739" y="155" width="100" height="50" as="geometry" />
