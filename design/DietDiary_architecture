@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-02T13:01:54.707Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="k8Pz7oN6FtLNwRK0BhBt" version="21.3.6" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-06-02T17:29:37.339Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="TrlI_8z-elBf02LqeR4d" version="21.3.7" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -494,8 +494,8 @@
         <mxCell id="adUW8EdYDnNfrDUWuIO9-1" value="DBに登録された食品から選択するだけでなく、摂取した栄養を直接入力できるモードも用意したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2780" y="306.5" width="220" height="153.5" as="geometry" />
         </mxCell>
-        <mxCell id="3xfaWBao8sKOb0TL2-zc-1" value="Log4J使ってservletを継承していないクラスでもログ出力ができるようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="1460" y="-32.5" width="234" height="130" as="geometry" />
+        <mxCell id="3xfaWBao8sKOb0TL2-zc-1" value="Log4J使ってservletを継承していないクラスでもログ出力ができるようにしたい&lt;br&gt;⇨ slf4j + logback でやってみる" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="1430" y="-60" width="264" height="157.5" as="geometry" />
         </mxCell>
         <mxCell id="Q_ENeYMZY1AbDpytAbhA-1" value="JSTL使ってJSPコードをフォーマットできるようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2446" y="-180" width="234" height="130" as="geometry" />

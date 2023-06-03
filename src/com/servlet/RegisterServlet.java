@@ -82,14 +82,6 @@ public class RegisterServlet extends HttpServlet {
                 }
                 double height = Double.parseDouble(req.getParameter("height"));
                 double weight = Double.parseDouble(req.getParameter("weight"));
-                log("username=" + username);
-                log("password=" + password);
-                log("email=" + email);
-                log("updated=" + updated);
-                log("gender=" + gender);
-                log("birth=" + birth);
-                log("height=" + height);
-                log("weight=" + weight);
 
                 // Accountオブジェクトを作成、フィールドの整合性をチェック
                 Account account = new Account(username, password, email, updated, gender, birth, height, weight);

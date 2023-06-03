@@ -1,0 +1,3 @@
+2023-06-03 20:27:30,505 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:36] (debug)referer: null, dest: WelcomeServlet
+2023-06-03 20:27:30,507 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-03 20:27:31,258 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:36] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
