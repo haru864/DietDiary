@@ -17,6 +17,8 @@ import jakarta.servlet.http.HttpServletRequest;
 @WebFilter("/*")
 public class DefaultFilter implements Filter {
 
+    Logger logger = LoggerFactory.getLogger(DefaultFilter.class);
+
     @Override
     public void destroy() {
     }
@@ -32,10 +34,10 @@ public class DefaultFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         String referer = httpServletRequest.getHeader("REFERER");
         String dest = httpServletRequest.getServletPath().substring(1);
-        Logger logger = LoggerFactory.getLogger(DefaultFilter.class);
         logger.info("(debug)referer: " + referer + ", dest: " + dest);
 
         request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         chain.doFilter(request, response);
     }
 }

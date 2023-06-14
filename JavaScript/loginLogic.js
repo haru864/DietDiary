@@ -5,7 +5,6 @@ window.onload = function () {
     let input_password = document.getElementById("password");
 
     btn_passview.addEventListener("click", () => {
-
         if (input_password.type == "password") {
             input_password.type = "text";
             btn_passview.textContent = "非表示";
@@ -20,7 +19,7 @@ window.onload = function () {
     document.getElementById("warningUnfilledPassword").style.display = "none";
 
     // ログインボタン押下時の入力内容チェック
-    const checkLoginForm = function () {
+    function checkLoginForm() {
 
         let isAllFilled = true;
 
@@ -41,35 +40,102 @@ window.onload = function () {
         return isAllFilled;
     }
 
+    async function loginAsynchronously() {
+
+        let url = 'http://localhost:8080/DietDiary/LoginServlet';
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        console.log('username: ' + username);
+        console.log('password: ' + password);
+
+        let params = new URLSearchParams();
+        params.append('action', 'preLogin');
+        params.append('username', username);
+        params.append('password', password);
+
+        try {
+
+            let response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: params
+            });
+            console.log(response);
+            let json = await response.json();
+            console.log(json);
+
+            if (json.result === 'success') {
+                return true;
+            }
+            return false;
+
+        } catch (error) {
+
+            console.log('FETCH ERROR');
+            console.error(error);
+            return false;
+        }
+    }
+
     function isUsernameFilled() {
 
         let username = document.getElementById("username").value;
-
         if (username == "") {
             return false;
         }
-
         return true;
     }
 
     function isPasswordFilled() {
 
         let password = document.getElementById("password").value;
-
         if (password == "") {
             return false;
         }
-
         return true;
     }
 
-    function isAccountRegistered() {
+    document.getElementById('login_form').addEventListener('submit', async function (event) {
 
-        let username = document.getElementById("username").value;
-        let password = document.getElementById("password").value;
+        let form = document.getElementById('login_form');
+        event.preventDefault();
 
-    }
+        if (checkLoginForm() == false) {
+            alert('入力項目を確認してください');
+            event.stopPropagation();
+            return;
+        }
 
-    document.getElementById('login_form').addEventListener('submit', checkLoginForm);
+        console.log('calling loginAsynchronously');
+        let isLoginSuccess = await loginAsynchronously();
+
+        console.log('isLoginSuccess: ' + isLoginSuccess);
+        if (isLoginSuccess == false) {
+            alert('ユーザー名またはパスワードが誤っています');
+            event.stopPropagation();
+            event.preventDefault();
+            return;
+        }
+
+        // 一時的なイベントハンドラを削除
+        form.removeEventListener('submit', arguments.callee);
+
+        // 再度フォーム送信をトリガー
+        form.submit();
+    });
+
+    document.getElementById('fetch_test_btn').addEventListener('click', function (event) {
+        console.log('calling loginAsynchronously from button');
+        (async function () {
+            await loginAsynchronously();
+        })();
+    })
+
+    console.log('calling loginAsynchronously first');
+    (async function () {
+        await loginAsynchronously();
+    })();
 
 }

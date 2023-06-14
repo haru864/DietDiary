@@ -26,6 +26,10 @@
     </form>
     <a href="/DietDiary/WelcomeServlet">トップ画面へ</a>
 
+    <br>
+    <br>
+    <button id="fetch_test_btn">fetch</button>
+
     <script type="text/javascript" src="${pageContext.request.contextPath}/JavaScript/loginLogic.js">
     </script>
 </body>

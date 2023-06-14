@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-02T17:29:37.339Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="TrlI_8z-elBf02LqeR4d" version="21.3.7" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-06-12T14:52:50.969Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="sr5ON1-UwKswlYGWWpQT" version="21.3.7" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -417,7 +417,7 @@
           <mxGeometry x="810" y="320" width="120" height="45" as="geometry" />
         </mxCell>
         <mxCell id="E5USZpEiSFg4vQxpNajU-8" value="非同期通信やりたい&lt;br&gt;→ログイン/登録成功時に画面遷移" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="920" y="-10" width="140" height="130" as="geometry" />
+          <mxGeometry x="520" y="80" width="140" height="130" as="geometry" />
         </mxCell>
         <mxCell id="E5USZpEiSFg4vQxpNajU-9" value="パスワード忘れたときにメールで再設定できるようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="1080" y="80" width="220" height="100" as="geometry" />
@@ -465,7 +465,7 @@
           <mxGeometry x="2350" y="354" width="100" height="50" as="geometry" />
         </mxCell>
         <mxCell id="yLVgH8BT-74q1l7Diu2N-1" value="一定期間ログインしていないユーザーを定期処理でDBから削除したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="510" y="55" width="220" height="100" as="geometry" />
+          <mxGeometry x="800" width="220" height="100" as="geometry" />
         </mxCell>
         <mxCell id="F5xzy9uc1psjQ421CndE-1" value="妊娠、授乳の有無を選択できるようにする&lt;br&gt;&lt;br&gt;写真をアプロードできるようにする&lt;br&gt;&lt;br&gt;栄養摂取量だけでなく、食事内容も表示できるようにする" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2830" y="-40" width="270" height="145" as="geometry" />

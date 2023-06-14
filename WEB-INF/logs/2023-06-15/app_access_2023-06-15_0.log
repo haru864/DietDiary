@@ -1,0 +1,138 @@
+2023-06-15 00:09:03,142 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-15 00:09:03,146 INFO [http-nio-8080-exec-5] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-15 00:09:04,341 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
+2023-06-15 00:09:04,411 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: JavaScript/loginLogic.js
+2023-06-15 00:09:04,428 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 00:09:04,429 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 00:09:04,429 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 00:09:04,429 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 00:09:04,429 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 00:09:06,697 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 00:09:06,698 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 00:09:06,698 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 00:09:06,698 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 00:09:06,698 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 00:09:15,449 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 00:09:15,450 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 00:09:15,450 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 00:09:15,451 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 00:09:15,451 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-15 00:09:18,282 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 00:09:18,283 INFO [http-nio-8080-exec-1] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 00:09:18,283 INFO [http-nio-8080-exec-1] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 00:09:18,283 INFO [http-nio-8080-exec-1] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 00:09:18,283 INFO [http-nio-8080-exec-1] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-15 01:10:39,533 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-15 01:10:39,534 INFO [http-nio-8080-exec-3] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-15 01:10:40,731 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
+2023-06-15 01:10:40,764 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: JavaScript/loginLogic.js
+2023-06-15 01:10:40,783 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:10:40,783 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:10:40,783 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:10:40,783 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 01:10:40,783 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 01:10:48,329 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:10:48,330 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:10:48,330 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:10:48,330 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 01:10:48,331 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-15 01:10:51,327 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:10:51,327 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:10:51,328 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 01:10:51,328 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-15 01:10:51,328 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: login
+2023-06-15 01:11:12,012 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-15 01:11:12,013 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-15 01:11:13,513 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
+2023-06-15 01:11:13,549 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: JavaScript/loginLogic.js
+2023-06-15 01:11:13,570 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:11:13,570 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:11:13,570 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:11:13,570 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 01:11:13,570 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 01:11:17,704 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:11:17,704 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:11:17,705 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:11:17,705 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 01:11:17,705 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 01:11:30,834 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-15 01:11:30,835 INFO [http-nio-8080-exec-6] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-15 01:11:31,665 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
+2023-06-15 01:11:31,694 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: JavaScript/loginLogic.js
+2023-06-15 01:11:31,709 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:11:31,709 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:11:31,709 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:11:31,709 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 01:11:31,709 INFO [http-nio-8080-exec-9] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 01:11:39,791 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:11:39,791 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:11:39,791 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 01:11:39,791 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-15 01:11:39,791 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: login
+2023-06-15 01:11:52,714 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-15 01:11:52,715 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-15 01:11:53,492 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
+2023-06-15 01:11:53,522 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: JavaScript/loginLogic.js
+2023-06-15 01:11:53,538 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:11:53,539 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:11:53,539 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:11:53,539 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 01:11:53,539 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 01:12:00,427 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:12:00,427 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:12:00,427 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:12:00,427 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 01:12:00,427 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-15 01:13:16,984 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-15 01:13:16,984 INFO [http-nio-8080-exec-7] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-15 01:13:18,024 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
+2023-06-15 01:13:18,065 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: JavaScript/loginLogic.js
+2023-06-15 01:13:18,094 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:13:18,094 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:13:18,094 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:13:18,094 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 01:13:18,094 INFO [http-nio-8080-exec-10] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 01:13:21,924 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:13:21,925 INFO [http-nio-8080-exec-1] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:13:21,925 INFO [http-nio-8080-exec-1] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:13:21,925 INFO [http-nio-8080-exec-1] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 01:13:21,925 INFO [http-nio-8080-exec-1] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-15 01:13:49,900 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-15 01:13:49,900 INFO [http-nio-8080-exec-3] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-15 01:13:50,836 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
+2023-06-15 01:13:50,867 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: JavaScript/loginLogic.js
+2023-06-15 01:13:50,880 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:13:50,881 INFO [http-nio-8080-exec-6] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:13:50,881 INFO [http-nio-8080-exec-6] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:13:50,881 INFO [http-nio-8080-exec-6] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 01:13:50,881 INFO [http-nio-8080-exec-6] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 01:13:55,445 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:13:55,445 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:13:55,446 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:13:55,446 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 01:13:55,446 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-15 01:13:55,531 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:13:55,531 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:13:55,531 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 01:13:55,531 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-15 01:13:55,531 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: login
+2023-06-15 01:13:59,125 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet, dest: LogoutServlet
+2023-06-15 01:13:59,700 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LogoutServlet?, dest: WelcomeServlet
+2023-06-15 01:13:59,700 INFO [http-nio-8080-exec-10] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-15 01:14:00,380 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
+2023-06-15 01:14:00,412 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: JavaScript/loginLogic.js
+2023-06-15 01:14:00,429 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:14:00,430 INFO [http-nio-8080-exec-3] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:14:00,430 INFO [http-nio-8080-exec-3] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:14:00,430 INFO [http-nio-8080-exec-3] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-15 01:14:00,430 INFO [http-nio-8080-exec-3] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-15 01:14:04,626 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:14:04,626 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:14:04,627 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:14:04,627 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 01:14:04,627 INFO [http-nio-8080-exec-4] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: asdasdas
+2023-06-15 01:14:11,644 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-15 01:14:11,645 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-15 01:14:11,645 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-15 01:14:11,645 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-15 01:14:11,645 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: asdasdas
