@@ -1,0 +1,89 @@
+2023-06-16 00:05:24,113 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:05:24,115 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:05:24,626 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.jsp
+2023-06-16 00:06:14,686 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:06:14,688 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:06:14,777 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.jsp
+2023-06-16 00:06:43,385 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:06:43,386 INFO [http-nio-8080-exec-4] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:06:43,409 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.jsp
+2023-06-16 00:07:08,719 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:07:08,722 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:07:09,279 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:07:09,288 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-16 00:09:27,523 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:09:27,524 INFO [http-nio-8080-exec-5] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:09:27,547 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:09:27,554 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-16 00:09:35,096 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:09:35,096 INFO [http-nio-8080-exec-8] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:09:35,113 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:10:02,462 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:10:02,462 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:10:02,479 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:11:40,341 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:11:40,341 INFO [http-nio-8080-exec-4] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:11:40,361 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:11:40,368 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-16 00:24:47,294 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:24:47,296 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:24:47,801 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:24:47,810 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-16 00:26:21,434 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:26:21,435 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:26:21,928 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:32:47,511 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:32:47,512 INFO [http-nio-8080-exec-6] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:32:47,538 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:32:47,570 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-16 00:32:55,777 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:32:55,778 INFO [http-nio-8080-exec-9] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:32:55,812 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:33:04,882 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:33:04,882 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:33:04,907 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:33:05,278 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:33:05,279 INFO [http-nio-8080-exec-3] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:33:05,295 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:33:05,444 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:33:05,444 INFO [http-nio-8080-exec-5] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:33:05,459 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:33:05,623 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 00:33:05,624 INFO [http-nio-8080-exec-7] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 00:33:05,644 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 00:33:20,683 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-16 01:00:22,824 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 01:00:22,825 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 01:00:22,852 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 01:00:22,855 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-16 01:00:23,788 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: LoginServlet
+2023-06-16 01:00:23,853 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: JavaScript/loginLogic.js
+2023-06-16 01:00:23,862 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-16 01:00:23,862 INFO [http-nio-8080-exec-6] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-16 01:00:23,862 INFO [http-nio-8080-exec-6] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-16 01:00:23,862 INFO [http-nio-8080-exec-6] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: 
+2023-06-16 01:00:23,862 INFO [http-nio-8080-exec-6] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: 
+2023-06-16 01:00:28,139 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-16 01:00:28,140 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-16 01:00:28,140 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
+2023-06-16 01:00:28,140 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-16 01:00:28,141 INFO [http-nio-8080-exec-7] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-16 01:00:28,184 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet?action=display, dest: LoginServlet
+2023-06-16 01:00:28,184 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:50] LoginServlet doPost start
+2023-06-16 01:00:28,184 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
+2023-06-16 01:00:28,184 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: pass
+2023-06-16 01:00:28,184 INFO [http-nio-8080-exec-8] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: login
+2023-06-16 01:00:38,604 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/LoginServlet, dest: MypageServlet
+2023-06-16 01:00:38,628 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/MypageServlet?action=display&page=calender, dest: CSS/calenderStyle.css
+2023-06-16 01:00:38,628 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/MypageServlet?action=display&page=calender, dest: JavaScript/calenderLogic.js
+2023-06-16 01:01:36,682 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/MypageServlet?action=display&page=calender, dest: MypageServlet
+2023-06-16 01:01:43,674 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/MypageServlet?action=display&page=diary&year=2023&month=9&day=2, dest: MypageServlet
+2023-06-16 01:01:45,157 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/MypageServlet?action=display&page=mypage, dest: MypageServlet
+2023-06-16 01:01:46,591 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/MypageServlet?action=display&page=calender, dest: MypageServlet
+2023-06-16 01:01:52,671 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/MypageServlet?action=display&page=mypage, dest: LogoutServlet
+2023-06-16 01:01:55,062 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: MypageServlet
+2023-06-16 01:01:57,055 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/MypageServlet?action=display&page=mypage, dest: LogoutServlet
+2023-06-16 01:03:21,844 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-16 01:03:21,844 INFO [http-nio-8080-exec-2] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-16 01:03:21,850 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-16 01:03:21,853 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg

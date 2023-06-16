@@ -1,0 +1,30 @@
+body {
+    background-repeat: no-repeat;
+    /* 幅と高さを設定 */
+    background-size: 1920px 1080px;
+    background-image: url(../img/salad_bowl.jpg);
+    display: flex;
+}
+
+.container {
+    /* 水平方向の中央寄せ */
+    justify-content: center;
+    /* 垂直方向の中央寄せ */
+    align-items: center;
+    position: absolute;
+    /* 左端から0pxの位置 */
+    left: 300;
+    /* 上端から0pxの位置 */
+    top: 50;
+    /* 下端まで */
+    bottom: 0;
+    /* コンテナを画面の左半分に広げる */
+    width: 50%;
+    /* コンテナの高さを画面の高さと同じにする */
+    height: 100%;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+}

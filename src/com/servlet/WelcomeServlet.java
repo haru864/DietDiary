@@ -18,6 +18,8 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/WelcomeServlet")
 public class WelcomeServlet extends HttpServlet {
 
+    private final Logger logger = LoggerFactory.getLogger(WelcomeServlet.class);
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 

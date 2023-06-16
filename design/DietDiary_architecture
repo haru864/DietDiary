@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-12T14:52:50.969Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="sr5ON1-UwKswlYGWWpQT" version="21.3.7" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-06-15T16:28:11.106Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="A4dvTnjkqezpbCm6ecfU" version="21.4.0" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -386,11 +386,11 @@
         <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-1" value="action=display" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="206" y="170" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-6" value="action=login" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="720" y="170" width="130" height="30" as="geometry" />
+        <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-6" value="action=preLogin-&amp;gt;login" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="720" y="170" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-7" value="action=register" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="720" y="374" width="130" height="30" as="geometry" />
+        <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-7" value="action=validate-&amp;gt;register" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="720" y="374" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-8" value="action=display" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="206" y="370" width="130" height="30" as="geometry" />
@@ -415,9 +415,6 @@
         </mxCell>
         <mxCell id="E5USZpEiSFg4vQxpNajU-4" value="register_error.jsp" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="810" y="320" width="120" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="E5USZpEiSFg4vQxpNajU-8" value="非同期通信やりたい&lt;br&gt;→ログイン/登録成功時に画面遷移" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="520" y="80" width="140" height="130" as="geometry" />
         </mxCell>
         <mxCell id="E5USZpEiSFg4vQxpNajU-9" value="パスワード忘れたときにメールで再設定できるようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="1080" y="80" width="220" height="100" as="geometry" />
@@ -494,9 +491,6 @@
         <mxCell id="adUW8EdYDnNfrDUWuIO9-1" value="DBに登録された食品から選択するだけでなく、摂取した栄養を直接入力できるモードも用意したい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.05;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2780" y="306.5" width="220" height="153.5" as="geometry" />
         </mxCell>
-        <mxCell id="3xfaWBao8sKOb0TL2-zc-1" value="Log4J使ってservletを継承していないクラスでもログ出力ができるようにしたい&lt;br&gt;⇨ slf4j + logback でやってみる" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="1430" y="-60" width="264" height="157.5" as="geometry" />
-        </mxCell>
         <mxCell id="Q_ENeYMZY1AbDpytAbhA-1" value="JSTL使ってJSPコードをフォーマットできるようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="2446" y="-180" width="234" height="130" as="geometry" />
         </mxCell>
@@ -535,6 +529,12 @@
         </mxCell>
         <mxCell id="fMCOVagfSarkIOheRsBp-3" value="POST" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="2370" y="479" width="56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RjKoA_BQ1K6HrX-z2Jf8-1" value="ログインしていない状態で&lt;br&gt;マイページ画面以降に&lt;br&gt;アクセスできないようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="-90" width="234" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="RjKoA_BQ1K6HrX-z2Jf8-2" value="非同期通信で入力内容をチェックするようにしたい。" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=31;size=30;position=0.21;position2=0.21;fillColor=#f8cecc;strokeColor=#b85450;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="470" width="234" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

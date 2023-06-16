@@ -39,7 +39,7 @@ public class Account {
         MODIFIABLE_USER_INFORMATION = new HashMap<>() {
             {
                 put("ユーザー名", false);
-                put("パスワード", false);
+                put("パスワード", true);
                 put("メールアドレス", true);
                 put("性別", false);
                 put("誕生日", false);
@@ -51,7 +51,14 @@ public class Account {
 
     public Account(String username, String password, String email,
             Date lastLoginDate, Gender gender, java.util.Date birth,
-            double height, double weight) {
+            double height, double weight) throws Exception {
+
+        if (username == null || password == null || email == null
+                || lastLoginDate == null || gender == null || birth == null
+                || height < 0 || weight < 0) {
+
+            throw new Exception("invalid account parameter");
+        }
 
         this.username = username;
         this.password = password;

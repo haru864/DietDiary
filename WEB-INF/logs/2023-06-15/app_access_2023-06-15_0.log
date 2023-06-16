@@ -136,3 +136,5 @@
 2023-06-15 01:14:11,645 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> action: preLogin
 2023-06-15 01:14:11,645 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> username: user
 2023-06-15 01:14:11,645 INFO [http-nio-8080-exec-5] c.s.LoginServlet [LoginServlet.java:57] (LoginServlet) request parameter -> password: asdasdas
+2023-06-15 22:55:37,851 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (debug)referer: null, dest: WelcomeServlet
+2023-06-15 22:55:37,854 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:31] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
