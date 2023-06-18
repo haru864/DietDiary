@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-15T16:28:11.106Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="A4dvTnjkqezpbCm6ecfU" version="21.4.0" type="device" pages="6">
+<mxfile host="app.diagrams.net" modified="2023-06-18T09:40:45.072Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="gIj4pI3DE2279XkgzELc" version="21.4.0" type="device" pages="6">
   <diagram name="画面遷移図" id="268Scbz7bR3FJPDDd4EO">
     <mxGraphModel dx="2261" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -386,7 +386,7 @@
         <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-1" value="action=display" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="206" y="170" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-6" value="action=preLogin-&amp;gt;login" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+        <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-6" value="action=login-&amp;gt;transition" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="720" y="170" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="qC2ZSRAMvkcQJF4yLQ2T-7" value="action=validate-&amp;gt;register" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
@@ -530,11 +530,8 @@
         <mxCell id="fMCOVagfSarkIOheRsBp-3" value="POST" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="2370" y="479" width="56" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RjKoA_BQ1K6HrX-z2Jf8-1" value="ログインしていない状態で&lt;br&gt;マイページ画面以降に&lt;br&gt;アクセスできないようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="RjKoA_BQ1K6HrX-z2Jf8-1" value="ログインしていない状態で&lt;br&gt;マイページ画面以降に&lt;br&gt;アクセスできないようにしたい" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=20;size=30;position=0.21;position2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="1520" y="-90" width="234" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="RjKoA_BQ1K6HrX-z2Jf8-2" value="非同期通信で入力内容をチェックするようにしたい。" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;base=31;size=30;position=0.21;position2=0.21;fillColor=#f8cecc;strokeColor=#b85450;rotation=0;" vertex="1" parent="1">
-          <mxGeometry x="1170" y="470" width="234" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -75,7 +75,7 @@ public class RegisterServlet extends HttpServlet {
             try {
                 gender = Gender.valueOf(req.getParameter("gender"));
             } catch (Exception e) {
-                logger.info("(Exception in RegisterServlet)" + e.getMessage());
+                logger.info("(RegisterServlet.doPost)" + e.getMessage());
             }
             Date birth = null;
             try {
@@ -83,19 +83,19 @@ public class RegisterServlet extends HttpServlet {
                 String birthString = req.getParameter("birth");
                 birth = sdf.parse(birthString);
             } catch (Exception e) {
-                logger.info("(Exception in RegisterServlet)" + e.getMessage());
+                logger.info("(RegisterServlet.doPost)" + e.getMessage());
             }
             double height = 0.0;
             try {
                 height = Double.parseDouble(req.getParameter("height"));
             } catch (Exception e) {
-                logger.info("(Exception in RegisterServlet)" + e.getMessage());
+                logger.info("(RegisterServlet.doPost)" + e.getMessage());
             }
             double weight = 0.0;
             try {
                 weight = Double.parseDouble(req.getParameter("weight"));
             } catch (Exception e) {
-                logger.info("(Exception in RegisterServlet)" + e.getMessage());
+                logger.info("(RegisterServlet.doPost)" + e.getMessage());
             }
 
             // Accountオブジェクトを作成、フィールドの整合性をチェック
@@ -112,7 +112,7 @@ public class RegisterServlet extends HttpServlet {
                 try (PrintWriter out = resp.getWriter()) {
                     out.print(errorMessageListJson);
                 } catch (Exception e) {
-                    logger.info("(Exception in RegisterServlet) errorMessageListJson: " + errorMessageListJson);
+                    logger.info("(RegisterServlet.doPost) errorMessageListJson: " + errorMessageListJson);
                     requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
                     requestDispatcher.forward(req, resp);
                 }

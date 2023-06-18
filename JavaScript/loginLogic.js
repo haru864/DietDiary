@@ -49,7 +49,7 @@ window.onload = function () {
         console.log('password: ' + password);
 
         let params = new URLSearchParams();
-        params.append('action', 'preLogin');
+        params.append('action', 'login');
         params.append('username', username);
         params.append('password', password);
 
@@ -124,13 +124,7 @@ window.onload = function () {
 
         // 再度フォーム送信をトリガー
         form.submit();
-    });
 
-    document.getElementById('fetch_test_btn').addEventListener('click', function (event) {
-        console.log('calling loginAsynchronously from button');
-        (async function () {
-            await loginAsynchronously();
-        })();
-    })
+    });
 
 }

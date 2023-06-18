@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.DAO.AccountDAO;
 import com.DAO.RecommendedIntakeDAO;
 import com.DAO.UserIntakeDAO;
 import jakarta.servlet.http.HttpServletRequest;
@@ -16,17 +17,10 @@ import jakarta.servlet.http.HttpSession;
 
 public class DiaryLogic {
 
-    public Boolean execute(HttpServletRequest request) {
-
-        return setDietInfoToSession(request);
-    }
-
     public Boolean setDietInfoToSession(HttpServletRequest request) {
 
         HttpSession session = request.getSession(true);
         String username = (String) session.getAttribute("username");
-        String genderString = (String) session.getAttribute("gender");
-        int age = (Integer) session.getAttribute("age");
         String year = request.getParameter("year");
         String month = request.getParameter("month");
         String day = request.getParameter("day");
@@ -35,14 +29,23 @@ public class DiaryLogic {
             return false;
         }
 
+        AccountDAO accountDAO = new AccountDAO();
+        Account account = accountDAO.getAccountByUserName(username);
+        if (account == null) {
+            return false;
+        }
+        String genderString = account.getGender().getGenderString();
+        int age = account.calcAge();
+
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
         LocalDate localDate = LocalDate.parse(year + "-" + month + "-" + day, formatter);
         Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
-        var userIntakeNutritionList = listDietAndNutritionOnSpecifiedDate(username, date);
+        List<UserIntakeNutrition> userIntakeNutritionList = listDietAndNutritionOnSpecifiedDate(username, date);
         // 活動レベルは仮設定
         Map<String, Double> recommendedIntakeMap = getRecommendedIntakeMap(age, Gender.valueOf(genderString), 1);
 
+        session.setAttribute("age", age);
         session.setAttribute("year", year);
         session.setAttribute("month", month);
         session.setAttribute("day", day);
@@ -67,7 +70,6 @@ public class DiaryLogic {
             for (int dietNumber = 1; dietNumber <= numOfDiets; dietNumber++) {
                 var userIntake = userIntakeDAO.getSpecifiedUserIntake(username, date, dietNumber);
                 UserIntakeNutrition userIntakeNutrition = new UserIntakeNutrition(userIntake);
-                // System.out.println("userIntakeNutrition: " + userIntakeNutrition);
                 userIntakeNutritionList.add(userIntakeNutrition);
             }
 

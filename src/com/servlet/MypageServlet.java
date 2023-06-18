@@ -48,7 +48,7 @@ public class MypageServlet extends HttpServlet {
 
         } else if (page.equals("diary")) {
 
-            if (new DiaryLogic().execute(req) == false) {
+            if (new DiaryLogic().setDietInfoToSession(req) == false) {
                 requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
                 requestDispatcher.forward(req, resp);
                 return;
