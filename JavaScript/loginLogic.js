@@ -133,9 +133,4 @@ window.onload = function () {
         })();
     })
 
-    console.log('calling loginAsynchronously first');
-    (async function () {
-        await loginAsynchronously();
-    })();
-
 }

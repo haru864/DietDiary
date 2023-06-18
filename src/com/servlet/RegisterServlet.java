@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.catalina.startup.Catalina;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -65,50 +64,7 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
-        if (action.equals("register")) {
-
-            Account validAccount = (Account) session.getAttribute("validAccount");
-
-            if (validAccount == null) {
-                requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
-                requestDispatcher.forward(req, resp);
-                return;
-            }
-
-            try {
-                // データベースに登録
-                RegisterLogic registerLogic = new RegisterLogic();
-                Boolean isRegisterSuccess = registerLogic.execute(validAccount);
-
-                if (isRegisterSuccess == false) {
-                    var list = new ArrayList<>();
-                    list.add("登録済みのユーザー名です。");
-                    session.setAttribute("errorMessageList", list);
-                    requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
-                    requestDispatcher.forward(req, resp);
-                    return;
-                }
-
-                session.setAttribute("username", validAccount.getUsername());
-
-                requestDispatcher = req.getRequestDispatcher(mypageJsp);
-                requestDispatcher.forward(req, resp);
-
-                return;
-
-            } catch (Exception e) {
-
-                logger.info(e.getMessage());
-                requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
-                requestDispatcher.forward(req, resp);
-                return;
-
-            } finally {
-
-                session.removeAttribute("validAccount");
-            }
-
-        } else if (action.equals("validate")) {
+        if (action.equals("validate")) {
 
             // ユーザー登録画面の入力値を受け取り、Accountフィールドに設定する
             String username = req.getParameter("username");
@@ -165,6 +121,48 @@ public class RegisterServlet extends HttpServlet {
             session.setAttribute("validAccount", account);
             String exceptionMessageJson = mapper.writeValueAsString(new ArrayList<>());
             resp.getWriter().println(exceptionMessageJson);
+
+        } else if (action.equals("register")) {
+
+            Account validAccount = (Account) session.getAttribute("validAccount");
+
+            if (validAccount == null) {
+                requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+                requestDispatcher.forward(req, resp);
+                return;
+            }
+
+            try {
+                // データベースに登録
+                RegisterLogic registerLogic = new RegisterLogic();
+                Boolean isRegisterSuccess = registerLogic.execute(validAccount);
+                if (isRegisterSuccess == false) {
+                    throw new Exception("ユーザー登録に失敗しました。\nエラーが何度も発生する場合は管理者にお問い合わせください。");
+                }
+
+                session.setAttribute("username", validAccount.getUsername());
+
+                requestDispatcher = req.getRequestDispatcher(mypageJsp);
+                requestDispatcher.forward(req, resp);
+
+                return;
+
+            } catch (Exception e) {
+
+                logger.info(e.getMessage());
+
+                var list = new ArrayList<>();
+                list.add(e.getMessage());
+                session.setAttribute("errorMessageList", list);
+
+                requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
+                requestDispatcher.forward(req, resp);
+                return;
+
+            } finally {
+
+                session.removeAttribute("validAccount");
+            }
 
         }
 

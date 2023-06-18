@@ -7,12 +7,16 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.model.Account;
 import com.model.Gender;
 import com.model.Login;
 
 public class AccountDAO {
 
+    private final Logger logger = LoggerFactory.getLogger(AccountDAO.class);
     private final String DB_URL = "jdbc:mysql://localhost:3306/DietDiary";
     private final String DB_USER = "admin";
     private final String DB_PASS = "4dm1n";
@@ -47,6 +51,7 @@ public class AccountDAO {
 
         } catch (Exception e) {
 
+            logger.info("(AccountDAO.findByLogin)" + e.getMessage());
             return null;
         }
     }
@@ -78,6 +83,7 @@ public class AccountDAO {
 
         } catch (Exception e) {
 
+            logger.info("(AccountDAO.getAccountByUserName)" + e.getMessage());
             return null;
         }
     }
@@ -106,6 +112,7 @@ public class AccountDAO {
 
         } catch (Exception e) {
 
+            logger.info("(AccountDAO.registerAccount)" + e.getMessage());
             return false;
         }
     }
@@ -129,11 +136,12 @@ public class AccountDAO {
 
         } catch (Exception e) {
 
+            logger.info("(AccountDAO.changeUpdatableUserInformation)" + e.getMessage());
             return false;
         }
     }
 
-    public boolean deleteAccount(Account account) throws Exception {
+    public boolean deleteAccount(Account account) {
 
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
 
@@ -148,7 +156,8 @@ public class AccountDAO {
 
         } catch (Exception e) {
 
-            throw new Exception("delete account failed");
+            logger.info("(AccountDAO.deleteAccount)" + e.getMessage());
+            return false;
         }
 
         return true;
@@ -174,7 +183,8 @@ public class AccountDAO {
 
         } catch (Exception e) {
 
-            throw new Exception("update last_login_date failed");
+            logger.info("(AccountDAO.updateLastLoginDate)" + e.getMessage());
+            return false;
         }
 
         return true;

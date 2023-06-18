@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.DAO.AccountDAO;
+
 public class ValidateAccountLogic {
 
     private static final String USERNAME_PATTERN = "[A-Za-z0-9]+";
@@ -27,6 +29,12 @@ public class ValidateAccountLogic {
         final String username = account.getUsername();
         if (username == null || username.length() > 10 || username.matches(USERNAME_PATTERN) == false) {
             errorMessageList.add("ユーザー名が不正です。10文字以下、半角英数のみとしてください。");
+        } else {
+            AccountDAO accountDAO = new AccountDAO();
+            Account sameNameAccount = accountDAO.getAccountByUserName(username);
+            if (sameNameAccount != null) {
+                errorMessageList.add("入力されたユーザー名はすでに使用されています。");
+            }
         }
 
         // パスワード：10文字以下、半角英数記号(空白除く)
