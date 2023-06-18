@@ -1,5 +1,19 @@
 window.onload = function () {
 
+    // パスワードの表示・非表示の切り替え
+    let btn_passview = document.getElementById("btn_passview");
+    let input_password = document.getElementById("password");
+
+    btn_passview.addEventListener("click", () => {
+        if (input_password.type == "password") {
+            input_password.type = "text";
+            btn_passview.textContent = "非表示";
+        } else {
+            input_password.type = "password";
+            btn_passview.textContent = "表示";
+        }
+    });
+
     async function validateInput() {
 
         let username = document.getElementById('username').value;
@@ -16,7 +30,6 @@ window.onload = function () {
         let birth = document.getElementById('birth').value;
         let height = document.getElementById('height').value;
         let weight = document.getElementById('weight').value;
-        console.log('gender: ' + gender);
 
         let url = 'http://localhost:8080/DietDiary/RegisterServlet';
         let params = new URLSearchParams();
@@ -38,14 +51,17 @@ window.onload = function () {
                 },
                 body: params
             });
-            console.log(response);
+            // console.log(response);
             let errorMessageListJson = await response.json();
-            console.log(errorMessageListJson);
+            // console.log(errorMessageListJson);
+            // console.log(errorMessageListJson.length);
 
-            if (errorMessageListJson == null) {
+            if (errorMessageListJson == null || errorMessageListJson.length == 0) {
                 return true;
+            } else {
+                alert(errorMessageListJson.join('\n'));
+                return false;
             }
-            return false;
 
         } catch (error) {
 
@@ -55,15 +71,21 @@ window.onload = function () {
         }
     }
 
-    document.getElementById('submit').addEventListener('click', async function (event) {
+    document.getElementById('register_form').addEventListener('submit', async function (event) {
 
+        let form = document.getElementById('register_form');
         event.preventDefault();
+
         let isValid = await validateInput();
         if (isValid == false) {
-            alert('invalid');
             return;
         }
-        alert('validation ok!');
+
+        // 一時的なイベントハンドラを削除
+        form.removeEventListener('submit', arguments.callee);
+
+        // 再度フォーム送信をトリガー
+        form.submit();
     });
 
 }

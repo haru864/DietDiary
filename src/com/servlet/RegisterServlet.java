@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.catalina.startup.Catalina;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,9 +21,9 @@ import jakarta.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.model.Account;
-import com.model.CheckAccountLogic;
 import com.model.Gender;
 import com.model.RegisterLogic;
+import com.model.ValidateAccountLogic;
 
 @WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
@@ -101,46 +102,57 @@ public class RegisterServlet extends HttpServlet {
                 requestDispatcher = req.getRequestDispatcher(registerErrorJsp);
                 requestDispatcher.forward(req, resp);
                 return;
+
+            } finally {
+
+                session.removeAttribute("validAccount");
             }
 
         } else if (action.equals("validate")) {
 
+            // ユーザー登録画面の入力値を受け取り、Accountフィールドに設定する
+            String username = req.getParameter("username");
+            String password = req.getParameter("password");
+            String email = req.getParameter("email");
+            Date lastLoginDate = new Date();
+            Gender gender = null;
             try {
-                // ユーザー登録画面の入力値を受け取り、Accountフィールドに設定する
-                String username = req.getParameter("username");
-                String password = req.getParameter("password");
-                String email = req.getParameter("email");
-                Date lastLoginDate = new Date();
-                String genderString = req.getParameter("gender");
-                if (genderString == null ||
-                        (genderString.equals("men") == false && genderString.equals("women") == false)) {
-                    throw new Exception("invalid gender from register.jsp");
-                }
-                Gender gender = Gender.valueOf(genderString);
+                gender = Gender.valueOf(req.getParameter("gender"));
+            } catch (Exception e) {
+                logger.info("(Exception in RegisterServlet)" + e.getMessage());
+            }
+            Date birth = null;
+            try {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String birthString = req.getParameter("birth");
-                Date birth = null;
-                if (birthString != null) {
-                    birth = sdf.parse(birthString);
-                }
-                double height = Double.parseDouble(req.getParameter("height"));
-                double weight = Double.parseDouble(req.getParameter("weight"));
+                birth = sdf.parse(birthString);
+            } catch (Exception e) {
+                logger.info("(Exception in RegisterServlet)" + e.getMessage());
+            }
+            double height = 0.0;
+            try {
+                height = Double.parseDouble(req.getParameter("height"));
+            } catch (Exception e) {
+                logger.info("(Exception in RegisterServlet)" + e.getMessage());
+            }
+            double weight = 0.0;
+            try {
+                weight = Double.parseDouble(req.getParameter("weight"));
+            } catch (Exception e) {
+                logger.info("(Exception in RegisterServlet)" + e.getMessage());
+            }
 
-                // Accountオブジェクトを作成、フィールドの整合性をチェック
-                Account account = new Account(username, password, email, lastLoginDate, gender, birth, height, weight);
-                CheckAccountLogic checkAccountLogic = new CheckAccountLogic();
-                List<String> errorMessageList = checkAccountLogic.execute(account);
+            // Accountオブジェクトを作成、フィールドの整合性をチェック
+            Account account = new Account(username, password, email, lastLoginDate, gender, birth, height, weight);
+            ValidateAccountLogic validateAccountLogic = new ValidateAccountLogic();
+            List<String> errorMessageList = validateAccountLogic.execute(account);
+            logger.info("(RegisterServlet)" + errorMessageList);
 
-                if (errorMessageList == null) {
-                    session.setAttribute("validAccount", account);
-                }
-                logger.info("(Exception in RegisterServlet) errorMessageList: " + errorMessageList);
+            ObjectMapper mapper = new ObjectMapper();
+            resp.setContentType("application/json");
 
-                ObjectMapper mapper = new ObjectMapper();
+            if (errorMessageList.size() > 0) {
                 String errorMessageListJson = mapper.writeValueAsString(errorMessageList);
-
-                resp.setContentType("application/json");
-
                 try (PrintWriter out = resp.getWriter()) {
                     out.print(errorMessageListJson);
                 } catch (Exception e) {
@@ -148,22 +160,11 @@ public class RegisterServlet extends HttpServlet {
                     requestDispatcher = req.getRequestDispatcher(unknownErrorJsp);
                     requestDispatcher.forward(req, resp);
                 }
-
-            } catch (Exception e) {
-
-                logger.info(e.getMessage());
-                List<String> exceptionMessage = new ArrayList<>() {
-                    {
-                        add(e.getMessage());
-                    }
-                };
-
-                ObjectMapper mapper = new ObjectMapper();
-                String exceptionMessageJson = mapper.writeValueAsString(exceptionMessage);
-
-                resp.setContentType("application/json");
-                resp.getWriter().println(exceptionMessageJson);
             }
+
+            session.setAttribute("validAccount", account);
+            String exceptionMessageJson = mapper.writeValueAsString(new ArrayList<>());
+            resp.getWriter().println(exceptionMessageJson);
 
         }
 

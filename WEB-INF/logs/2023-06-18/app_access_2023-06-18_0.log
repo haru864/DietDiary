@@ -1,0 +1,294 @@
+2023-06-18 04:31:34,399 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 04:31:34,404 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 04:31:34,523 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-18 04:31:34,533 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-18 04:31:35,547 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 04:31:35,547 INFO [http-nio-8080-exec-5] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 04:32:01,582 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 04:32:01,863 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 04:32:11,259 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:32:11,259 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:32:11,262 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:137] (Exception in RegisterServlet) errorMessageList: null
+2023-06-18 04:32:38,482 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:32:38,482 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:32:38,483 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:137] (Exception in RegisterServlet) errorMessageList: null
+2023-06-18 04:33:02,060 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:33:02,061 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:33:02,061 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:137] (Exception in RegisterServlet) errorMessageList: null
+2023-06-18 04:33:07,082 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:33:07,083 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:33:07,084 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:137] (Exception in RegisterServlet) errorMessageList: [生年月日が不正です。本日よりも前の日付を設定してください。]
+2023-06-18 04:34:15,500 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:34:15,501 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:34:15,501 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:137] (Exception in RegisterServlet) errorMessageList: [ユーザー名が不正です。10文字以下、半角英数のみとしてください。, 生年月日が不正です。本日よりも前の日付を設定してください。]
+2023-06-18 04:36:05,254 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 04:36:05,256 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 04:36:06,320 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 04:36:08,386 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:36:08,386 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:36:08,387 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:154] Unparseable date: ""
+2023-06-18 04:39:35,663 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 04:39:35,663 INFO [http-nio-8080-exec-5] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 04:39:35,686 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-18 04:39:35,698 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-18 04:39:36,704 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 04:39:36,733 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 04:39:38,584 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:39:38,585 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:39:38,585 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:154] Unparseable date: ""
+2023-06-18 04:42:06,325 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 04:42:06,327 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 04:42:07,165 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 04:42:07,230 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 04:42:08,876 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:42:08,877 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:42:08,879 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:154] Unparseable date: ""
+2023-06-18 04:44:47,798 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:44:47,799 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:44:47,800 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:154] Unparseable date: ""
+2023-06-18 04:44:53,494 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:44:53,494 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:44:53,495 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:154] empty String
+2023-06-18 04:49:50,496 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 04:49:50,498 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 04:49:51,387 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 04:49:51,451 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 04:49:52,948 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:49:52,949 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:49:52,951 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:156] 誕生日を見直してください。
+2023-06-18 04:49:58,433 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:49:58,434 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:49:58,434 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:156] empty String
+2023-06-18 04:50:06,006 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:50:06,006 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:50:06,007 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:156] empty String
+2023-06-18 04:50:09,594 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:50:09,595 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:50:09,595 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:156] empty String
+2023-06-18 04:50:13,120 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:50:13,120 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:50:13,121 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:156] empty String
+2023-06-18 04:50:17,102 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:50:17,103 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:50:17,103 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:156] empty String
+2023-06-18 04:50:20,951 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:50:20,952 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:50:20,956 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:139] (Exception in RegisterServlet) errorMessageList: null
+2023-06-18 04:51:41,448 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:51:41,449 INFO [http-nio-8080-exec-2] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:51:41,449 INFO [http-nio-8080-exec-2] c.s.RegisterServlet [RegisterServlet.java:156] empty String
+2023-06-18 04:51:53,094 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:51:53,095 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:51:53,095 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:139] (Exception in RegisterServlet) errorMessageList: [ユーザー名が不正です。10文字以下、半角英数のみとしてください。, パスワードが不正です。10文字以下、半角英数記号(空白除く)としてください。]
+2023-06-18 04:53:26,476 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 04:53:26,476 INFO [http-nio-8080-exec-5] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 04:53:27,267 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 04:53:27,296 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 04:53:29,110 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:53:29,111 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:53:29,112 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:156] 誕生日を見直してください。
+2023-06-18 04:53:34,798 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 04:53:34,798 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 04:53:34,799 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:156] empty String
+2023-06-18 15:32:47,498 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 15:32:47,499 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 15:32:47,595 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-18 15:32:47,607 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-18 15:32:48,644 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 15:32:48,710 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 15:32:49,703 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:32:49,704 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:58] (RegisterServlet) action: validate
+2023-06-18 15:32:49,791 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:149] (Exception in RegisterServlet) errorMessageList: [誕生日を入力してください。, 身長を入力してください。, 体重を入力してください。]
+2023-06-18 15:45:49,823 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 15:45:49,825 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 15:45:51,274 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 15:45:52,390 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:45:52,391 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 15:45:52,480 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:134] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 15:45:52,480 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:140] (Exception in RegisterServlet)empty String
+2023-06-18 15:45:52,480 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:146] (Exception in RegisterServlet)empty String
+2023-06-18 15:48:42,233 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 15:48:42,235 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 15:48:43,365 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 15:48:44,485 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:48:44,485 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 15:48:44,486 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 15:48:44,486 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 15:48:44,486 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 15:51:08,109 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 15:51:08,111 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 15:51:09,214 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 15:51:10,387 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:51:10,388 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 15:51:10,389 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 15:51:10,389 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 15:51:10,390 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 15:53:49,387 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 15:53:49,390 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 15:53:50,246 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 15:53:51,621 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:53:51,621 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 15:53:51,622 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 15:53:51,622 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 15:53:51,622 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 15:53:51,624 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[ユーザー名が不正です。10文字以下、半角英数のみとしてください。, パスワードが不正です。20文字以下、半角英数記号(空白除く)としてください。, メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 15:54:09,320 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:54:09,321 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 15:54:09,322 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 15:54:09,322 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 15:54:09,322 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 15:54:09,323 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[パスワードが不正です。20文字以下、半角英数記号(空白除く)としてください。, メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 15:54:25,396 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:54:25,397 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 15:54:25,398 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 15:54:25,398 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 15:54:25,398 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 15:54:25,399 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[パスワードが不正です。20文字以下、半角英数記号(空白除く)としてください。, メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 15:54:39,025 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:54:39,026 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 15:54:39,026 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 15:54:39,026 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 15:54:39,026 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 15:54:39,026 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 15:56:45,736 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 15:56:45,738 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 15:56:46,485 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 15:57:03,722 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 15:57:03,722 INFO [http-nio-8080-exec-4] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 15:57:03,749 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-18 15:57:03,763 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-18 15:57:04,482 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 15:57:04,506 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 15:57:12,487 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:57:12,489 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 15:57:12,491 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 15:57:12,491 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 15:57:12,491 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 15:57:12,493 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 15:57:16,591 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 15:57:16,592 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 15:57:16,592 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 15:57:16,592 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 15:57:16,592 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 15:57:16,592 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 16:01:55,556 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:01:55,557 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:01:55,557 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 16:01:55,557 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 16:01:55,557 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 16:01:55,558 INFO [http-nio-8080-exec-3] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 16:02:01,508 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:02:01,508 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:02:01,508 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 16:02:01,508 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:01,509 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:01,509 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 16:02:08,512 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: WelcomeServlet
+2023-06-18 16:02:08,513 INFO [http-nio-8080-exec-5] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 16:02:10,015 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 16:02:10,040 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 16:02:27,829 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:02:27,830 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:02:27,831 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 16:02:27,831 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:27,831 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:27,831 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 16:02:34,149 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:02:34,149 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:02:34,150 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 16:02:34,150 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:34,150 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:34,150 INFO [http-nio-8080-exec-9] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 16:02:37,784 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:02:37,784 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:02:37,785 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:37,785 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:37,785 INFO [http-nio-8080-exec-10] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[生年月日は本日よりも前の日付を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 16:02:42,022 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:02:42,022 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:02:42,022 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:42,022 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 16:02:42,023 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 16:02:48,886 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:02:48,887 INFO [http-nio-8080-exec-2] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:02:48,887 INFO [http-nio-8080-exec-2] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:04:43,832 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:04:43,833 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:04:43,834 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:06:35,210 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:06:35,210 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:06:35,211 INFO [http-nio-8080-exec-6] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:20:47,640 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 16:20:47,642 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 16:20:48,874 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 16:20:49,392 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 16:25:43,565 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 16:25:43,567 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 16:25:44,407 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 16:25:44,967 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: CSS/register.css
+2023-06-18 16:25:44,968 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 16:25:48,724 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:25:48,726 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:25:48,728 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:130] (Exception in RegisterServlet)Unparseable date: ""
+2023-06-18 16:25:48,728 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:136] (Exception in RegisterServlet)empty String
+2023-06-18 16:25:48,728 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:142] (Exception in RegisterServlet)empty String
+2023-06-18 16:25:48,729 INFO [http-nio-8080-exec-5] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[パスワードが不正です。20文字以下、半角英数記号(空白除く)としてください。, メールアドレスを正しい形式で入力してください。, 生年月日を設定してください。, 身長が不正です。正数を設定してください。, 体重が不正です。正数を設定してください。]
+2023-06-18 16:26:07,726 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:26:07,726 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:26:07,727 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:27:08,995 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 16:27:08,997 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 16:27:09,972 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 16:27:10,034 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: CSS/register.css
+2023-06-18 16:27:10,035 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 16:27:32,090 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:27:32,091 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:27:32,097 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:33:36,576 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 16:33:36,577 INFO [http-nio-8080-exec-9] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 16:33:42,315 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 16:33:42,909 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: CSS/register.css
+2023-06-18 16:33:42,909 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 16:34:01,412 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:34:01,413 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:34:01,415 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:34:16,497 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 16:34:16,498 INFO [http-nio-8080-exec-7] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 16:34:16,531 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-18 16:34:16,537 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-18 16:34:17,341 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 16:34:17,370 INFO [http-nio-8080-exec-3] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 16:34:17,370 INFO [http-nio-8080-exec-2] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: CSS/register.css
+2023-06-18 16:34:34,817 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:34:34,818 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:34:34,819 INFO [http-nio-8080-exec-4] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:37:13,788 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 16:37:13,788 INFO [http-nio-8080-exec-7] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 16:37:14,890 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 16:37:14,915 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 16:37:14,915 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: CSS/register.css
+2023-06-18 16:37:31,187 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:37:31,188 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:37:31,188 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:37:42,884 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 16:37:42,884 INFO [http-nio-8080-exec-4] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 16:37:42,923 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: CSS/welcome.css
+2023-06-18 16:37:42,937 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/CSS/welcome.css, dest: img/salad_bowl.jpg
+2023-06-18 16:37:43,675 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 16:37:43,700 INFO [http-nio-8080-exec-9] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: CSS/register.css
+2023-06-18 16:37:43,701 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 16:37:53,737 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:37:53,737 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:37:53,738 INFO [http-nio-8080-exec-1] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:38:39,456 INFO [http-nio-8080-exec-4] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: null, dest: WelcomeServlet
+2023-06-18 16:38:39,457 INFO [http-nio-8080-exec-4] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]
+2023-06-18 16:38:40,247 INFO [http-nio-8080-exec-5] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/WelcomeServlet, dest: RegisterServlet
+2023-06-18 16:38:40,275 INFO [http-nio-8080-exec-6] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: JavaScript/registerLogic.js
+2023-06-18 16:38:59,552 INFO [http-nio-8080-exec-7] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:38:59,553 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: validate
+2023-06-18 16:38:59,553 INFO [http-nio-8080-exec-7] c.s.RegisterServlet [RegisterServlet.java:149] (RegisterServlet)[]
+2023-06-18 16:38:59,586 INFO [http-nio-8080-exec-8] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet?action=display, dest: RegisterServlet
+2023-06-18 16:38:59,586 INFO [http-nio-8080-exec-8] c.s.RegisterServlet [RegisterServlet.java:59] (RegisterServlet) action: register
+2023-06-18 16:40:18,519 INFO [http-nio-8080-exec-10] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/RegisterServlet, dest: LogoutServlet
+2023-06-18 16:40:19,762 INFO [http-nio-8080-exec-1] c.f.DefaultFilter [DefaultFilter.java:37] (DefaultFilter)referer: http://localhost:8080/DietDiary/LogoutServlet?, dest: WelcomeServlet
+2023-06-18 16:40:19,762 INFO [http-nio-8080-exec-1] c.s.WelcomeServlet [WelcomeServlet.java:33] WelcomeServlet debug message: [webapp, NOTICE, webapps, tomcat10, CONTRIBUTING.md, RELEASE-NOTES, bin, RUNNING.txt, LICENSE, temp, conf, logs, lib, work, README.md, WEB-INF, BUILDING.txt]

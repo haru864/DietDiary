@@ -51,14 +51,7 @@ public class Account {
 
     public Account(String username, String password, String email,
             Date lastLoginDate, Gender gender, java.util.Date birth,
-            double height, double weight) throws Exception {
-
-        if (username == null || password == null || email == null
-                || lastLoginDate == null || gender == null || birth == null
-                || height < 0 || weight < 0) {
-
-            throw new Exception("invalid account parameter");
-        }
+            double height, double weight) {
 
         this.username = username;
         this.password = password;
